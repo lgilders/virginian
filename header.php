@@ -46,6 +46,7 @@
 				<ul class="menu">
 					<li class="home"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
 				</ul>
+				<?php foundationpress_top_bar_l(); ?>
 			</div>
 			<div class="top-bar-right">
 				<?php foundationpress_top_bar_r(); ?>
