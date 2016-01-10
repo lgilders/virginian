@@ -40,6 +40,10 @@
 		</div>
 
 		<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
+            <div class="small-4 large-4 right search-form">
+                <?php get_search_form(); ?>
+            </div>
+
 			<div class="top-bar-right">
 				<?php foundationpress_top_bar_r(); ?>
 
