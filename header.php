@@ -44,6 +44,8 @@
                 <?php get_search_form(); ?>
             </div>
 
+            <?php get_template_part( '/parts/social-media' ); ?>
+
 			<div class="top-bar-right">
 				<?php foundationpress_top_bar_r(); ?>
 

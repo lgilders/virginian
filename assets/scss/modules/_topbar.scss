@@ -78,3 +78,20 @@
 .search-form {
   float: left;
 }
+
+.social-media {
+  float: right;
+
+  li {
+    display: table-cell;
+    vertical-align: middle;
+
+    a {
+      display: block;
+      height: 45px;
+      line-height: 1;
+      padding: 1rem;
+      font-size: 0.8rem;
+    }
+  }
+}
