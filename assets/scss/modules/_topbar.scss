@@ -109,6 +109,11 @@
   }
 }
 
+// Styles for main nav for MOBIL
+.menu.vertical > li {
+  text-align: center;
+}
+
 // Hamburger icon for MOBILE
 .title-bar .menu-icon {
   float: right;
@@ -145,6 +150,13 @@
 // Displays search form on icon click
 .search-form, form#searchform {
   float: left;
+
+  form#searchform {
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      border-bottom: 1px solid white;
+    }
+  }
 
   #search {
     position: absolute;
