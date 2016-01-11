@@ -65,20 +65,19 @@
 
 // Additional styles for The Virginian site
 
+// Locks header into a max size based on the screen size
 #masthead {
   margin: 0 auto;
   max-width: 62.5rem;
   width: 100%;
 }
 
+// Mobile bar icon
 .title-bar .menu-icon {
   float: right;
 }
 
-.search-form {
-  float: left;
-}
-
+// Social media links for DESKTOP
 .social-media {
   float: right;
 
@@ -93,5 +92,78 @@
       padding: 1rem;
       font-size: 0.8rem;
     }
+  }
+}
+
+// Displays search form on icon click
+.search-form, form#searchform {
+  float: left;
+
+  #search {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+  }
+
+  #label {
+    position: relative;
+    z-index: 20;
+    float: left;
+    height: 45px;
+    width: 45px;
+    line-height: 1;
+    padding: 1rem;
+    font-size: 0.8rem;
+    color: white;
+    cursor: pointer;
+  }
+
+  #label label {
+    display: block;
+    color: white;
+    cursor: pointer;
+  }
+
+  #input {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 45px;
+    z-index: 5;
+    overflow: hidden;
+  }
+
+  #input input {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    margin: 0;
+    padding: 0 10px;
+    border: none;
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    backface-visibility: none;
+    border-radius: 0;
+    transition: left 0;
+  }
+
+  #input input:focus {
+    outline: none
+  }
+
+  #input.focus {
+    z-index: 20
+  }
+
+  #input.focus input {
+    left: 0;
+    transition: left 0.3s;
   }
 }

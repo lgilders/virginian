@@ -40,7 +40,7 @@
 		</div>
 
 		<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
-            <div class="small-4 large-4 search-form">
+            <div class="small-12 medium-6 large-6 search-form">
                 <?php get_search_form(); ?>
             </div>
 
