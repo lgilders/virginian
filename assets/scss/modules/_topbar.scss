@@ -103,8 +103,8 @@
   li {
     display: inline-block;
     float: none;
-    padding: 0;
-    min-width: 125px;
+    padding: 1rem;
+    min-width: 50px;
     text-align: center;
   }
 }
@@ -129,6 +129,16 @@
       padding: 1rem;
       font-size: 0.8rem;
     }
+  }
+}
+
+// Logo styles
+#logo {
+  min-width: 100px;
+
+  img {
+    display: block;
+    margin: 0 auto;
   }
 }
 
