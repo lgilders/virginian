@@ -1,0 +1,13 @@
+#contact-form {
+  min-height: 0 !important;
+  z-index: 1000;
+}
+
+.height-transition {
+  transition: max-height 1s ease-in-out;
+  overflow-y: hidden;
+}
+
+.height-transition-hidden {
+  max-height: 0;
+}

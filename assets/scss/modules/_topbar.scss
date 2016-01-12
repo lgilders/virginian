@@ -109,7 +109,7 @@
   }
 }
 
-// Styles for main nav for MOBIL
+// Styles for main nav for MOBILE
 .menu.vertical > li {
   text-align: center;
 }
@@ -117,6 +117,17 @@
 // Hamburger icon for MOBILE
 .title-bar .menu-icon {
   float: right;
+}
+
+// Styles for secondary nav
+.top-bar-right {
+  min-height: 0 !important;
+  height: auto !important;
+  width: auto;
+
+  @media screen and (max-width: 768px) {
+    float: none;
+  }
 }
 
 // Social media links for DESKTOP
