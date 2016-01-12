@@ -119,13 +119,13 @@ nav.vertical.menu {
 // Hamburger icon for MOBILE
 .title-bar .menu-icon {
   float: right;
-  z-index: 1000;
+  z-index: 10;
 }
 
 // Styles for secondary nav
 .top-bar-right {
   min-height: 0 !important;
-  max-height: 80px;
+  max-height: 45px;
 
   @media screen and (max-width: 768px) {
     float: none;
@@ -136,6 +136,7 @@ nav.vertical.menu {
 // Social media links for DESKTOP
 .social-media {
   float: right;
+  max-height: 45px;
 
   ul {
     list-style: none;
@@ -157,7 +158,12 @@ nav.vertical.menu {
 
 // Social media links for MOBILE
 #social-media-mobile {
-  max-height: 80px;
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: inline-block;
+    width: 100%;
+  }
 
   .social-media {
     display: block !important;
@@ -174,6 +180,7 @@ nav.vertical.menu {
 
   ul {
     text-align: center;
+    margin: 0;
   }
 
   li {
@@ -237,8 +244,6 @@ nav.vertical.menu {
     line-height: 1;
     padding: 1rem;
     font-size: 0.8rem;
-    color: white;
-    cursor: pointer;
 
     @media screen and (max-width: 768px) {
       margin-bottom: 1rem;
@@ -255,7 +260,7 @@ nav.vertical.menu {
     position: relative;
     top: 0;
     left: 0;
-    width: 270px;
+    width: 250px;
     height: 45px;
     z-index: 5;
     overflow: hidden;
@@ -265,8 +270,8 @@ nav.vertical.menu {
     display: block;
     position: absolute;
     top: 0;
-    left: -270px;
-    width: 270px;
+    left: -250px;
+    width: 250px;
     height: 100%;
     margin: 0;
     padding: 0 0 0 1rem;
@@ -295,5 +300,22 @@ nav.vertical.menu {
 
 // Placeholder styles for wireframe
 .top-bar, .top-bar ul, .title-bar {
-  background-color: gray;
+  background-color: white;
+
+  @media screen and (max-width: 768px) {
+    background-color: darkgrey;
+  }
+}
+
+.top-bar .menu a, .top-bar a, .search-form #label label {
+  color: grey;
+}
+
+.menu-icon::after {
+  background-color: grey;
+  box-shadow: 0 7px 0 grey, 0 14px 0 grey;
+}
+
+.search-form #input input {
+  background-color: whitesmoke;
 }
