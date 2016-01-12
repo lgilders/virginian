@@ -1,6 +1,11 @@
+// DESKTOP styles
 #contact-form {
   min-height: 0 !important;
   z-index: 1000;
+}
+
+iframe {
+  padding: 1rem;
 }
 
 .height-transition {
@@ -10,4 +15,23 @@
 
 .height-transition-hidden {
   max-height: 0;
+}
+
+// MOBILE styles
+#contact-form-mobile {
+  display: none;
+  max-height: 21rem;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+
+  #contact-form-header {
+    padding-top: 1rem;
+    border-top: 1px solid white;
+
+    p {
+      display: none;
+    }
+  }
 }
