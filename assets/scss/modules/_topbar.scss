@@ -117,7 +117,8 @@ nav.vertical.menu {
 }
 
 // Hamburger icon for MOBILE
-.title-bar .menu-icon {
+// For additional styles, see components/hamburger.scss
+.c-hamburger {
   float: right;
   z-index: 10;
 }

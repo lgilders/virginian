@@ -35,7 +35,31 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="title-bar" data-responsive-toggle="site-navigation">
-			<button class="menu-icon" type="button" data-toggle="offCanvas"></button>
+			<!--<button class="menu-icon" type="button" data-toggle="offCanvas"></button>-->
+            <button class="c-hamburger c-hamburger--htx" type="button" data-toggle="offCanvas">
+                <span>toggle menu</span>
+            </button>
+            <script>
+                (function() {
+
+                    "use strict";
+
+                    var toggles = document.querySelectorAll(".c-hamburger");
+
+                    for (var i = toggles.length - 1; i >= 0; i--) {
+                        var toggle = toggles[i];
+                        toggleHandler(toggle);
+                    };
+
+                    function toggleHandler(toggle) {
+                        toggle.addEventListener( "click", function(e) {
+                            e.preventDefault();
+                            (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
+                        });
+                    }
+
+                })();
+            </script>
 		</div>
 
 		<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
