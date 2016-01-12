@@ -1,15 +1,14 @@
+// !IMPORTANT
+// Some styles are controlled via an inline stylesheet that can be edited via sharpspring.com
+
+iframe {
+  padding: 0 1rem;
+}
+
 // DESKTOP styles
 #contact-form {
   min-height: 0 !important;
   z-index: 1000;
-}
-
-iframe {
-  padding: 1rem;
-}
-
-form {
-  padding: 0;
 }
 
 #contact-form-header {
@@ -35,10 +34,10 @@ form {
 // MOBILE styles
 #contact-form-mobile {
   display: none;
-  max-height: 21rem;
 
   @media screen and (max-width: 768px) {
     display: block;
+    max-height: 21rem;
   }
 
   #contact-form-header {

@@ -48,7 +48,7 @@
                     ss_form.width = '100%';
                     ss_form.height = '1000';
                     ss_form.domain = 'app-N24YKLWU.marketingautomation.services';
-                    // ss_form.hidden = {'Company': 'Anon'}; // Modify this for sending hidden variables, or overriding values
+                    ss_form.hidden = {'_usePlaceholders' : true}; // Modify this for sending hidden variables, or overriding values
                 </script>
                 <script type="text/javascript" src="https://koi-N24YKLWU.marketingautomation.services/client/form.js?ver=1.1.1"></script>
             </div>
@@ -74,7 +74,7 @@
                             ss_form.width = '100%';
                             ss_form.height = '1000';
                             ss_form.domain = 'app-N24YKLWU.marketingautomation.services';
-                            // ss_form.hidden = {'Company': 'Anon'}; // Modify this for sending hidden variables, or overriding values
+                            ss_form.hidden = {'_usePlaceholders' : true}; // Modify this for sending hidden variables, or overriding values
                         </script>
                         <script type="text/javascript" src="https://koi-N24YKLWU.marketingautomation.services/client/form.js?ver=1.1.1"></script>
                     </div>
@@ -92,6 +92,4 @@
 	<section class="container">
 		<?php do_action( 'foundationpress_after_header' ); ?>
 
-        <?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'topbar' ) : ?>
-            <?php get_template_part( '/parts/logo-mobile' ); ?>
-        <?php endif; ?>
+        <?php get_template_part( '/parts/logo-mobile' ); ?>

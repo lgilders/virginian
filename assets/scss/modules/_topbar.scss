@@ -150,12 +150,20 @@ nav.vertical.menu {
 }
 
 // Logo styles
-#logo {
+#logo, #logo-mobile {
   min-width: 100px;
 
   img {
     display: block;
     margin: 0 auto;
+  }
+}
+
+#logo-mobile {
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: block;
   }
 }
 
