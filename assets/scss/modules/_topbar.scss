@@ -221,10 +221,16 @@ nav.vertical.menu {
 }
 
 // Displays search form on icon click
-.search-form, form#searchform {
+.search-form {
   float: left;
 
+  @media screen and (max-width: 768px ) {
+    margin-top: -32px;
+  }
+
   form#searchform {
+    float: left;
+
     @media screen and (max-width: 768px) {
       width: 100%;
       border-bottom: 1px solid white;
