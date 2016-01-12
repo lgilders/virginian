@@ -89,6 +89,7 @@
   float: none;
   display: block;
   text-align: justify;
+  max-height: 80px;
 
   &:after {
     content: '';
@@ -123,11 +124,11 @@ nav.vertical.menu {
 // Styles for secondary nav
 .top-bar-right {
   min-height: 0 !important;
-  height: auto !important;
-  width: auto;
+  max-height: 80px;
 
   @media screen and (max-width: 768px) {
     float: none;
+    max-height: none;
   }
 }
 
@@ -252,6 +253,6 @@ nav.vertical.menu {
 }
 
 // Placeholder styles for wireframe
-.top-bar, .top-bar ul {
+.top-bar, .top-bar ul, .title-bar {
   background-color: gray;
 }
