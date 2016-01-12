@@ -156,6 +156,8 @@ nav.vertical.menu {
 
 // Social media links for MOBILE
 #social-media-mobile {
+  max-height: 80px;
+
   .social-media {
     display: block !important;
     float: none;
@@ -179,6 +181,24 @@ nav.vertical.menu {
     padding: 1rem;
     min-width: 50px;
     text-align: center;
+  }
+}
+
+// Visit us for MOBILE
+#visit-mobile {
+  text-align: center;
+  border-top: 1px solid white;
+
+  p {
+    text-transform: lowercase;
+    margin-top: 1rem;
+  }
+
+  button {
+    background-color: darkgray;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
   }
 }
 
