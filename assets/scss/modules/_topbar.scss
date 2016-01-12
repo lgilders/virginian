@@ -110,7 +110,8 @@
 }
 
 // Styles for main nav for MOBILE
-.menu.vertical > li {
+nav.vertical.menu {
+  padding-top: 3rem;
   text-align: center;
 }
 
@@ -188,6 +189,10 @@
     font-size: 0.8rem;
     color: white;
     cursor: pointer;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 1rem;
+    }
   }
 
   #label label {
