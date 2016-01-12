@@ -36,7 +36,6 @@
 	<header id="masthead" class="site-header" role="banner">
 		<div class="title-bar" data-responsive-toggle="site-navigation">
 			<button class="menu-icon" type="button" data-toggle="offCanvas"></button>
-            <?php get_template_part( '/parts/logo-mobile' ); ?>
 		</div>
 
 		<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
@@ -92,3 +91,7 @@
 
 	<section class="container">
 		<?php do_action( 'foundationpress_after_header' ); ?>
+
+        <?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'topbar' ) : ?>
+            <?php get_template_part( '/parts/logo-mobile' ); ?>
+        <?php endif; ?>
