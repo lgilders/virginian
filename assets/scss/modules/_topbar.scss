@@ -136,6 +136,10 @@ nav.vertical.menu {
 .social-media {
   float: right;
 
+  ul {
+    list-style: none;
+  }
+
   li {
     display: table-cell;
     vertical-align: middle;
@@ -147,6 +151,34 @@ nav.vertical.menu {
       padding: 1rem;
       font-size: 0.8rem;
     }
+  }
+}
+
+// Social media links for MOBILE
+#social-media-mobile {
+  .social-media {
+    display: block !important;
+    float: none;
+    text-align: justify;
+    border-top: 1px solid white;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 100%;
+    }
+  }
+
+  ul {
+    text-align: center;
+  }
+
+  li {
+    display: inline-block;
+    float: none;
+    padding: 1rem;
+    min-width: 50px;
+    text-align: center;
   }
 }
 

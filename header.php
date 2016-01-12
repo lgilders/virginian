@@ -78,6 +78,10 @@
                         </script>
                         <script type="text/javascript" src="https://koi-N24YKLWU.marketingautomation.services/client/form.js?ver=1.1.1"></script>
                     </div>
+
+                    <div id="social-media-mobile">
+                        <?php get_template_part( '/parts/social-media' ); ?>
+                    </div>
 				<?php endif; ?>
 			</div>
 
