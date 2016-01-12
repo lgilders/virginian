@@ -82,8 +82,6 @@
                     <div id="social-media-mobile">
                         <?php get_template_part( '/parts/social-media' ); ?>
                     </div>
-
-                    <?php get_template_part( '/parts/visit' ); ?>
 				<?php endif; ?>
 			</div>
 
