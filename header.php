@@ -40,6 +40,20 @@
 		</div>
 
 		<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
+            <div id="contact-form" class="height-transition height-transition-hidden">
+                <?php get_template_part( '/parts/contact-form' ); ?>
+
+                <!-- SharpSpring Form for Contact  -->
+                <script type="text/javascript">
+                    var ss_form = {'account': 'MzQxMze2NAYA', 'formID': 'MzI0S0w1NTbUTTGxMNA1STQ10000SDXVNbc0SE0zs0iysDRKAgA'};
+                    ss_form.width = '100%';
+                    ss_form.height = '1000';
+                    ss_form.domain = 'app-N24YKLWU.marketingautomation.services';
+                    // ss_form.hidden = {'Company': 'Anon'}; // Modify this for sending hidden variables, or overriding values
+                </script>
+                <script type="text/javascript" src="https://koi-N24YKLWU.marketingautomation.services/client/form.js?ver=1.1.1"></script>
+            </div>
+
             <div class="small-12 medium-6 large-6 search-form">
                 <?php get_search_form(); ?>
             </div>
