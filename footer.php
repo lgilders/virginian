@@ -15,9 +15,19 @@
 		<div id="footer-container">
 			<footer id="footer">
 				<?php do_action( 'foundationpress_before_footer' ); ?>
-				<?php dynamic_sidebar( 'footer-widgets' ); ?>
+
+                <?php foundationpress_bottom_bar(); ?>
+
+                <div id="social-media-footer">
+                    <?php get_template_part( '/parts/social-media' ); ?>
+                </div>
+
 				<?php do_action( 'foundationpress_after_footer' ); ?>
 			</footer>
+
+            <footer id="subfooter">
+                <?php get_template_part( '/parts/sub-footer' ); ?>
+            </footer>
 		</div>
 
 		<?php do_action( 'foundationpress_layout_end' ); ?>

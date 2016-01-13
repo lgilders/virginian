@@ -2,7 +2,7 @@
 // Inserts social media icons
 ?>
 
-<div id="social-media" class="social-media show-for-medium">
+<div id="social-media" class="social-media">
     <ul>
         <li>
             <a href="http://twitter.com/virginiangolf" target="_blank" class="fa fa-twitter"></a>
