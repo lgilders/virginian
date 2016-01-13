@@ -60,3 +60,263 @@
     color: #B9B9B9;
   }
 }
+
+
+
+// Additional styles for The Virginian site
+
+// Locks header into a max size based on the screen size
+#masthead {
+  margin: 0 auto;
+  max-width: 62.5rem;
+  width: 100%;
+}
+
+// Styles all nav menu items
+.top-bar .menu {
+  li:not(:last-child) {
+    border: none;
+  }
+
+  a {
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+  }
+}
+
+// Styles for main nav
+.top-bar-left {
+  float: none;
+  display: block;
+  text-align: justify;
+  max-height: 80px;
+
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+
+  ul {
+    text-align: center;
+  }
+
+  li {
+    display: inline-block;
+    float: none;
+    padding: 1rem;
+    min-width: 50px;
+    text-align: center;
+  }
+}
+
+// Styles for main nav for MOBILE
+nav.vertical.menu {
+  padding-top: 3rem;
+  text-align: center;
+}
+
+// Hamburger icon for MOBILE
+// For additional styles, see components/hamburger.scss
+.c-hamburger {
+  float: right;
+  z-index: 10;
+}
+
+// Styles for secondary nav
+.top-bar-right {
+  min-height: 0 !important;
+  max-height: 45px;
+
+  @media screen and (max-width: 768px) {
+    float: none;
+    max-height: none;
+  }
+}
+
+// Social media links for DESKTOP
+.social-media {
+  float: right;
+  max-height: 45px;
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    display: table-cell;
+    vertical-align: middle;
+
+    a {
+      display: block;
+      height: 45px;
+      line-height: 1;
+      padding: 1rem;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+// Social media links for MOBILE
+#social-media-mobile {
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .social-media {
+    display: block !important;
+    float: none;
+    text-align: justify;
+    border-top: 1px solid white;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 100%;
+    }
+  }
+
+  ul {
+    text-align: center;
+    margin: 0;
+  }
+
+  li {
+    display: inline-block;
+    float: none;
+    padding: 1rem;
+    min-width: 50px;
+    text-align: center;
+  }
+}
+
+// Logo styles
+#logo, #logo-mobile {
+  min-width: 100px;
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+#logo-mobile {
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+}
+
+// Displays search form on icon click
+.search-form {
+  float: left;
+
+  @media screen and (max-width: 768px ) {
+    margin-top: -32px;
+  }
+
+  form#searchform {
+    float: left;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      border-bottom: 1px solid white;
+    }
+  }
+
+  #search {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+  }
+
+  #label {
+    position: relative;
+    z-index: 20;
+    float: left;
+    height: 45px;
+    width: 45px;
+    line-height: 1;
+    padding: 1rem;
+    font-size: 0.8rem;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  #label label {
+    display: block;
+    color: white;
+    cursor: pointer;
+  }
+
+  #input {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 45px;
+    z-index: 5;
+    overflow: hidden;
+  }
+
+  #input input {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    margin: 0;
+    padding: 0 0 0 1rem;
+    border: none;
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    backface-visibility: none;
+    border-radius: 0;
+    transition: left 0;
+  }
+
+  #input input:focus {
+    outline: none
+  }
+
+  #input.focus {
+    z-index: 20
+  }
+
+  #input.focus input {
+    left: 0;
+    transition: left 0.3s;
+  }
+}
+
+// Placeholder styles for wireframe
+.top-bar, .top-bar ul, .title-bar {
+  background-color: white;
+
+  @media screen and (max-width: 768px) {
+    background-color: darkgrey;
+  }
+}
+
+.top-bar .menu a, .top-bar a, .search-form #label label {
+  color: grey;
+}
+
+.menu-icon::after {
+  background-color: grey;
+  box-shadow: 0 7px 0 grey, 0 14px 0 grey;
+}
+
+.search-form #input input {
+  background-color: whitesmoke;
+}

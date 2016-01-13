@@ -35,27 +35,88 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="title-bar" data-responsive-toggle="site-navigation">
-			<button class="menu-icon" type="button" data-toggle="offCanvas"></button>
-			<div class="title-bar-title">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-			</div>
+			<button class="c-hamburger c-hamburger--htx" type="button" data-toggle="offCanvas">
+                <span>toggle menu</span>
+            </button>
+            <script>
+                (function() {
+
+                    "use strict";
+
+                    var toggles = document.querySelectorAll(".c-hamburger");
+
+                    for (var i = toggles.length - 1; i >= 0; i--) {
+                        var toggle = toggles[i];
+                        toggleHandler(toggle);
+                    };
+
+                    function toggleHandler(toggle) {
+                        toggle.addEventListener( "click", function(e) {
+                            e.preventDefault();
+                            (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
+                        });
+                    }
+
+                })();
+            </script>
 		</div>
 
 		<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
-			<div class="top-bar-left show-for-medium">
-				<ul class="menu">
-					<li class="home"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
-				</ul>
-			</div>
+            <div id="contact-form" class="height-transition height-transition-hidden">
+                <?php get_template_part( '/parts/contact-form' ); ?>
+
+                <!-- SharpSpring Form for Contact  -->
+                <script type="text/javascript">
+                    var ss_form = {'account': 'MzQxMze2NAYA', 'formID': 'MzI0S0w1NTbUTTGxMNA1STQ10000SDXVNbc0SE0zs0iysDRKAgA'};
+                    ss_form.width = '100%';
+                    ss_form.height = '1000';
+                    ss_form.domain = 'app-N24YKLWU.marketingautomation.services';
+                    ss_form.hidden = {'_usePlaceholders' : true}; // Modify this for sending hidden variables, or overriding values
+                </script>
+                <script type="text/javascript" src="https://koi-N24YKLWU.marketingautomation.services/client/form.js?ver=1.1.1"></script>
+            </div>
+
+            <div class="small-12 medium-6 large-6 search-form">
+                <?php get_search_form(); ?>
+            </div>
+
+            <?php get_template_part( '/parts/social-media' ); ?>
+
 			<div class="top-bar-right">
 				<?php foundationpress_top_bar_r(); ?>
 
 				<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'topbar' ) : ?>
 					<?php get_template_part( 'parts/mobile-top-bar' ); ?>
+
+                    <div id="contact-form-mobile">
+                        <?php get_template_part( '/parts/contact-form' ); ?>
+
+                        <!-- SharpSpring Form for Contact  -->
+                        <script type="text/javascript">
+                            var ss_form = {'account': 'MzQxMze2NAYA', 'formID': 'MzI0S0w1NTbUTTGxMNA1STQ10000SDXVNbc0SE0zs0iysDRKAgA'};
+                            ss_form.width = '100%';
+                            ss_form.height = '1000';
+                            ss_form.domain = 'app-N24YKLWU.marketingautomation.services';
+                            ss_form.hidden = {'_usePlaceholders' : true}; // Modify this for sending hidden variables, or overriding values
+                        </script>
+                        <script type="text/javascript" src="https://koi-N24YKLWU.marketingautomation.services/client/form.js?ver=1.1.1"></script>
+                    </div>
+
+                    <div id="social-media-mobile">
+                        <?php get_template_part( '/parts/social-media' ); ?>
+                    </div>
 				<?php endif; ?>
+			</div>
+
+            <?php get_template_part( '/parts/logo' ); ?>
+
+			<div class="top-bar-left show-for-medium">
+				<?php foundationpress_top_bar_l(); ?>
 			</div>
 		</nav>
 	</header>
 
 	<section class="container">
 		<?php do_action( 'foundationpress_after_header' ); ?>
+
+        <?php get_template_part( '/parts/logo-mobile' ); ?>
