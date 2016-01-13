@@ -64,6 +64,24 @@
     }
   }
 
+  #menu-footer-primary {
+
+    li:nth-child(1), li:nth-child(2), li:nth-child(3) {
+      &:before {
+        position: relative;
+        left: 45%;
+
+        @media screen and (max-width: 600px) {
+          left: 0;
+        }
+      }
+    }
+  }
+
+  #subfooter {
+    margin-top: 2rem;
+  }
+
   #social-media-footer {
 
     @media screen and (max-width: 600px) {
