@@ -15,7 +15,9 @@
 		<div id="footer-container">
 			<footer id="footer">
 				<?php do_action( 'foundationpress_before_footer' ); ?>
-				
+
+                <?php foundationpress_bottom_bar(); ?>
+
 				<?php do_action( 'foundationpress_after_footer' ); ?>
 			</footer>
 		</div>
