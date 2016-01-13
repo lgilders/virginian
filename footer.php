@@ -18,9 +18,17 @@
 
                 <?php foundationpress_bottom_bar(); ?>
 
+                <div id="social-media-footer">
+                    <?php get_template_part( '/parts/social-media' ); ?>
+                </div>
+
 				<?php do_action( 'foundationpress_after_footer' ); ?>
 			</footer>
 		</div>
+
+        <div id="subfooter-container">
+            <?php get_template_part( '/parts/sub-footer' ); ?>
+        </div>
 
 		<?php do_action( 'foundationpress_layout_end' ); ?>
 

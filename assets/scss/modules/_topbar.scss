@@ -112,7 +112,7 @@
 
 // Styles for main nav for MOBILE
 nav.vertical.menu {
-  padding-top: 3rem;
+  padding-top: 2rem;
   text-align: center;
 }
 
@@ -138,6 +138,10 @@ nav.vertical.menu {
 .social-media {
   float: right;
   max-height: 45px;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 
   ul {
     list-style: none;

@@ -16,3 +16,24 @@
 		}
 	}
 }
+
+// Additional styles for The Virginian site
+
+// Locks footer into a max size based on the screen size
+#footer-container, #subfooter-container {
+	margin: 0 auto;
+	max-width: 62.5rem;
+	width: 100%;
+
+  #menu-footer-primary {
+    float: left;
+  }
+
+  #social-media-footer {
+    .social-media {
+      display: block !important;
+    }
+  }
+}
+
+
