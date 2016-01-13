@@ -20,20 +20,82 @@
 // Additional styles for The Virginian site
 
 // Locks footer into a max size based on the screen size
-#footer-container, #subfooter-container {
-	margin: 0 auto;
-	max-width: 62.5rem;
-	width: 100%;
+#footer-container {
+  footer {
+    padding: 1.875rem 2rem !important;
+  }
 
   #menu-footer-primary {
     float: left;
+
+    @media screen and (max-width: 600px) {
+      float: none;
+    }
+  }
+
+  #footer {
+    li {
+      float: left;
+    }
+
+    @media screen and (max-width: 600px) {
+      display: block;
+      float: none;
+      text-align: justify;
+      max-height: 20rem;
+
+      &:after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+      }
+
+      ul {
+        text-align: center;
+      }
+
+      li {
+        display: inline-block;
+        float: none;
+        padding: 1rem;
+        min-width: 50px;
+        text-align: center;
+      }
+    }
   }
 
   #social-media-footer {
+
+    @media screen and (max-width: 600px) {
+      display: inline-block;
+      width: 100%;
+    }
+
     .social-media {
       display: block !important;
+
+      @media screen and (max-width: 600px) {
+        float: none;
+        text-align: justify;
+
+        &:after {
+          content: '';
+          display: inline-block;
+          width: 100%;
+        }
+
+        ul {
+          text-align: center;
+        }
+
+        li {
+          display: inline-block;
+          float: none;
+          padding: 1rem;
+          min-width: 50px;
+          text-align: center;
+        }
+      }
     }
   }
 }
-
-

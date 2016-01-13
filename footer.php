@@ -24,11 +24,11 @@
 
 				<?php do_action( 'foundationpress_after_footer' ); ?>
 			</footer>
-		</div>
 
-        <div id="subfooter-container">
-            <?php get_template_part( '/parts/sub-footer' ); ?>
-        </div>
+            <footer id="subfooter">
+                <?php get_template_part( '/parts/sub-footer' ); ?>
+            </footer>
+		</div>
 
 		<?php do_action( 'foundationpress_layout_end' ); ?>
 
