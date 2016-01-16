@@ -1,36 +1,36 @@
 body.page-template-homepage {
 
-  div > section {
-    float: left;
-    width: 50%;
-  }
-
-  div {
-    @include clearfix;
-  }
+  // Hero styling
 
   #hero {
-    margin: rem-calc(20) 0;
+    margin: rem-calc(10) 0 rem-calc(20);
     padding: rem-calc(15);
   }
 
   h1 {
+    font-size: rem-calc(48);
     margin: 0;
-    padding-bottom: rem-calc(30);
+    padding: rem-calc(20) rem-calc(30);
   }
 
   p {
     border: 1px solid white;
-    padding: rem-calc(18) rem-calc(15);
+    padding: rem-calc(18) rem-calc(14) rem-calc(22);
   }
 
   @include breakpoint(small) {
     #hero {
-      padding: rem-calc(45);
+      padding: rem-calc(45) rem-calc(45) rem-calc(34);
     }
 
     h1 {
-      padding-bottom: rem-calc(4);
+      font-size: rem-calc(64);
+      padding-top: 0;
+      padding-bottom: rem-calc(14);
+    }
+
+    p {
+      padding: rem-calc(16) rem-calc(36) rem-calc(18) ;
     }
   }
 
@@ -48,5 +48,16 @@ body.page-template-homepage {
         padding: rem-calc(12) rem-calc(30);
       }
     }
+  }
+
+// Highlights styling
+  
+  div > section {
+    float: left;
+    width: 50%;
+  }
+
+  div {
+    @include clearfix;
   }
 }
