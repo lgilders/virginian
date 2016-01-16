@@ -112,8 +112,12 @@
 
 // Styles for main nav for MOBILE
 nav.vertical.menu {
-  padding-top: 3rem;
+  padding-top: 2rem;
   text-align: center;
+}
+
+#menu-header-mobile {
+  display: block;
 }
 
 // Hamburger icon for MOBILE
