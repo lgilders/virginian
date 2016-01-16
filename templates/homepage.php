@@ -5,23 +5,22 @@ Template Name: Homepage
 get_header(); ?>
 
 <?php $heroImage = get_field( 'hero_image' ); ?>
-<header id="hero" role="banner">
-    <?php if($heroImage): ?>
-        <img src="<?php echo $heroImage['url']; ?>" />
-    <?php endif; ?>
-
+<header id="hero" role="banner"
+        <?php if($heroImage): ?>
+        style="background: url(<?php echo $heroImage['url']; ?>)"
+        <?php endif; ?>>
     <h1><?php echo get_field( 'hero_title' ); ?></h1>
     <p><?php echo get_field( 'hero_introduction' ); ?></p>
 </header>
 
 <?php do_action( 'foundationpress_before_content' ); ?>
 
-<div id="highlights-primary">
+<div id="first" class="highlights group">
     <?php $firstLeftImage = get_field( 'first_left_image' ); ?>
-    <section id="real-estate">
-        <?php if($firstLeftImage): ?>
-            <img src="<?php echo $firstLeftImage['url']; ?>" />
-        <?php endif; ?>
+    <section id="real-estate"
+             <?php if($firstLeftImage): ?>
+             style="background: url(<?php echo $firstLeftImage['url']; ?>)"
+             <?php endif; ?>>
 
         <?php echo get_field( 'first_left_title' ); ?>
         <?php echo get_field( 'first_left_description' ); ?>
@@ -29,10 +28,10 @@ get_header(); ?>
     </section>
 
     <?php $firstRightImage = get_field( 'first_right_image' ); ?>
-    <section id="discovery-visit">
-        <?php if($firstRightImage): ?>
-            <img src="<?php echo $firstRightImage['url']; ?>" />
-        <?php endif; ?>
+    <section id="discovery-visit"
+             <?php if($firstRightImage): ?>
+             style="background: url(<?php echo $firstRightImage['url']; ?>)"
+             <?php endif; ?>>
 
         <?php echo get_field( 'first_right_title' ); ?>
         <?php echo get_field( 'first_right_description' ); ?>
@@ -41,20 +40,20 @@ get_header(); ?>
 </div>
 
 <?php $centerImage = get_field( 'center_image' ); ?>
-<div id="center">
-    <?php if($centerImage): ?>
-        <img src="<?php echo $centerImage['url']; ?>" />
-    <?php endif; ?>
+<div id="center"
+     <?php if($centerImage): ?>
+     style="background: url(<?php echo $centerImage['url']; ?>)"
+     <?php endif; ?>>
 
     <?php echo get_field( 'center_title' ); ?>
 </div>
 
-<div id="highlights-secondary">
+<div id="second" class="highlights group">
     <?php $secondLeftImage = get_field( 'second_left_image' ); ?>
-    <section id="golf-course">
-        <?php if($secondLeftImage): ?>
-            <img src="<?php echo $secondLeftImage['url']; ?>" />
-        <?php endif; ?>
+    <section id="golf-course"
+             <?php if($secondLeftImage): ?>
+             style="background: url(<?php echo $secondLeftImage['url']; ?>)"
+             <?php endif; ?>>
 
         <?php echo get_field( 'second_left_title' ); ?>
         <?php echo get_field( 'second_left_description' ); ?>
@@ -62,10 +61,10 @@ get_header(); ?>
     </section>
 
     <?php $secondRightImage = get_field( 'second_right_image' ); ?>
-    <section id="the-club">
-        <?php if ($secondRightImage): ?>
-            <img src="<?php echo $secondRightImage['url']; ?>" />
-        <?php endif; ?>
+    <section id="the-club"
+             <?php if($secondRightImage): ?>
+             style="background: url(<?php echo $secondRightImage['url']; ?>)"
+             <?php endif; ?>>
 
         <?php echo get_field( 'second_right_title' ); ?>
         <?php echo get_field( 'second_right_description' ); ?>

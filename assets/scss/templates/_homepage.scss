@@ -1,0 +1,16 @@
+body.page-template-homepage {
+
+  #hero {
+    min-height: 300px;
+    margin: 20px 0;
+  }
+
+  div > section {
+    float: left;
+    width: 50%;
+  }
+
+  section {
+    min-height: 20rem;
+  }
+}
