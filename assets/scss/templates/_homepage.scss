@@ -1,16 +1,52 @@
 body.page-template-homepage {
 
-  #hero {
-    min-height: 300px;
-    margin: 20px 0;
-  }
-
   div > section {
     float: left;
     width: 50%;
   }
 
-  section {
-    min-height: 20rem;
+  div {
+    @include clearfix;
+  }
+
+  #hero {
+    margin: rem-calc(20) 0;
+    padding: rem-calc(15);
+  }
+
+  h1 {
+    margin: 0;
+    padding-bottom: rem-calc(30);
+  }
+
+  p {
+    border: 1px solid white;
+    padding: rem-calc(18) rem-calc(15);
+  }
+
+  @include breakpoint(small) {
+    #hero {
+      padding: rem-calc(45);
+    }
+
+    h1 {
+      padding-bottom: rem-calc(4);
+    }
+  }
+
+  @include breakpoint(medium) {
+    #hero {
+      padding: rem-calc(60) rem-calc(170);
+
+      h1 {
+        font-size: rem-calc(64);
+        padding-bottom: rem-calc(20);
+      }
+
+      p {
+        border: 1px solid white;
+        padding: rem-calc(12) rem-calc(30);
+      }
+    }
   }
 }

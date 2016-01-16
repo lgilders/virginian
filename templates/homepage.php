@@ -15,7 +15,7 @@ get_header(); ?>
 
 <?php do_action( 'foundationpress_before_content' ); ?>
 
-<div id="first" class="highlights group">
+<div id="first" class="highlights">
     <?php $firstLeftImage = get_field( 'first_left_image' ); ?>
     <section id="real-estate"
              <?php if($firstLeftImage): ?>
@@ -48,7 +48,7 @@ get_header(); ?>
     <?php echo get_field( 'center_title' ); ?>
 </div>
 
-<div id="second" class="highlights group">
+<div id="second" class="highlights">
     <?php $secondLeftImage = get_field( 'second_left_image' ); ?>
     <section id="golf-course"
              <?php if($secondLeftImage): ?>

@@ -7,10 +7,3 @@ body {
   text-align: center;
   color: white;
 }
-
-// Clearfix for floated content
-.group:after {
-  content: "";
-  display: table;
-  clear: both;
-}
