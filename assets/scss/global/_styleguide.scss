@@ -1,6 +1,16 @@
-// Locks content into a max-width
 body {
+  // Locks content into a max-width
   margin: 0 auto;
   max-width: 62.5rem;
   width: 100%;
+  // Other general styles
+  text-align: center;
+  color: white;
+}
+
+// Clearfix for floated content
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
 }
