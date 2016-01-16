@@ -22,9 +22,9 @@ get_header(); ?>
              style="background: url(<?php echo $firstLeftImage['url']; ?>)"
              <?php endif; ?>>
 
-        <?php echo get_field( 'first_left_title' ); ?>
-        <?php echo get_field( 'first_left_description' ); ?>
-        <?php echo get_field( 'first_left_button' ); ?>
+        <p><?php echo get_field( 'first_left_title' ); ?></p>
+        <p><?php echo get_field( 'first_left_description' ); ?></p>
+        <a href=""><?php echo get_field( 'first_left_button' ); ?></a>
     </section>
 
     <?php $firstRightImage = get_field( 'first_right_image' ); ?>
@@ -33,9 +33,9 @@ get_header(); ?>
              style="background: url(<?php echo $firstRightImage['url']; ?>)"
              <?php endif; ?>>
 
-        <?php echo get_field( 'first_right_title' ); ?>
-        <?php echo get_field( 'first_right_description' ); ?>
-        <?php echo get_field( 'first_right_button' ); ?>
+        <p><?php echo get_field( 'first_right_title' ); ?></p>
+        <p><?php echo get_field( 'first_right_description' ); ?></p>
+        <a href=""><?php echo get_field( 'first_right_button' ); ?></a>
     </section>
 </div>
 
@@ -45,7 +45,7 @@ get_header(); ?>
      style="background: url(<?php echo $centerImage['url']; ?>)"
      <?php endif; ?>>
 
-    <?php echo get_field( 'center_title' ); ?>
+    <h2><?php echo get_field( 'center_title' ); ?></h2>
 </div>
 
 <div id="second" class="highlights">
@@ -55,9 +55,9 @@ get_header(); ?>
              style="background: url(<?php echo $secondLeftImage['url']; ?>)"
              <?php endif; ?>>
 
-        <?php echo get_field( 'second_left_title' ); ?>
-        <?php echo get_field( 'second_left_description' ); ?>
-        <?php echo get_field( 'second_left_button' ); ?>
+        <p><?php echo get_field( 'second_left_title' ); ?></p>
+        <p><?php echo get_field( 'second_left_description' ); ?></p>
+        <a href="" class="button"><?php echo get_field( 'second_left_button' ); ?></a>
     </section>
 
     <?php $secondRightImage = get_field( 'second_right_image' ); ?>
@@ -66,9 +66,9 @@ get_header(); ?>
              style="background: url(<?php echo $secondRightImage['url']; ?>)"
              <?php endif; ?>>
 
-        <?php echo get_field( 'second_right_title' ); ?>
-        <?php echo get_field( 'second_right_description' ); ?>
-        <?php echo get_field( 'second_right_button' ); ?>
+        <p><?php echo get_field( 'second_right_title' ); ?></p>
+        <p><?php echo get_field( 'second_right_description' ); ?></p>
+        <a href="" class="button"><?php echo get_field( 'second_right_button' ); ?></a>
     </section>
 </div>
 

@@ -40,7 +40,7 @@ body.page-template-homepage {
 
       h1 {
         font-size: rem-calc(64);
-        padding-bottom: rem-calc(20);
+        padding: 0 0 rem-calc(20);
       }
 
       p {
@@ -52,9 +52,17 @@ body.page-template-homepage {
 
 // Highlights styling
 
-  div > section {
-    float: left;
-    width: 50%;
+  section {
+    padding: rem-calc(20);
+  }
+
+  @include breakpoint(medium) {
+
+    div > section {
+      float: left;
+      width: 50%;
+    }
+
   }
 
   div {
