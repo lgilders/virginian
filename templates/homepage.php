@@ -22,9 +22,9 @@ get_header(); ?>
              style="background: url(<?php echo $firstLeftImage['url']; ?>)"
              <?php endif; ?>>
 
-        <p><?php echo get_field( 'first_left_title' ); ?></p>
+        <h3><?php echo get_field( 'first_left_title' ); ?></h3>
         <p><?php echo get_field( 'first_left_description' ); ?></p>
-        <a href=""><?php echo get_field( 'first_left_button' ); ?></a>
+        <a href="" class="button"><?php echo get_field( 'first_left_button' ); ?></a>
     </section>
 
     <?php $firstRightImage = get_field( 'first_right_image' ); ?>
@@ -33,9 +33,9 @@ get_header(); ?>
              style="background: url(<?php echo $firstRightImage['url']; ?>)"
              <?php endif; ?>>
 
-        <p><?php echo get_field( 'first_right_title' ); ?></p>
+        <h3><?php echo get_field( 'first_right_title' ); ?></h3>
         <p><?php echo get_field( 'first_right_description' ); ?></p>
-        <a href=""><?php echo get_field( 'first_right_button' ); ?></a>
+        <a href="" class="button"><?php echo get_field( 'first_right_button' ); ?></a>
     </section>
 </div>
 
@@ -55,7 +55,7 @@ get_header(); ?>
              style="background: url(<?php echo $secondLeftImage['url']; ?>)"
              <?php endif; ?>>
 
-        <p><?php echo get_field( 'second_left_title' ); ?></p>
+        <h3><?php echo get_field( 'second_left_title' ); ?></h3>
         <p><?php echo get_field( 'second_left_description' ); ?></p>
         <a href="" class="button"><?php echo get_field( 'second_left_button' ); ?></a>
     </section>
@@ -66,7 +66,7 @@ get_header(); ?>
              style="background: url(<?php echo $secondRightImage['url']; ?>)"
              <?php endif; ?>>
 
-        <p><?php echo get_field( 'second_right_title' ); ?></p>
+        <h3><?php echo get_field( 'second_right_title' ); ?></h3>
         <p><?php echo get_field( 'second_right_description' ); ?></p>
         <a href="" class="button"><?php echo get_field( 'second_right_button' ); ?></a>
     </section>

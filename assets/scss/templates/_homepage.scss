@@ -52,8 +52,41 @@ body.page-template-homepage {
 
 // Highlights styling
 
+  div {
+    margin-bottom: rem-calc(15);
+
+    @include clearfix;
+  }
+
   section {
-    padding: rem-calc(20);
+    padding: rem-calc(25) rem-calc(12);
+
+    h3 {
+      margin: 0;
+      padding: rem-calc(20) rem-calc(14) rem-calc(14);
+      font-family: $body-font-family;
+      font-size: rem-calc(30);
+      font-weight: bold;
+      line-height: rem-calc(30);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background-color: white;
+      color: #787878;
+    }
+
+    p {
+      border: none;
+      margin: 0;
+    }
+
+    .button {
+      min-width: rem-calc(205);
+      font-size: rem-calc(24);
+      margin: 0;
+      padding: rem-calc(14);
+      background-color: #535353;
+      color: white;
+    }
   }
 
   @include breakpoint(medium) {
@@ -65,7 +98,13 @@ body.page-template-homepage {
 
   }
 
-  div {
-    @include clearfix;
+// Center quote styling
+
+  #center {
+    display: none;
+
+    @include breakpoint(medium) {
+      display: block;
+    }
   }
 }
