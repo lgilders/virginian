@@ -82,7 +82,7 @@
   float: none;
   display: block;
   text-align: justify;
-  max-height: 80px;
+  max-height: rem-calc(60);
 
   &:after {
     content: '';
@@ -92,13 +92,14 @@
 
   ul {
     text-align: center;
+    max-height: rem-calc(52);
   }
 
   li {
     display: inline-block;
     float: none;
     padding: 1rem;
-    min-width: 50px;
+    min-width: rem-calc(50);
     text-align: center;
   }
 }
@@ -110,7 +111,11 @@ nav.vertical.menu {
 }
 
 #menu-header-mobile {
-  display: block;
+  display: block !important;
+
+  @include breakpoint(medium) {
+    display: none !important;
+  }
 }
 
 // Hamburger icon for MOBILE
@@ -122,22 +127,24 @@ nav.vertical.menu {
 
 // Styles for secondary nav
 .top-bar-right {
-  min-height: 0 !important;
-  max-height: 45px;
+  float: none;
+  max-height: none;
 
-  @media screen and (max-width: 768px) {
-    float: none;
-    max-height: none;
+  @include breakpoint(medium) {
+    float: right;
+    min-height: 0 !important;
+    max-height: rem-calc(45);
   }
 }
 
 // Social media links for DESKTOP
 .social-media {
-  float: right;
-  max-height: 45px;
+  display: none;
 
-  @media screen and (max-width: 768px) {
-    display: none;
+  @include breakpoint(medium) {
+    display: block;
+    float: right;
+    max-height: rem-calc(45);
   }
 
   ul {
@@ -150,7 +157,7 @@ nav.vertical.menu {
 
     a {
       display: block;
-      height: 45px;
+      height: rem-calc(45);
       line-height: 1;
       padding: 1rem;
       font-size: 0.8rem;
@@ -160,11 +167,11 @@ nav.vertical.menu {
 
 // Social media links for MOBILE
 #social-media-mobile {
-  display: none;
+  display: inline-block;
+  width: 100%;
 
-  @media screen and (max-width: 768px) {
-    display: inline-block;
-    width: 100%;
+  @include breakpoint(medium) {
+    display: none;
   }
 
   .social-media {
@@ -189,14 +196,14 @@ nav.vertical.menu {
     display: inline-block;
     float: none;
     padding: 1rem;
-    min-width: 50px;
+    min-width: rem-calc(50);
     text-align: center;
   }
 }
 
 // Logo styles
 #logo, #logo-mobile {
-  min-width: 100px;
+  min-width: rem-calc(100);
 
   img {
     display: block;
@@ -205,27 +212,33 @@ nav.vertical.menu {
 }
 
 #logo-mobile {
-  display: none;
+  display: block;
 
-  @media screen and (max-width: 768px) {
-    display: block;
+  img {
+    width: rem-calc(135);
+  }
+
+  @include breakpoint(medium) {
+    display: none;
   }
 }
 
 // Displays search form on icon click
 .search-form {
-  float: left;
+  margin-top: rem-calc(-32);
+  max-height: rem-calc(45);
 
-  @media screen and (max-width: 768px ) {
-    margin-top: -32px;
+  @include breakpoint(medium) {
+    float: left;
+    margin-top: 0;
   }
 
   form#searchform {
-    float: left;
+    width: 100%;
+    border-bottom: 1px solid white;
 
-    @media screen and (max-width: 768px) {
-      width: 100%;
-      border-bottom: 1px solid white;
+    @include breakpoint(medium) {
+      float: left;
     }
   }
 
@@ -233,22 +246,23 @@ nav.vertical.menu {
     position: absolute;
     top: 0;
     left: 0;
-    width: 45px;
-    height: 45px;
+    width: rem-calc(45);
+    height: rem-calc(45);
   }
 
   #label {
     position: relative;
     z-index: 20;
     float: left;
-    height: 45px;
-    width: 45px;
+    height: rem-calc(45);
+    width: rem-calc(45);
     line-height: 1;
     padding: 1rem;
     font-size: 0.8rem;
+    margin-bottom: 1rem;
 
-    @media screen and (max-width: 768px) {
-      margin-bottom: 1rem;
+    @include breakpoint(medium) {
+      margin-bottom: 0;
     }
   }
 
@@ -262,8 +276,8 @@ nav.vertical.menu {
     position: relative;
     top: 0;
     left: 0;
-    width: 250px;
-    height: 45px;
+    width: rem-calc(250);
+    height: rem-calc(45);
     z-index: 5;
     overflow: hidden;
   }
@@ -272,15 +286,15 @@ nav.vertical.menu {
     display: block;
     position: absolute;
     top: 0;
-    left: -250px;
-    width: 250px;
+    left: rem-calc(-250);
+    width: rem-calc(250);
     height: 100%;
     margin: 0;
     padding: 0 0 0 1rem;
     border: none;
     background-color: white;
     color: black;
-    font-size: 18px;
+    font-size: rem-calc(18);
     backface-visibility: none;
     border-radius: 0;
     transition: left 0;
@@ -302,10 +316,10 @@ nav.vertical.menu {
 
 // Placeholder styles for wireframe
 .top-bar, .top-bar ul, .title-bar {
-  background-color: white;
+  background-color: whitesmoke;
 
-  @media screen and (max-width: 768px) {
-    background-color: darkgrey;
+  @include breakpoint(medium) {
+    background-color: white;
   }
 }
 
@@ -313,11 +327,6 @@ nav.vertical.menu {
   color: grey;
 }
 
-.menu-icon::after {
-  background-color: grey;
-  box-shadow: 0 7px 0 grey, 0 14px 0 grey;
-}
-
 .search-form #input input {
-  background-color: whitesmoke;
+  background-color: lightgray;
 }

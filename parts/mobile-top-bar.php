@@ -9,6 +9,6 @@
 
 ?>
 
-<nav class="vertical menu" role="navigation">
+<nav class="vertical menu show-for-medium-down" role="navigation">
   <?php foundationpress_mobile_nav(); ?>
 </nav>
