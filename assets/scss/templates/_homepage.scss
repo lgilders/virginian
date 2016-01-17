@@ -1,5 +1,9 @@
 body.page-template-homepage {
 
+  section.container {
+    padding: 0 !important;
+  }
+
   // Hero styling
 
   #hero {
@@ -37,7 +41,7 @@ body.page-template-homepage {
 
   @include breakpoint(medium) {
     #hero {
-      padding: rem-calc(60) rem-calc(170);
+      padding: rem-calc(50) rem-calc(100);
 
       h1 {
         font-size: rem-calc(64);
@@ -48,6 +52,12 @@ body.page-template-homepage {
         border: 1px solid white;
         padding: rem-calc(12) rem-calc(30);
       }
+    }
+  }
+
+  @include breakpoint(large) {
+    #hero {
+      padding: rem-calc(60) rem-calc(170);
     }
   }
 
@@ -63,7 +73,7 @@ body.page-template-homepage {
     }
   }
 
-  section {
+  section, .overlay {
     position: relative;
     min-height: rem-calc(304);
     padding: rem-calc(25) rem-calc(12) rem-calc(20);
@@ -102,7 +112,13 @@ body.page-template-homepage {
 
   div + div {
     section {
-      padding-top: rem-calc(20);
+      padding: 0;
+
+      .overlay {
+        margin: 0;
+        padding: rem-calc(20);
+        background: rgba(256, 256, 256, 0.8);
+      }
 
       h3 {
         padding: 0;
@@ -119,10 +135,16 @@ body.page-template-homepage {
 
   @include breakpoint(small) {
 
-    section {
+    section, .overlay {
       min-height: rem-calc(330);
       padding-left: rem-calc(20);
       padding-right: rem-calc(20);
+    }
+
+    div + div {
+      section, .overlay {
+        min-height: rem-calc(365);
+      }
     }
 
     div > section {
@@ -145,10 +167,28 @@ body.page-template-homepage {
         padding: rem-calc(36) 0 rem-calc(56);
       }
     }
+
+    div + div {
+      section {
+        padding: rem-calc(57) rem-calc(44);
+
+        .overlay {
+          padding: rem-calc(16) rem-calc(32);
+
+          h3 {
+            background-color: transparent !important;
+          }
+
+          p {
+            padding: 0 0 rem-calc(24);
+          }
+        }
+      }
+    }
   }
 
   @include breakpoint(large) {
-    section {
+    section, .overlay {
       min-height: rem-calc(434);
     }
   }

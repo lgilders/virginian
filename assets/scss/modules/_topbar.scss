@@ -79,6 +79,7 @@
 
 // Styles for main nav
 .top-bar-left {
+  margin: 0 !important;
   float: none;
   display: block;
   text-align: justify;
@@ -225,7 +226,7 @@ nav.vertical.menu {
 
 // Displays search form on icon click
 .search-form {
-  margin-top: rem-calc(-32);
+  margin-top: rem-calc(-45);
   max-height: rem-calc(45);
 
   @include breakpoint(medium) {
@@ -317,6 +318,7 @@ nav.vertical.menu {
 // Placeholder styles for wireframe
 .top-bar, .top-bar ul, .title-bar {
   background-color: whitesmoke;
+  margin-bottom: 0 !important;
 
   @include breakpoint(medium) {
     background-color: white;

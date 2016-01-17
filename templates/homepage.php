@@ -54,10 +54,11 @@ get_header(); ?>
              <?php if($secondLeftImage): ?>
              style="background: url(<?php echo $secondLeftImage['url']; ?>)"
              <?php endif; ?>>
-
-        <h3><?php echo get_field( 'second_left_title' ); ?></h3>
-        <p><?php echo get_field( 'second_left_description' ); ?></p>
-        <a href="" class="button"><?php echo get_field( 'second_left_button' ); ?></a>
+        <div class="overlay">
+            <h3><?php echo get_field( 'second_left_title' ); ?></h3>
+            <p><?php echo get_field( 'second_left_description' ); ?></p>
+            <a href="" class="button"><?php echo get_field( 'second_left_button' ); ?></a>
+        </div>
     </section>
 
     <?php $secondRightImage = get_field( 'second_right_image' ); ?>
@@ -65,10 +66,11 @@ get_header(); ?>
              <?php if($secondRightImage): ?>
              style="background: url(<?php echo $secondRightImage['url']; ?>)"
              <?php endif; ?>>
-
-        <h3><?php echo get_field( 'second_right_title' ); ?></h3>
-        <p><?php echo get_field( 'second_right_description' ); ?></p>
-        <a href="" class="button"><?php echo get_field( 'second_right_button' ); ?></a>
+        <div class="overlay">
+            <h3><?php echo get_field( 'second_right_title' ); ?></h3>
+            <p><?php echo get_field( 'second_right_description' ); ?></p>
+            <a href="" class="button"><?php echo get_field( 'second_right_button' ); ?></a>
+        </div>
     </section>
 </div>
 
