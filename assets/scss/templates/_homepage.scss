@@ -65,7 +65,7 @@ body.page-template-homepage {
 
   section {
     position: relative;
-    min-height: rem-calc(300);
+    min-height: rem-calc(304);
     padding: rem-calc(25) rem-calc(12) rem-calc(20);
 
     h3 {
@@ -119,11 +119,29 @@ body.page-template-homepage {
 
   @include breakpoint(small) {
 
+    section {
+      min-height: rem-calc(330);
+      padding-left: rem-calc(20);
+      padding-right: rem-calc(20);
+    }
+
     div > section {
       float: left;
       width: 50%;
     }
+  }
 
+  @media screen and (max-width: 625px) {
+
+    div > section {
+      width: 100%;
+    }
+  }
+
+  @include breakpoint(medium) {
+    section {
+      min-height: rem-calc(400);
+    }
   }
 
 // Center quote styling
@@ -133,6 +151,12 @@ body.page-template-homepage {
 
     @include breakpoint(small) {
       display: block;
+      padding: rem-calc(52) rem-calc(87);
+
+      h2 {
+        margin: 0;
+        font-size: rem-calc(48);
+      }
     }
   }
 }
