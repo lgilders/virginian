@@ -74,6 +74,8 @@
   a {
     text-transform: uppercase;
     letter-spacing: 0.1rem;
+    font-size: rem-calc(18);
+    line-height: rem-calc(30);
   }
 }
 
@@ -159,9 +161,8 @@ nav.vertical.menu {
     a {
       display: block;
       height: rem-calc(45);
-      line-height: 1;
       padding: 1rem;
-      font-size: 0.8rem;
+      font-size: rem-calc(18);
     }
   }
 }
@@ -226,7 +227,7 @@ nav.vertical.menu {
 
 // Displays search form on icon click
 .search-form {
-  margin-top: rem-calc(-45);
+  margin-top: rem-calc(-50);
   max-height: rem-calc(45);
 
   @include breakpoint(medium) {
@@ -259,7 +260,7 @@ nav.vertical.menu {
     width: rem-calc(45);
     line-height: 1;
     padding: 1rem;
-    font-size: 0.8rem;
+    font-size: rem-calc(18);
     margin-bottom: 1rem;
 
     @include breakpoint(medium) {
