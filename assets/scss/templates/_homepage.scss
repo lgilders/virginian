@@ -1,7 +1,10 @@
 body.page-template-homepage {
 
   section.container {
+    max-height: none !important;
     padding: 0 !important;
+
+    @include clearfix;
   }
 
   // Hero styling
@@ -142,8 +145,13 @@ body.page-template-homepage {
     }
 
     div + div {
-      section, .overlay {
-        min-height: rem-calc(365);
+      section {
+        .overlay {
+          p {
+            min-height: rem-calc(154);
+            padding: rem-calc(18) 0 rem-calc(14);
+          }
+        }
       }
     }
 
@@ -164,6 +172,7 @@ body.page-template-homepage {
       }
 
       p {
+        min-height: rem-calc(181);
         padding: rem-calc(36) 0 rem-calc(56);
       }
     }
@@ -173,6 +182,7 @@ body.page-template-homepage {
         padding: rem-calc(57) rem-calc(44);
 
         .overlay {
+          max-height: rem-calc(284);
           padding: rem-calc(16) rem-calc(32);
 
           h3 {
@@ -180,6 +190,7 @@ body.page-template-homepage {
           }
 
           p {
+            min-height: rem-calc(145);
             padding: 0 0 rem-calc(24);
           }
         }
@@ -188,7 +199,7 @@ body.page-template-homepage {
   }
 
   @include breakpoint(large) {
-    section, .overlay {
+    section {
       min-height: rem-calc(434);
     }
   }
