@@ -131,16 +131,33 @@ body.page-template-homepage {
     }
   }
 
+  @include breakpoint(medium) {
+    section {
+      min-height: rem-calc(494);
+      padding: rem-calc(66) rem-calc(42) rem-calc(67.5);
+
+      h3 {
+        max-width: rem-calc(382);
+        margin: 0 rem-calc(28);
+      }
+
+      p {
+        padding: rem-calc(36) 0 rem-calc(56);
+      }
+    }
+  }
+
+  @include breakpoint(large) {
+    section {
+      min-height: rem-calc(434);
+    }
+  }
+
+// Fixes for strange section sizes during resize events
   @media screen and (max-width: 625px) {
 
     div > section {
       width: 100%;
-    }
-  }
-
-  @include breakpoint(medium) {
-    section {
-      min-height: rem-calc(400);
     }
   }
 
@@ -157,6 +174,10 @@ body.page-template-homepage {
         margin: 0;
         font-size: rem-calc(48);
       }
+    }
+
+    @include breakpoint(medium) {
+      padding: rem-calc(78) rem-calc(215);
     }
   }
 }
