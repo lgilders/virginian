@@ -4,23 +4,24 @@ body.page-template-homepage {
 
   #hero {
     margin: rem-calc(10) 0 rem-calc(20);
-    padding: rem-calc(15);
-  }
+    padding: rem-calc(15) rem-calc(15) rem-calc(46);
 
-  h1 {
-    font-size: rem-calc(48);
-    margin: 0;
-    padding: rem-calc(20) rem-calc(30);
-  }
+    h1 {
+      font-size: rem-calc(48);
+      margin: 0;
+      padding: rem-calc(20) rem-calc(30);
+    }
 
-  p {
-    border: 1px solid white;
-    padding: rem-calc(18) rem-calc(14) rem-calc(22);
+    p {
+      border: 1px solid white;
+      padding: rem-calc(18) rem-calc(14) rem-calc(22);
+    }
   }
 
   @include breakpoint(small) {
     #hero {
-      padding: rem-calc(45) rem-calc(45) rem-calc(34);
+      margin-bottom: rem-calc(15);
+      padding: rem-calc(45) rem-calc(45) rem-calc(50);
     }
 
     h1 {
@@ -56,10 +57,16 @@ body.page-template-homepage {
     margin-bottom: rem-calc(15);
 
     @include clearfix;
+
+    @include breakpoint(small) {
+      margin-bottom: rem-calc(10);
+    }
   }
 
   section {
-    padding: rem-calc(25) rem-calc(12);
+    position: relative;
+    min-height: rem-calc(300);
+    padding: rem-calc(25) rem-calc(12) rem-calc(20);
 
     h3 {
       margin: 0;
@@ -68,7 +75,7 @@ body.page-template-homepage {
       font-size: rem-calc(30);
       font-weight: bold;
       line-height: rem-calc(30);
-      letter-spacing: 0.1em;
+      letter-spacing: 0.0875em;
       text-transform: uppercase;
       background-color: white;
       color: #787878;
@@ -77,9 +84,13 @@ body.page-template-homepage {
     p {
       border: none;
       margin: 0;
+      padding: rem-calc(24) 0;
     }
 
     .button {
+      //position: absolute;
+      //left: rem-calc(58);
+      //bottom: rem-calc(25);
       min-width: rem-calc(205);
       font-size: rem-calc(24);
       margin: 0;
@@ -89,7 +100,24 @@ body.page-template-homepage {
     }
   }
 
-  @include breakpoint(medium) {
+  div + div {
+    section {
+      padding-top: rem-calc(20);
+
+      h3 {
+        padding: 0;
+        background-color: transparent;
+        color: #727272;
+      }
+
+      p {
+        padding: rem-calc(14) 0;
+        color: black;
+      }
+    }
+  }
+
+  @include breakpoint(small) {
 
     div > section {
       float: left;
@@ -103,7 +131,7 @@ body.page-template-homepage {
   #center {
     display: none;
 
-    @include breakpoint(medium) {
+    @include breakpoint(small) {
       display: block;
     }
   }
