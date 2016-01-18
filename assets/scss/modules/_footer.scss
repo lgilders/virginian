@@ -19,33 +19,106 @@
 
 // Additional styles for The Virginian site
 
-// Locks footer into a max size based on the screen size
 #footer-container {
+  margin: 0;
+  padding: rem-calc(36) rem-calc(30);
+  border: none;
+  background-color: #525252;
+
   footer {
-    padding: 1.875rem 2rem !important;
+    padding: 0 !important;
+
+    @include breakpoint(small) {
+      padding: 1.875rem 2rem !important;
+    }
   }
 
   #menu-footer-primary {
-    float: left;
+    float: none;
 
-    @media screen and (max-width: 600px) {
-      float: none;
+    @include breakpoint(small) {
+      float: left;
     }
   }
 
   #footer {
+    display: block;
+    float: none;
+    padding: 0 !important;
+    text-align: justify;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 100%;
+    }
+
+    ul {
+      text-align: center;
+    }
+
+    li {
+      display: inline-block;
+      float: none;
+      padding: 1.25rem;
+      min-width: 50px;
+      text-align: center;
+
+      @include breakpoint(small) {
+        padding: 0;
+      }
+
+      @include breakpoint(medium) {
+        padding: 1rem;
+      }
+    }
+
+    a {
+      text-transform: uppercase;
+      color: white;
+    }
 
     @include clearfix;
 
-    li {
-      float: left;
+    @include breakpoint(small) {
+      li {
+        float: left;
+      }
+    }
+  }
+
+  #menu-footer-primary {
+
+    li:nth-child(1), li:nth-child(2), li:nth-child(3) {
+      &:before {
+        display: none;
+
+        @include breakpoint(small) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  #social-media-footer {
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+
+    @include breakpoint(small) {
+      float: right;
+      width: 25%;
     }
 
-    @media screen and (max-width: 600px) {
-      display: block;
+    @include breakpoint(medium) {
+      width: 30%;
+    }
+
+    .social-media {
+      display: block !important;
       float: none;
       text-align: justify;
-      max-height: 20rem;
+      margin: 0;
 
       &:after {
         content: '';
@@ -60,63 +133,27 @@
       li {
         display: inline-block;
         float: none;
-        padding: 1rem;
+        padding: 0;
         min-width: 50px;
         text-align: center;
-      }
-    }
-  }
 
-  #menu-footer-primary {
-
-    li:nth-child(1), li:nth-child(2), li:nth-child(3) {
-      &:before {
-        position: relative;
-        left: 45%;
-
-        @media screen and (max-width: 600px) {
-          left: 0;
-        }
-      }
-    }
-  }
-
-  #subfooter {
-    margin-top: 2rem;
-  }
-
-  #social-media-footer {
-
-    @media screen and (max-width: 600px) {
-      display: inline-block;
-      width: 100%;
-    }
-
-    .social-media {
-      display: block !important;
-
-      @media screen and (max-width: 600px) {
-        float: none;
-        text-align: justify;
-
-        &:after {
-          content: '';
-          display: inline-block;
-          width: 100%;
-        }
-
-        ul {
-          text-align: center;
-        }
-
-        li {
-          display: inline-block;
-          float: none;
+        @include breakpoint(medium) {
           padding: 1rem;
-          min-width: 50px;
-          text-align: center;
         }
       }
     }
+  }
+}
+
+#subfooter {
+  min-height: rem-calc(60);
+  padding: rem-calc(30);
+  color: white;
+  background-color: #3b3b3b;
+
+  p {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
   }
 }
