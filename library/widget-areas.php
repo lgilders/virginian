@@ -28,6 +28,16 @@ function foundationpress_sidebar_widgets() {
 	  'before_title' => '<h6>',
 	  'after_title' => '</h6>',
 	));
+
+    register_sidebar(array(
+        'id' => 'featured-property-widgets',
+        'name' => __( 'Featured property widgets', 'foundationpress' ),
+        'description' => __( 'Drag widgets to this container', 'foundationpress' ),
+        'before_widget' => '<section id="%1$s" class="large-12 columns widget %2$s">',
+        'after_widget' => '</section>',
+        'before_title' => '<h6>',
+        'after_title' => '</h6>',
+    ));
 }
 
 add_action( 'widgets_init', 'foundationpress_sidebar_widgets' );

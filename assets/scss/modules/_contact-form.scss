@@ -9,6 +9,7 @@ iframe {
 #contact-form {
   min-height: 0 !important;
   z-index: 1000;
+  color: black;
 }
 
 #contact-form-header {
@@ -33,16 +34,17 @@ iframe {
 
 // MOBILE styles
 #contact-form-mobile {
-  display: none;
+  display: block;
+  max-height: 17rem;
+  color: black;
 
-  @media screen and (max-width: 768px) {
-    display: block;
-    max-height: 17rem;
+  @include breakpoint(medium) {
+    display: none;
   }
 
   #contact-form-header {
     padding-top: 1rem;
-    text-align: left;
+    text-align: center;
     border-top: 1px solid white;
 
     p {
