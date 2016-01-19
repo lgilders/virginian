@@ -6,4 +6,32 @@ body {
   // Other general styles
   text-align: center;
   color: white;
+
+  // Set up body container
+  section.container {
+    max-height: none !important;
+    padding: 0 !important;
+
+    @include clearfix;
+  }
+
+  // Hero styling
+  #hero {
+    margin: 0;
+    padding: 0;
+
+    h1 {
+      margin: 0;
+      padding: 0;
+      font-size: rem-calc(48);
+      line-height: rem-calc(48);
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+      font-size: rem-calc(16);
+      line-height: rem-calc(30);
+    }
+  }
 }

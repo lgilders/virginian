@@ -1,20 +1,12 @@
 body.page-template-homepage {
 
-  section.container {
-    max-height: none !important;
-    padding: 0 !important;
-
-    @include clearfix;
-  }
-
   // Hero styling
 
   #hero {
-    margin: rem-calc(10) 0 rem-calc(20);
+    margin: 0 0 rem-calc(20);
     padding: rem-calc(15) rem-calc(15) rem-calc(46);
 
     h1 {
-      font-size: rem-calc(48);
       margin: 0;
       padding: rem-calc(20) rem-calc(30);
     }

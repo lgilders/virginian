@@ -17,7 +17,12 @@ get_header(); ?>
 <?php do_action( 'foundationpress_before_content' ); ?>
 
 <div id="first">
-    <section id="description"
+    <?php $iconImage = get_field( 'secondary_icon' ); ?>
+    <section id="description">
+        <?php if($iconImage): ?>
+            <img src="<?php echo $iconImage['url']; ?>" alt="icon" />
+        <?php endif; ?>
+
         <p><?php echo get_field( 'secondary_text' ); ?></p>
     </section>
 </div>

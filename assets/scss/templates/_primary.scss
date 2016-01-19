@@ -1,3 +1,55 @@
 body.page-template-primary {
 
+  // Hero styling
+
+  #hero {
+
+    h1 {
+      padding: rem-calc(36);
+    }
+
+    p {
+      padding: 0 rem-calc(45) rem-calc(45);
+    }
+
+    nav {
+      background-color: #959595;
+
+      ul {
+        padding: rem-calc(36) rem-calc(60);
+      }
+
+      li {
+        display: inline;
+      }
+
+      .menu > li:not(.menu-text) > a {
+        margin-bottom: rem-calc(30);
+        border: 1px solid white;
+        color: white;
+        font-size: rem-calc(24);
+        line-height: rem-calc(30);
+      }
+
+      li:last-child > a {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+
+  #first {
+    #description {
+      padding: rem-calc(52) rem-calc(25);
+
+      p {
+        margin: 0;
+        padding-top: rem-calc(40);
+        color: black;
+      }
+    }
+  }
+
+  #second {
+    display: none;
+  }
 }
