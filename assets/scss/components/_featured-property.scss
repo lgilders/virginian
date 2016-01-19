@@ -8,7 +8,7 @@ body.page-template-homepage, body.page-template-primary {
     background-color: #a5a5a5;
 
     @include breakpoint(small) {
-      padding: rem-calc(30) rem-calc(24) rem-calc(8) !important;
+      padding: rem-calc(30) rem-calc(24) rem-calc(14) !important;
     }
 
     @include breakpoint(medium) {
@@ -17,9 +17,18 @@ body.page-template-homepage, body.page-template-primary {
     }
 
     h3 {
+      margin: 0;
+      padding: rem-calc(20) rem-calc(14) rem-calc(14);
       max-width: none;
       line-height: rem-calc(52);
       background-color: transparent;
+      font-family: $body-font-family;
+      font-size: rem-calc(30);
+      font-weight: bold;
+      line-height: rem-calc(30);
+      letter-spacing: 0.0875rem;
+      text-transform: uppercase;
+      color: #787878;
 
       @include breakpoint(small) {
         padding-top: 0;
@@ -32,9 +41,14 @@ body.page-template-homepage, body.page-template-primary {
       }
     }
 
+    .listing {
+      margin-bottom: 0;
+    }
+
     p.listing-address {
       font-size: rem-calc(24);
       line-height: rem-calc(29);
+      margin-bottom: 0;
       padding: 0 0 rem-calc(10);
       color: black;
 
@@ -49,8 +63,18 @@ body.page-template-homepage, body.page-template-primary {
     }
 
     .description {
+      margin-bottom: rem-calc(10);
       padding: 0 rem-calc(24);
       color: black;
+    }
+
+    .button {
+      min-width: rem-calc(205);
+      font-size: rem-calc(24);
+      margin: 0;
+      padding: rem-calc(14);
+      background-color: #535353;
+      color: white;
     }
 
   }
@@ -69,10 +93,14 @@ body.page-template-homepage, body.page-template-primary {
   }
 
   .listing-summary {
+    margin-bottom: 0;
+    padding-bottom: rem-calc(20);
 
     @include breakpoint(small) {
       float: right;
       width: 50%;
+      margin-bottom: rem-calc(10);
+      padding-bottom: 0;
     }
 
     @include breakpoint(medium) {
