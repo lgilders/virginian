@@ -1,20 +1,12 @@
 body.page-template-homepage {
 
-  section.container {
-    max-height: none !important;
-    padding: 0 !important;
-
-    @include clearfix;
-  }
-
   // Hero styling
 
   #hero {
-    margin: rem-calc(10) 0 rem-calc(20);
+    margin: 0 0 rem-calc(20);
     padding: rem-calc(15) rem-calc(15) rem-calc(46);
 
     h1 {
-      font-size: rem-calc(48);
       margin: 0;
       padding: rem-calc(20) rem-calc(30);
     }
@@ -226,103 +218,6 @@ body.page-template-homepage {
 
     @include breakpoint(medium) {
       padding: rem-calc(78) rem-calc(215);
-    }
-  }
-
-// Featured property styling
-
-  section.wplistings-featured-listings {
-    float: none !important;
-    padding: 0 !important;
-    color: #787878;
-    background-color: #a5a5a5;
-
-    @include breakpoint(small) {
-      padding: rem-calc(30) rem-calc(24) rem-calc(8) !important;
-    }
-
-    @include breakpoint(medium) {
-      min-height: rem-calc(313);
-      padding: rem-calc(25) rem-calc(43) rem-calc(14) !important;
-    }
-
-    h3 {
-      max-width: none;
-      line-height: rem-calc(52);
-      background-color: transparent;
-
-      @include breakpoint(small) {
-        padding-top: 0;
-        padding-right: 0;
-      }
-
-      @include breakpoint(medium) {
-        padding: 0 0 rem-calc(14);
-        margin: 0;
-      }
-    }
-
-    p.listing-address {
-      font-size: rem-calc(24);
-      line-height: rem-calc(29);
-      padding: 0 0 rem-calc(10);
-      color: black;
-
-      @include breakpoint(small) {
-        line-height: rem-calc(36);
-        padding-bottom: rem-calc(14);
-      }
-
-      @include breakpoint(medium) {
-        min-height: initial;
-      }
-    }
-
-    .description {
-      padding: 0 rem-calc(24);
-      color: black;
-    }
-
-  }
-
-  .widget .listing-wrap {
-    margin: 0 !important;
-  }
-
-  .widget .listing-widget-thumb {
-    margin: 0 !important;
-
-    @include breakpoint(small) {
-      float: left;
-      width: 50%;
-    }
-  }
-
-  .listing-summary {
-
-    @include breakpoint(small) {
-      float: right;
-      width: 50%;
-    }
-
-    @include breakpoint(medium) {
-      padding-left: rem-calc(43);
-    }
-  }
-
-  .widget .listing-wrap .more-link {
-    display: inline-block !important;
-  }
-
-  // Fixes for strange section sizes during resize events
-  @media screen and (max-width: 625px) {
-
-    section.wplistings-featured-listings h3 {
-      padding-top: rem-calc(18);
-    }
-
-    .widget .listing-widget-thumb, .listing-summary {
-      width: 100%;
     }
   }
 

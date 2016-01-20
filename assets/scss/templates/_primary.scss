@@ -1,0 +1,136 @@
+body.page-template-primary {
+
+  // Hero styling
+
+  #hero {
+
+    h1 {
+      padding: rem-calc(36);
+
+      @include breakpoint(small) {
+        padding-top: rem-calc(44);
+        padding-bottom: rem-calc(8);
+        font-size: rem-calc(64);
+        line-height: rem-calc(64);
+      }
+
+      @include breakpoint(medium) {
+        padding-top: rem-calc(62);
+      }
+    }
+
+    p {
+      padding: 0 rem-calc(45) rem-calc(45);
+
+      @include breakpoint(small) {
+        padding: 0 rem-calc(80);
+      }
+
+      @include breakpoint(medium) {
+        padding: 0 rem-calc(200);
+      }
+    }
+
+    nav {
+      background-color: #959595;
+
+      ul {
+        padding: rem-calc(36) rem-calc(60);
+      }
+
+      li {
+        display: inline;
+      }
+
+      .menu > li:not(.menu-text) > a {
+        margin-bottom: rem-calc(30);
+        border: 1px solid white;
+        color: white;
+        font-size: rem-calc(24);
+        line-height: rem-calc(30);
+        text-transform: uppercase;
+      }
+
+      li:last-child > a {
+        margin-bottom: 0 !important;
+      }
+
+      @include breakpoint(small) {
+        background-color: transparent;
+
+        ul {
+          padding-top: rem-calc(14);
+        }
+
+        li {
+          display: inline-block;
+        }
+
+        .menu > li:not(.menu-text) > a {
+          margin: rem-calc(10);
+          font-size: rem-calc(16);
+          line-height: rem-calc(30);
+          padding: rem-calc(5) rem-calc(52);
+        }
+
+        li:last-child > a {
+          margin-top: 0 !important;
+          margin-bottom: 0 !important;
+        }
+      }
+
+      @include breakpoint(medium) {
+        ul {
+          padding-top: rem-calc(52);
+          padding-bottom: rem-calc(62);
+        }
+
+        .menu > li:not(.menu-text) > a {
+          margin: rem-calc(8);
+          padding: rem-calc(5) rem-calc(48);
+        }
+      }
+    }
+  }
+
+  #first {
+    #description {
+      padding: rem-calc(52) rem-calc(25);
+
+      p {
+        margin: 0;
+        padding-top: rem-calc(40);
+        color: black;
+      }
+
+      @include breakpoint(small) {
+        padding: rem-calc(52) rem-calc(48);
+      }
+
+      @include breakpoint(medium) {
+        padding: rem-calc(68) rem-calc(200);
+      }
+    }
+  }
+
+  #second {
+    display: none;
+
+    @include breakpoint(small) {
+      display: block;
+
+      h2 {
+        margin: 0;
+        padding: rem-calc(52);
+        font-size: rem-calc(48);
+        line-height: rem-calc(48);
+      }
+    }
+
+    @include breakpoint(medium) {
+      h2 {
+        padding: rem-calc(80) rem-calc(52);
+      }
+    }
+  }
+}
