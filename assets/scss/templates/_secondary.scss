@@ -1,0 +1,88 @@
+body.page-template-secondary {
+  // Hero styling
+
+  #hero {
+    margin: 0 0 rem-calc(20);
+    padding: rem-calc(15) rem-calc(15) rem-calc(46);
+
+    h1 {
+      margin: 0;
+      padding: rem-calc(20) rem-calc(30);
+    }
+
+    p {
+      border: 1px solid white;
+      padding: rem-calc(18) rem-calc(14) rem-calc(22);
+    }
+  }
+
+  @include breakpoint(small) {
+    #hero {
+      margin-bottom: rem-calc(15);
+      padding: rem-calc(45) rem-calc(45) rem-calc(50);
+    }
+
+    h1 {
+      font-size: rem-calc(64);
+      padding-top: 0;
+      padding-bottom: rem-calc(14);
+    }
+
+    p {
+      padding: rem-calc(16) rem-calc(36) rem-calc(18) ;
+    }
+  }
+
+  @include breakpoint(medium) {
+    #hero {
+      padding: rem-calc(50) rem-calc(100);
+
+      h1 {
+        font-size: rem-calc(64);
+        padding: 0 0 rem-calc(20);
+      }
+
+      p {
+        border: 1px solid white;
+        padding: rem-calc(12) rem-calc(30);
+      }
+    }
+  }
+
+  @include breakpoint(large) {
+    #hero {
+      padding: rem-calc(60) rem-calc(170);
+    }
+  }
+
+  #first, #second {
+    padding: rem-calc(28);
+
+    #title h1 {
+      padding: rem-calc(20) rem-calc(14) rem-calc(32);
+      color: #868686;
+    }
+
+    #description p {
+      margin: 0;
+      padding: rem-calc(32) 0 rem-calc(14);
+      text-align: left;
+      color: black;
+    }
+  }
+
+  #center {
+    display: none;
+
+    @include breakpoint(small) {
+      display: block;
+    }
+  }
+
+  #second {
+    #title h1 {
+      padding-top: rem-calc(62);
+      border-top: 1px solid #868686;
+    }
+  }
+}

@@ -18,7 +18,7 @@ get_header(); ?>
 
     <div id="first">
         <section id="title">
-            <?php echo get_field( 'first_section_title' ); ?>
+            <h1><?php echo get_field( 'first_section_title' ); ?></h1>
         </section>
 
         <?php $firstImage = get_field( 'first_section_image' ); ?>
@@ -34,7 +34,7 @@ get_header(); ?>
         </section>
 
         <section id="description">
-            <?php echo get_field( 'first_section_description' ); ?>
+            <p><?php echo get_field( 'first_section_description' ); ?></p>
         </section>
     </div>
 
@@ -49,7 +49,7 @@ get_header(); ?>
 
     <div id="second">
         <section id="title">
-            <?php echo get_field( 'second_section_title' ); ?>
+            <h1><?php echo get_field( 'second_section_title' ); ?></h1>
         </section>
 
         <?php $secondImage = get_field( 'second_section_image' ); ?>
@@ -65,7 +65,7 @@ get_header(); ?>
         </section>
 
         <section id="description">
-            <?php echo get_field( 'second_section_description' ); ?>
+            <p><?php echo get_field( 'second_section_description' ); ?></p>
         </section>
     </div>
 
