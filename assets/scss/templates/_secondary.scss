@@ -87,7 +87,7 @@ body.page-template-secondary {
     }
 
     #media {
-      @include breakpoint(small) {
+      @include breakpoint(700) {
         float: right;
         width: 36%;
       }
@@ -103,7 +103,7 @@ body.page-template-secondary {
       text-align: left;
       color: black;
 
-      @include breakpoint(small) {
+      @include breakpoint(700) {
         float: left;
         width: 64%;
         padding-top: 0;
@@ -139,7 +139,7 @@ body.page-template-secondary {
       }
     }
 
-    @include breakpoint(small) {
+    @include breakpoint(700) {
       #media {
         float: left;
       }
