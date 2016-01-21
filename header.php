@@ -92,37 +92,39 @@
                 <script type="text/javascript" src="https://koi-N24YKLWU.marketingautomation.services/client/form.js?ver=1.1.1"></script>
             </div>
 
-            <div class="small-12 medium-6 large-6 search-form">
-                <?php get_search_form(); ?>
+            <div id="desktop-menu">
+                <div class="small-12 medium-6 large-6 search-form">
+                    <?php get_search_form(); ?>
+                </div>
+
+                <?php get_template_part( '/parts/social-media' ); ?>
+
+                <div class="top-bar-right">
+                    <?php foundationpress_top_bar_r(); ?>
+
+                    <?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'topbar' ) : ?>
+                        <?php get_template_part( 'parts/mobile-top-bar' ); ?>
+
+                        <div id="contact-form-mobile">
+                            <?php get_template_part( '/parts/contact-form' ); ?>
+
+                            <!-- SharpSpring Form for Contact  -->
+                            <script type="text/javascript">
+                                var ss_form = {'account': 'MzQxMze2NAYA', 'formID': 'MzI0S0w1NTbUTTGxMNA1STQ10000SDXVNbc0SE0zs0iysDRKAgA'};
+                                ss_form.width = '100%';
+                                ss_form.height = '1000';
+                                ss_form.domain = 'app-N24YKLWU.marketingautomation.services';
+                                ss_form.hidden = {'_usePlaceholders' : true}; // Modify this for sending hidden variables, or overriding values
+                            </script>
+                            <script type="text/javascript" src="https://koi-N24YKLWU.marketingautomation.services/client/form.js?ver=1.1.1"></script>
+                        </div>
+
+                        <div id="social-media-mobile">
+                            <?php get_template_part( '/parts/social-media' ); ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
             </div>
-
-            <?php get_template_part( '/parts/social-media' ); ?>
-
-			<div class="top-bar-right">
-				<?php foundationpress_top_bar_r(); ?>
-
-				<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'topbar' ) : ?>
-					<?php get_template_part( 'parts/mobile-top-bar' ); ?>
-
-                    <div id="contact-form-mobile">
-                        <?php get_template_part( '/parts/contact-form' ); ?>
-
-                        <!-- SharpSpring Form for Contact  -->
-                        <script type="text/javascript">
-                            var ss_form = {'account': 'MzQxMze2NAYA', 'formID': 'MzI0S0w1NTbUTTGxMNA1STQ10000SDXVNbc0SE0zs0iysDRKAgA'};
-                            ss_form.width = '100%';
-                            ss_form.height = '1000';
-                            ss_form.domain = 'app-N24YKLWU.marketingautomation.services';
-                            ss_form.hidden = {'_usePlaceholders' : true}; // Modify this for sending hidden variables, or overriding values
-                        </script>
-                        <script type="text/javascript" src="https://koi-N24YKLWU.marketingautomation.services/client/form.js?ver=1.1.1"></script>
-                    </div>
-
-                    <div id="social-media-mobile">
-                        <?php get_template_part( '/parts/social-media' ); ?>
-                    </div>
-				<?php endif; ?>
-			</div>
 
             <?php get_template_part( '/parts/logo' ); ?>
 
