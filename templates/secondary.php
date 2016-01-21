@@ -16,6 +16,10 @@ get_header(); ?>
 
 <?php do_action( 'foundationpress_before_content' ); ?>
 
+<?php if( function_exists('yoast_breadcrumb') ): ?>
+    <?php {yoast_breadcrumb( '<p id="breadcrumbs" ', '</p>' );} ?>
+<?php endif; ?>
+
     <div id="first">
         <section id="title">
             <h1><?php echo get_field( 'first_section_title' ); ?></h1>

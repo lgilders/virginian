@@ -34,4 +34,23 @@ body {
       line-height: rem-calc(30);
     }
   }
+
+  // Center quote styling
+  #center {
+    display: none;
+
+    @include breakpoint(small) {
+      display: block;
+      padding: rem-calc(48) rem-calc(87) rem-calc(56);
+
+      h2 {
+        margin: 0;
+        font-size: rem-calc(48);
+      }
+    }
+
+    @include breakpoint(medium) {
+      padding: rem-calc(78) rem-calc(215);
+    }
+  }
 }
