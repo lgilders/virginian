@@ -54,3 +54,11 @@ body {
     }
   }
 }
+
+.flex-video iframe,
+.flex-video object,
+.flex-video embed,
+.flex-video video {
+  height: auto !important;
+  min-height: 245px;
+}

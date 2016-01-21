@@ -29,9 +29,7 @@ get_header(); ?>
         <?php $firstVideo = get_field( 'first_section_video' ); ?>
         <section id="media">
             <?php if($firstVideo) { ?>
-                <div class="embed-container">
-                    <?php echo $firstVideo; ?>
-                </div>
+                <?php echo $firstVideo; ?>
             <?php } else { ?>
                 <img src="<?php echo $firstImage['url']; ?>" alt="icon" />
             <?php } ?>
@@ -60,9 +58,7 @@ get_header(); ?>
         <?php $secondVideo = get_field( 'second_section_video' ); ?>
         <section id="media">
             <?php if($secondVideo) { ?>
-                <div class="embed-container">
-                    <?php echo $secondVideo; ?>
-                </div>
+                <?php echo $secondVideo; ?>
             <?php } else { ?>
                 <img src="<?php echo $secondImage['url']; ?>" alt="icon" />
             <?php } ?>
