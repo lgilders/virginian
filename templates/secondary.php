@@ -59,7 +59,7 @@ get_header(); ?>
         <?php $secondImage = get_field( 'second_section_image' ); ?>
         <?php $secondVideo = get_field( 'second_section_video' ); ?>
         <section id="media">
-            <?php if($firstVideo) { ?>
+            <?php if($secondVideo) { ?>
                 <div class="embed-container">
                     <?php echo $secondVideo; ?>
                 </div>
