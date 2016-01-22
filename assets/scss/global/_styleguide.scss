@@ -68,7 +68,8 @@ body {
 
   // Secondary nav styling
   #hero > nav,
-  #second + nav {
+  #second + nav,
+  .owl-carousel + nav {
     background-color: #959595;
 
     ul {

@@ -27,49 +27,82 @@ get_header(); ?>
 
         <?php $firstImage = get_field( 'first_section_image' ); ?>
         <?php $firstVideo = get_field( 'first_section_video' ); ?>
-        <section id="media">
-            <?php if($firstVideo) { ?>
-                <?php echo $firstVideo; ?>
-            <?php } else { ?>
-                <img src="<?php echo $firstImage['url']; ?>" alt="icon" />
-            <?php } ?>
-        </section>
+        <?php if($firstImage || $firstVideo): ?>
+            <section id="media">
+                <?php if($firstVideo) { ?>
+                    <?php echo $firstVideo; ?>
+                <?php } else { ?>
+                    <img src="<?php echo $firstImage['url']; ?>" alt="icon" />
+                <?php } ?>
+            </section>
 
-        <section id="description">
-            <p><?php echo get_field( 'first_section_description' ); ?></p>
-        </section>
+            <section id="description">
+                <p><?php echo get_field( 'first_section_description' ); ?></p>
+            </section>
+        <?php endif; ?>
     </div>
 
     <?php $centerImage = get_field( 'center_image' ); ?>
-    <div id="center"
-        <?php if($centerImage): ?>
-            style="background: url(<?php echo $centerImage['url']; ?>)"
-        <?php endif; ?>>
+    <?php if($centerImage): ?>
+        <div id="center"
+            <?php if($centerImage): ?>
+                style="background: url(<?php echo $centerImage['url']; ?>)"
+            <?php endif; ?>>
 
-        <h2><?php echo get_field( 'center_title' ); ?></h2>
-    </div>
+            <h2><?php echo get_field( 'center_title' ); ?></h2>
+        </div>
+    <?php endif; ?>
 
-    <div id="second">
-        <section id="title">
-            <h1><?php echo get_field( 'second_section_title' ); ?></h1>
-        </section>
+    <?php $secondImage = get_field('second_section_image'); ?>
+    <?php if($secondImage): ?>
+        <div id="second">
+            <section id="title">
+                <h1><?php echo get_field( 'second_section_title' ); ?></h1>
+            </section>
 
-        <?php $secondImage = get_field( 'second_section_image' ); ?>
-        <?php $secondVideo = get_field( 'second_section_video' ); ?>
-        <section id="media">
-            <?php if($secondVideo) { ?>
-                <?php echo $secondVideo; ?>
-            <?php } else { ?>
-                <img src="<?php echo $secondImage['url']; ?>" alt="icon" />
-            <?php } ?>
-        </section>
+            <?php $secondVideo = get_field( 'second_section_video' ); ?>
+            <section id="media">
+                <?php if($secondVideo) { ?>
+                    <?php echo $secondVideo; ?>
+                <?php } else { ?>
+                    <img src="<?php echo $secondImage['url']; ?>" alt="icon" />
+                <?php } ?>
+            </section>
 
-        <section id="description">
-            <p><?php echo get_field( 'second_section_description' ); ?></p>
-        </section>
-    </div>
+            <section id="description">
+                <p><?php echo get_field( 'second_section_description' ); ?></p>
+            </section>
+        </div>
+    <?php endif; ?>
 
-<?php echo get_field( 'secondary_nav' ); ?>
+    <?php /* Hole by Hole Repeater */ ?>
+    <?php if( have_rows('hole_by_hole') ): ?>
+        <div class="owl-carousel">
+            <?php while( have_rows('hole_by_hole') ): the_row();
+                $image = get_sub_field('image'); ?>
+
+                <div class="item">
+                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+
+                    <div class="hole-title">
+                        <h5><?php the_sub_field( 'number' );?>.&nbsp;<?php the_sub_field( 'title' ); ?></h5>
+                    </div>
+
+                    <p class="caption"><?php the_sub_field('description'); ?></p>
+
+                    <div class="hole-details">
+                        <ul>
+                            <li><?php the_sub_field( 'par' ); ?></li>
+                            <li><?php the_sub_field( 'yards' ); ?></li>
+                            <li><?php the_sub_field( 'handicap' ); ?></li>
+                        </ul>
+                    </div>
+                </div>
+            <?php endwhile; ?>
+        </div>
+    <?php endif; ?>
+
+    <?php echo get_field( 'secondary_nav' ); ?>
 
 <?php do_action( 'foundationpress_after_content' ); ?>
 

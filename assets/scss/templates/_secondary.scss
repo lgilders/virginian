@@ -152,7 +152,8 @@ body.page-template-secondary {
   }
 
   // Secondary navigation styling
-  #second + nav {
+  #second + nav,
+  .owl-carousel + nav {
     background-color: #959595 !important;
   }
 }
