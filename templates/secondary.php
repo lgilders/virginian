@@ -40,7 +40,7 @@ get_header(); ?>
         </section>
     </div>
 
-<?php $centerImage = get_field( 'center_image' ); ?>
+    <?php $centerImage = get_field( 'center_image' ); ?>
     <div id="center"
         <?php if($centerImage): ?>
             style="background: url(<?php echo $centerImage['url']; ?>)"
@@ -68,6 +68,8 @@ get_header(); ?>
             <p><?php echo get_field( 'second_section_description' ); ?></p>
         </section>
     </div>
+
+<?php echo get_field( 'secondary_nav' ); ?>
 
 <?php do_action( 'foundationpress_after_content' ); ?>
 
