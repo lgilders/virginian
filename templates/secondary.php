@@ -85,16 +85,16 @@ get_header(); ?>
                     <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
 
                     <div class="hole-title">
-                        <h5><?php the_sub_field( 'number' );?>.&nbsp;<?php the_sub_field( 'title' ); ?></h5>
+                        <h5><span><?php the_sub_field( 'number' );?>.&nbsp;</span><?php the_sub_field( 'title' ); ?></h5>
                     </div>
 
-                    <p class="caption"><?php the_sub_field('description'); ?></p>
+                    <p class="description"><?php the_sub_field('description'); ?></p>
 
                     <div class="hole-details">
                         <ul>
-                            <li><?php the_sub_field( 'par' ); ?></li>
-                            <li><?php the_sub_field( 'yards' ); ?></li>
-                            <li><?php the_sub_field( 'handicap' ); ?></li>
+                            <li>Par&nbsp;<span><?php the_sub_field( 'par' ); ?></span></li>
+                            <li><span><?php the_sub_field( 'yards' ); ?></span>&nbsp;Yards</li>
+                            <li>Handicap&nbsp;<span><?php the_sub_field( 'handicap' ); ?></span></li>
                         </ul>
                     </div>
                 </div>

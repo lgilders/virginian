@@ -1,0 +1,47 @@
+body.page-template-secondary {
+  // Hole-by-Hole styling
+  .owl-carousel {
+    color: black;
+
+    .hole-title, .hole-details {
+      background-color: #474747;
+
+      h5 {
+        margin: 0;
+        padding: rem-calc(8);
+        font-family: $body-font-family;
+        font-size: rem-calc(28);
+        line-height: rem-calc(30);
+        text-transform: uppercase;
+        color: white;
+      }
+    }
+
+    span {
+      color: #d0b42b;
+    }
+
+    .description {
+      margin: 0;
+      padding: rem-calc(20) rem-calc(28);
+      background-color: #b8b2ae;
+    }
+
+    .hole-details {
+      padding: rem-calc(8);
+      font-size: rem-calc(14);
+      color: white;
+      text-transform: uppercase;
+
+      ul {
+        margin: 0;
+        list-style: none;
+      }
+
+      li {
+        display: inline;
+        padding: 0 rem-calc(4);
+      }
+    }
+  }
+}
