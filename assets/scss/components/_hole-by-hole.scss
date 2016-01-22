@@ -1,7 +1,14 @@
 body.page-template-secondary {
   // Hole-by-Hole styling
   .owl-carousel {
-    color: black;
+
+    @include breakpoint(medium) {
+      padding: 0 rem-calc(30);
+    }
+
+    img {
+      width: 100%;
+    }
 
     .hole-title, .hole-details {
       background-color: #474747;
@@ -14,6 +21,7 @@ body.page-template-secondary {
         line-height: rem-calc(30);
         text-transform: uppercase;
         color: white;
+        vertical-align: middle;
       }
     }
 
@@ -41,6 +49,17 @@ body.page-template-secondary {
       li {
         display: inline;
         padding: 0 rem-calc(4);
+        vertical-align: middle;
+      }
+
+      @include breakpoint(small) {
+        padding: rem-calc(4);
+        font-size: rem-calc(18);
+        line-height: rem-calc(30);
+
+        li {
+          padding: 0 rem-calc(32);
+        }
       }
     }
   }
