@@ -76,7 +76,6 @@ get_header(); ?>
 
 <?php do_action( 'foundationpress_after_content' ); ?>
 
-<!-- Insert Featured Property call here -->
 <?php dynamic_sidebar( 'featured-property-widgets' ); ?>
 
 <?php get_footer(); ?>
