@@ -1,7 +1,6 @@
 body.page-template-homepage {
 
-  // Hero styling
-
+// Hero styling
   #hero {
     margin: 0 0 rem-calc(20);
     padding: rem-calc(15) rem-calc(15) rem-calc(46);
@@ -57,7 +56,6 @@ body.page-template-homepage {
   }
 
 // Highlights styling
-
   div {
     margin-bottom: rem-calc(15);
 
@@ -195,7 +193,6 @@ body.page-template-homepage {
 
 // Fixes for strange section sizes during resize events
   @media screen and (max-width: 625px) {
-
     div > section {
       width: 100%;
     }

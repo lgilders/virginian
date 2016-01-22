@@ -1,6 +1,6 @@
 body.page-template-secondary {
-  // Hero styling
 
+  // Hero styling
   #hero {
     margin: 0 0 rem-calc(20);
     padding: rem-calc(15) rem-calc(15) rem-calc(46);
@@ -118,7 +118,6 @@ body.page-template-secondary {
   }
 
   #second {
-
     @include breakpoint(medium) {
       padding-bottom: rem-calc(36);
     }
@@ -150,5 +149,10 @@ body.page-template-secondary {
         padding-right: 0;
       }
     }
+  }
+
+  // Secondary navigation styling
+  #second + nav {
+    background-color: #959595 !important;
   }
 }
