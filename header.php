@@ -21,8 +21,12 @@
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/apple-touch-icon-72x72-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/apple-touch-icon-precomposed.png">
 
+        <!-- Insert Owl Carousel -->
+        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/components/owl-carousel/assets/owl.carousel.css" type="text/css" charset="utf-8" />
+        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/components/owl-carousel/assets/owl.theme.default.css" type="text/css" charset="utf-8" />
+
         <!-- Insert Fontfaces -->
-        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/components/vendemed/css/vendemed.css"> type="text/css" charset="utf-8" />
+        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/components/vendemed/css/vendemed.css" type="text/css" charset="utf-8" />
         <script type="text/javascript">
             (function() {
                 var path = '//easy.myfonts.net/v2/js?sid=161316(font-family=FF+Scala+Sans+OT+Regular)&key=K6aPYua6ag',
