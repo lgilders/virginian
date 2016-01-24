@@ -77,30 +77,54 @@ get_header(); ?>
 
     <?php /* Hole by Hole Repeater */ ?>
     <?php if( have_rows('hole_by_hole') ): ?>
-        <div class="owl-carousel">
-            <?php while( have_rows('hole_by_hole') ): the_row();
-                $image = get_sub_field('image'); ?>
 
-                <div class="item">
-                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
-
-                    <div class="hole-title">
-                        <h5><span><?php the_sub_field( 'number' );?>.&nbsp;</span><?php the_sub_field( 'title' ); ?></h5>
+        <div id="desktop-carousel">
+            <?php /* Builds a carousel object for each hole's number */ ?>
+            <?php $count = count( get_field('hole_by_hole') ); ?>
+            <?php $holeNumber = 1; ?>
+            <?php $preface = "0"; ?>
+            <div id="sync1" class="owl-carousel owl-theme">
+                <?php while( $count != 0 ): ?>
+                    <div class="item">
+                        <p>
+                            <?php if( $holeNumber < 10 ):
+                                echo $preface;
+                            endif;
+                            echo $holeNumber; ?>
+                        </p>
                     </div>
+                    <?php $count = $count - 1; ?>
+                    <?php $holeNumber = $holeNumber + 1; ?>
+                <?php endwhile; ?>
+            </div>
 
-                    <p class="description"><?php the_sub_field('description'); ?></p>
+            <?php /* Builds a carousel object for each hole */ ?>
+            <div id="sync2" class="owl-carousel owl-theme">
+                <?php while( have_rows('hole_by_hole') ): the_row();
+                    $image = get_sub_field('image'); ?>
 
-                    <div class="hole-details">
-                        <ul>
-                            <li>Par&nbsp;<span><?php the_sub_field( 'par' ); ?></span></li>
-                            <li><span><?php the_sub_field( 'yards' ); ?></span>&nbsp;Yards</li>
-                            <li>Handicap&nbsp;<span><?php the_sub_field( 'handicap' ); ?></span></li>
-                        </ul>
+                    <div class="item">
+                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+
+                        <div class="hole-title">
+                            <h5><span><?php the_sub_field( 'number' );?>.&nbsp;</span><?php the_sub_field( 'title' ); ?></h5>
+                        </div>
+
+                        <p class="description"><?php the_sub_field('description'); ?></p>
+
+                        <div class="hole-details">
+                            <ul>
+                                <li>Par&nbsp;<span><?php the_sub_field( 'par' ); ?></span></li>
+                                <li><span><?php the_sub_field( 'yards' ); ?></span>&nbsp;Yards</li>
+                                <li>Handicap&nbsp;<span><?php the_sub_field( 'handicap' ); ?></span></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            <?php endwhile; ?>
-        </div>
+                <?php endwhile; ?>
+            </div>
+
     <?php endif; ?>
+        </div>
 
     <?php echo get_field( 'secondary_nav' ); ?>
 

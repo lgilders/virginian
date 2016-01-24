@@ -1,11 +1,41 @@
 body.page-template-secondary {
-  // Hole-by-Hole styling
   .owl-carousel {
+    display: block !important;
+  }
 
+  #desktop-carousel {
     @include breakpoint(medium) {
       padding: 0 rem-calc(30);
     }
+  }
 
+  // Hole-by-Hole numbers styling
+  #sync1 {
+    @include clearfix;
+
+    .item {
+      display: inline-block;
+      float: left;
+      margin-right: rem-calc(4);
+      background-color: #b8b2ae;
+
+      p {
+        margin: 0;
+        padding: rem-calc(8);
+        font-family: $body-font-family;
+        font-size: rem-calc(36);
+        line-height: rem-calc(40);
+        color: #474747;
+      }
+    }
+
+    .item:last-child {
+      margin-right: 0;
+    }
+  }
+
+  // Hole-by-Hole styling
+  #sync2 {
     img {
       width: 100%;
     }
