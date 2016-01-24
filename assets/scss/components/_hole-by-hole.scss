@@ -1,7 +1,4 @@
 body.page-template-secondary {
-  .owl-carousel {
-    display: block !important;
-  }
 
   #desktop-carousel {
     @include breakpoint(medium) {
@@ -10,8 +7,16 @@ body.page-template-secondary {
   }
 
   // Hole-by-Hole numbers styling
-  #sync1 {
+  #sync2 {
     @include clearfix;
+
+    .synced .item {
+      background-color: #474747 !important;
+
+      p {
+        color: #d0b42b !important;
+      }
+    }
 
     .item {
       display: inline-block;
@@ -28,14 +33,10 @@ body.page-template-secondary {
         color: #474747;
       }
     }
-
-    .item:last-child {
-      margin-right: 0;
-    }
   }
 
   // Hole-by-Hole styling
-  #sync2 {
+  #sync1 {
     img {
       width: 100%;
     }

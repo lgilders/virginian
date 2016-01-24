@@ -83,7 +83,7 @@ get_header(); ?>
             <?php $count = count( get_field('hole_by_hole') ); ?>
             <?php $holeNumber = 1; ?>
             <?php $preface = "0"; ?>
-            <div id="sync1" class="owl-carousel owl-theme">
+            <div id="sync2" class="owl-carousel owl-theme">
                 <?php while( $count != 0 ): ?>
                     <div class="item">
                         <p>
@@ -99,12 +99,17 @@ get_header(); ?>
             </div>
 
             <?php /* Builds a carousel object for each hole */ ?>
-            <div id="sync2" class="owl-carousel owl-theme">
+            <div id="sync1" class="owl-carousel owl-theme">
                 <?php while( have_rows('hole_by_hole') ): the_row();
-                    $image = get_sub_field('image'); ?>
+                    $image = get_sub_field('image');
+                    $video = get_sub_field('video'); ?>
 
                     <div class="item">
-                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+                        <?php if($video) { ?>
+                            <?php echo $video; ?>
+                        <?php } else { ?>
+                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+                        <?php } ?>
 
                         <div class="hole-title">
                             <h5><span><?php the_sub_field( 'number' );?>.&nbsp;</span><?php the_sub_field( 'title' ); ?></h5>
