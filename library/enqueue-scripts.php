@@ -26,6 +26,10 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	// It's a good idea to do this, performance-wise. No need to load everything if you're just going to use the grid anyway, you know :)
 	wp_enqueue_script( 'foundation', get_template_directory_uri() . '/assets/javascript/foundation.js', array('jquery'), '2.3.0', true );
 
+    // Inserts custom js that was throwing linting errors when imported as part of the custom folder
+    wp_enqueue_script( 'enquire', get_stylesheet_directory_uri() . '/assets/components/enquire/enquire.js', array(), '2.1.2', true );
+    wp_enqueue_script( 'owl-carousel', get_stylesheet_directory_uri() . '/assets/components/owl-carousel/owl.carousel.js', array(), '2.4', true );
+
 	// Add the comment-reply library on pages where it is necessary
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

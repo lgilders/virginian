@@ -1,0 +1,166 @@
+body.page-template-secondary {
+
+  #desktop-carousel {
+    @include breakpoint(medium) {
+      padding: 0 rem-calc(30);
+    }
+
+    .item {
+      background-color: #b8b2ae;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .synced .item {
+      background-color: #474747 !important;
+
+      p {
+        color: #d0b42b;
+      }
+    }
+  }
+
+  // Hole-by-Hole front/back styling
+  #sync3 {
+
+    @include clearfix;
+
+    @include breakpoint(700) {
+      display: none;
+    }
+
+    .item {
+      p {
+        padding: rem-calc(10);
+        font-size: rem-calc(22);
+        line-height: rem-calc(30);
+        text-transform: uppercase;
+        color: white;
+      }
+    }
+
+    .synced .item {
+      p {
+        color: white;
+
+        span {
+          color: #d0b42b;
+        }
+      }
+    }
+  }
+
+  // Hole-by-Hole numbers styling
+  #sync2 {
+    display: none;
+
+    @include clearfix;
+
+    @include breakpoint(700) {
+      display: block;
+    }
+
+    .item {
+      border-right: rem-calc(4) solid white;
+
+      p {
+        padding: 0.25rem;
+        font-family: $body-font-family;
+        font-size: rem-calc(28);
+        line-height: rem-calc(30);
+        color: #474747;
+
+        @include breakpoint(medium) {
+          padding: rem-calc(8);
+          font-size: rem-calc(36);
+          line-height: rem-calc(40);
+        }
+      }
+    }
+
+    .owl-stage .owl-item:nth-child(18) .item {
+      border: none;
+    }
+  }
+
+  // Hole-by-Hole styling
+  #sync1 {
+    img {
+      width: 100%;
+    }
+
+    .owl-nav {
+      margin: 0;
+      position: relative;
+      top: -450px;
+
+      .owl-prev {
+        float: left;
+      }
+
+      .owl-next {
+        float: right;
+      }
+    }
+
+    .item {
+      background-color: #474747;
+    }
+
+    .hole-title, .hole-details {
+      background-color: #474747;
+
+      h5 {
+        margin: 0;
+        padding: rem-calc(8);
+        font-family: $body-font-family;
+        font-size: rem-calc(28);
+        line-height: rem-calc(30);
+        text-transform: uppercase;
+        color: white;
+        vertical-align: middle;
+      }
+    }
+
+    span {
+      color: #d0b42b;
+    }
+
+    .description {
+      margin: 0;
+      padding: rem-calc(20) rem-calc(28);
+      color: #474747;
+      background-color: #b8b2ae;
+    }
+
+    .hole-details {
+      padding: rem-calc(8);
+      font-size: rem-calc(14);
+      color: white;
+      text-transform: uppercase;
+
+      ul {
+        margin: 0;
+        list-style: none;
+      }
+
+      li {
+        display: inline;
+        padding: 0 rem-calc(4);
+        vertical-align: middle;
+      }
+
+      @include breakpoint(small) {
+        padding: rem-calc(4);
+        font-size: rem-calc(18);
+        line-height: rem-calc(30);
+
+        li {
+          padding: 0 rem-calc(32);
+        }
+      }
+    }
+  }
+}
