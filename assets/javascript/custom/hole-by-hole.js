@@ -15,8 +15,12 @@ $(document).ready(function ($) {
     });
 
     function updateClassName(current) {
+        // For tablet and desktop
         $(sync2).find(".synced").removeClass("synced");
         $(sync2).find(".owl-item").eq(current).addClass("synced");
+        // For mobile
+        $(sync3).find(".synced").removeClass("synced");
+        $(sync3).find(".owl-item").eq(current).addClass("synced");
     }
 
     sync1
@@ -62,7 +66,12 @@ $(document).ready(function ($) {
         })
         .on('click', '.owl-item', function () {
             var updateNumber = $(this).index();
-            sync1.trigger('to.owl.carousel', [$(this).index(), duration, true]);
+
+            if(updateNumber === 0) {
+                sync1.trigger('to.owl.carousel', [updateNumber, duration, true]);
+            } else {
+                sync1.trigger('to.owl.carousel', [(updateNumber + 8), duration, true]);
+            }
             updateClassName(updateNumber);
         })
         .on('changed.owl.carousel', function (e) {
