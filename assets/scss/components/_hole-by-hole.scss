@@ -4,6 +4,52 @@ body.page-template-secondary {
     @include breakpoint(medium) {
       padding: 0 rem-calc(30);
     }
+
+    .item {
+      background-color: #b8b2ae;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .synced .item {
+      background-color: #474747 !important;
+
+      p {
+        color: #d0b42b;
+      }
+    }
+  }
+
+  // Hole-by-Hole front/back styling
+  #sync3 {
+
+    @include clearfix;
+
+    @include breakpoint(700) {
+      display: none;
+    }
+
+    .item {
+      p {
+        padding: rem-calc(10);
+        font-size: rem-calc(22);
+        line-height: rem-calc(30);
+        text-transform: uppercase;
+        color: white;
+      }
+    }
+
+    .synced .item {
+      p {
+        color: white;
+
+        span {
+          color: #d0b42b;
+        }
+      }
+    }
   }
 
   // Hole-by-Hole numbers styling
@@ -12,24 +58,14 @@ body.page-template-secondary {
 
     @include clearfix;
 
-    @include breakpoint(small) {
+    @include breakpoint(700) {
       display: block;
     }
 
-    .synced .item {
-      background-color: #474747 !important;
-
-      p {
-        color: #d0b42b !important;
-      }
-    }
-
     .item {
-      background-color: #b8b2ae;
       border-right: rem-calc(4) solid white;
 
       p {
-        margin: 0;
         padding: 0.25rem;
         font-family: $body-font-family;
         font-size: rem-calc(28);
@@ -58,7 +94,7 @@ body.page-template-secondary {
     .owl-nav {
       margin: 0;
       position: relative;
-      top: -400px;
+      top: -450px;
 
       .owl-prev {
         float: left;
@@ -91,6 +127,7 @@ body.page-template-secondary {
     .description {
       margin: 0;
       padding: rem-calc(20) rem-calc(28);
+      color: #474747;
       background-color: #b8b2ae;
     }
 

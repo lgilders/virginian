@@ -79,6 +79,12 @@ get_header(); ?>
     <?php if( have_rows('hole_by_hole') ): ?>
 
         <div id="desktop-carousel">
+            <?php /* Builds a carousel object for the front 9/back 9 tabs */ ?>
+            <div id="sync3" class="owl-carousel owl-theme">
+                <div class="item"><p>Front <span>9</span></p></div>
+                <div class="item"><p>Back <span>9</span></p></div>
+            </div>
+
             <?php /* Builds a carousel object for each hole's number */ ?>
             <?php $count = count( get_field('hole_by_hole') ); ?>
             <?php $holeNumber = 1; ?>

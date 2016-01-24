@@ -2,11 +2,16 @@ $(document).ready(function ($) {
 
     var sync1 = $("#sync1"),
         sync2 = $("#sync2"),
+        sync3 = $("#sync3"),
         flag = false,
         duration = 300;
 
     sync2.on('initialized.owl.carousel', function() {
         sync2.find(".owl-item").eq(0).addClass("synced");
+    });
+
+    sync3.on('initialized.owl.carousel', function() {
+        sync3.find(".owl-item").eq(0).addClass("synced");
     });
 
     function updateClassName(current) {
@@ -48,4 +53,24 @@ $(document).ready(function ($) {
                 flag = false;
             }
         });
+
+    sync3
+        .owlCarousel({
+            items: 2,
+            nav: false,
+            dots: false
+        })
+        .on('click', '.owl-item', function () {
+            var updateNumber = $(this).index();
+            sync1.trigger('to.owl.carousel', [$(this).index(), duration, true]);
+            updateClassName(updateNumber);
+        })
+        .on('changed.owl.carousel', function (e) {
+            if (!flag) {
+                flag = true;
+                sync1.trigger('to.owl.carousel', [e.item.index, duration, true]);
+                flag = false;
+            }
+        });
+
 });
