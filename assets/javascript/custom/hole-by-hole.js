@@ -18,7 +18,6 @@ $(document).ready(function ($) {
 
     sync1.on('resized.owl.carousel', function(){ reset_video_size(); });
 
-
     // Video
     function reset_video_size(video_width){
         //better use jquery selectors: owl.items() and $(owl.items()) give problems, don't know why
