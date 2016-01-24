@@ -110,25 +110,28 @@ get_header(); ?>
                     $image = get_sub_field('image');
                     $video = get_sub_field('video'); ?>
 
+                    <?php if($video) { ?>
+                    <div class="item-video">
+                        <a class="owl-video" href="<?php echo $video; ?>"></a>
+                    <?php } else { ?>
                     <div class="item">
-                        <?php if($video) { ?>
-                            <?php echo $video; ?>
-                        <?php } else { ?>
-                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
-                        <?php } ?>
+                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+                    <?php } ?>
 
-                        <div class="hole-title">
-                            <h5><span><?php the_sub_field( 'number' );?>.&nbsp;</span><?php the_sub_field( 'title' ); ?></h5>
-                        </div>
+                        <div class="hole-information">
+                            <div class="hole-title">
+                                <h5><span><?php the_sub_field( 'number' );?>.&nbsp;</span><?php the_sub_field( 'title' ); ?></h5>
+                            </div>
 
-                        <p class="description"><?php the_sub_field('description'); ?></p>
+                            <p class="description"><?php the_sub_field('description'); ?></p>
 
-                        <div class="hole-details">
-                            <ul>
-                                <li>Par&nbsp;<span><?php the_sub_field( 'par' ); ?></span></li>
-                                <li><span><?php the_sub_field( 'yards' ); ?></span>&nbsp;Yards</li>
-                                <li>Handicap&nbsp;<span><?php the_sub_field( 'handicap' ); ?></span></li>
-                            </ul>
+                            <div class="hole-details">
+                                <ul>
+                                    <li>Par&nbsp;<span><?php the_sub_field( 'par' ); ?></span></li>
+                                    <li><span><?php the_sub_field( 'yards' ); ?></span>&nbsp;Yards</li>
+                                    <li>Handicap&nbsp;<span><?php the_sub_field( 'handicap' ); ?></span></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 <?php endwhile; ?>
