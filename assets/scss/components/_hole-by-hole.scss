@@ -8,7 +8,13 @@ body.page-template-secondary {
 
   // Hole-by-Hole numbers styling
   #sync2 {
+    display: none;
+
     @include clearfix;
+
+    @include breakpoint(small) {
+      display: block;
+    }
 
     .synced .item {
       background-color: #474747 !important;
@@ -19,19 +25,27 @@ body.page-template-secondary {
     }
 
     .item {
-      display: inline-block;
-      float: left;
-      margin-right: rem-calc(4);
       background-color: #b8b2ae;
+      border-right: rem-calc(4) solid white;
 
       p {
         margin: 0;
-        padding: rem-calc(8);
+        padding: 0.25rem;
         font-family: $body-font-family;
-        font-size: rem-calc(36);
-        line-height: rem-calc(40);
+        font-size: rem-calc(28);
+        line-height: rem-calc(30);
         color: #474747;
+
+        @include breakpoint(medium) {
+          padding: rem-calc(8);
+          font-size: rem-calc(36);
+          line-height: rem-calc(40);
+        }
       }
+    }
+
+    .owl-stage .owl-item:nth-child(18) .item {
+      border: none;
     }
   }
 
@@ -39,6 +53,20 @@ body.page-template-secondary {
   #sync1 {
     img {
       width: 100%;
+    }
+
+    .owl-nav {
+      margin: 0;
+      position: relative;
+      top: -400px;
+
+      .owl-prev {
+        float: left;
+      }
+
+      .owl-next {
+        float: right;
+      }
     }
 
     .hole-title, .hole-details {
