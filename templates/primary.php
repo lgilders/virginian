@@ -9,14 +9,16 @@ get_header(); ?>
         <?php if($heroImage): ?>
             style="background: url(<?php echo $heroImage['url']; ?>)"
         <?php endif; ?>>
-        <h1><?php echo get_field( 'hero_title' ); ?></h1>
-        <p><?php echo get_field( 'hero_introduction' ); ?></p>
-        <?php echo get_field( 'sub_navigation' ); ?>
+        <div class="content-container">
+            <h1><?php echo get_field( 'hero_title' ); ?></h1>
+            <p><?php echo get_field( 'hero_introduction' ); ?></p>
+            <?php echo get_field( 'sub_navigation' ); ?>
+        </div>
     </header>
 
 <?php do_action( 'foundationpress_before_content' ); ?>
 
-<div id="first">
+<div id="first" class="content-container">
     <?php $iconImage = get_field( 'secondary_icon' ); ?>
     <section id="description">
         <?php if($iconImage): ?>

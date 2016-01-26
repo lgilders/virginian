@@ -86,6 +86,8 @@
 
 //  My custom styles:
 //  Add your scss files below to structure your project styles
+@import "global/sitewide";
+@import "global/styleguide";
 @import "modules/contact-form";
 @import "components/hamburger";
 @import "components/featured-property";
@@ -93,4 +95,3 @@
 @import "templates/homepage";
 @import "templates/primary";
 @import "templates/secondary";
-@import "global/styleguide";

@@ -45,7 +45,9 @@ body.page-template-secondary {
     }
 
     .listing {
-      margin-bottom: 0;
+      margin: 0 auto;
+      max-width: rem-calc(1024);
+      width: 100%;
     }
 
     p.listing-address {

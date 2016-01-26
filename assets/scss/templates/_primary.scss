@@ -2,6 +2,10 @@ body.page-template-primary {
 
   // Hero styling
   #hero {
+    .content-container {
+      max-width: rem-calc(1024);
+    }
+
     h1 {
       padding: rem-calc(36);
 
