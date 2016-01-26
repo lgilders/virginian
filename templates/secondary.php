@@ -120,7 +120,8 @@ get_header(); ?>
 
                         <div class="hole-information">
                             <div class="hole-title">
-                                <h5><span><?php the_sub_field( 'number' );?>.&nbsp;</span><?php the_sub_field( 'title' ); ?></h5>
+                                <?php $number = get_sub_field( 'number' ); ?>
+                                <h5><span><?php if($number < 10) echo $preface ?><?php echo $number; ?>.&nbsp;</span><?php the_sub_field( 'title' ); ?></h5>
                             </div>
 
                             <p class="description"><?php the_sub_field('description'); ?></p>
