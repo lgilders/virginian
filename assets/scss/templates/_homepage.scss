@@ -56,6 +56,12 @@ body.page-template-homepage {
   }
 
 // Highlights styling
+  #first, #second {
+    margin: 0 auto;
+    max-width: rem-calc(1024);
+    width: 100%;
+  }
+
   div {
     margin-bottom: rem-calc(15);
 

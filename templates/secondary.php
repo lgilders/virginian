@@ -9,9 +9,11 @@ get_header(); ?>
         <?php if($heroImage): ?>
             style="background: url(<?php echo $heroImage['url']; ?>)"
         <?php endif; ?>>
-        <h1><?php echo get_field( 'hero_title' ); ?></h1>
-        <p><?php echo get_field( 'hero_introduction' ); ?></p>
-        <?php echo get_field( 'sub_navigation' ); ?>
+        <div class="content-container">
+            <h1><?php echo get_field( 'hero_title' ); ?></h1>
+            <p><?php echo get_field( 'hero_introduction' ); ?></p>
+            <?php echo get_field( 'sub_navigation' ); ?>
+        </div>
     </header>
 
 <?php do_action( 'foundationpress_before_content' ); ?>
@@ -78,7 +80,7 @@ get_header(); ?>
     <?php /* Hole by Hole Repeater */ ?>
     <?php if( have_rows('hole_by_hole') ): ?>
 
-        <div id="desktop-carousel">
+        <div id="desktop-carousel" class="content-container">
             <?php /* Builds a carousel object for the front 9/back 9 tabs */ ?>
             <div id="sync3" class="owl-carousel owl-theme">
                 <div class="item"><p>Front <span>9</span></p></div>

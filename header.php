@@ -53,7 +53,7 @@
 
 	<?php do_action( 'foundationpress_layout_start' ); ?>
 
-	<header id="masthead" class="site-header" role="banner">
+	<header id="masthead" class="site-header content-container" role="banner">
 		<div class="title-bar" data-responsive-toggle="site-navigation">
 			<button class="c-hamburger c-hamburger--htx" type="button" data-toggle="offCanvas">
                 <span>toggle menu</span>
