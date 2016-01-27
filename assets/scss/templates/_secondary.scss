@@ -1,9 +1,14 @@
 body.page-template-secondary {
 
   // Hero styling
-  #hero {
+  #hero-mobile {
+    display: block;
     margin: 0 0 rem-calc(20);
     padding: rem-calc(15) rem-calc(15) rem-calc(46);
+
+    @include breakpoint(small) {
+      display: none;
+    }
 
     h1 {
       margin: 0;
@@ -16,20 +21,26 @@ body.page-template-secondary {
     }
   }
 
+  #hero {
+    display: none;
+  }
+
   @include breakpoint(small) {
     #hero {
+      display: block;
       margin-bottom: rem-calc(15);
       padding: rem-calc(45) rem-calc(45) rem-calc(50);
-    }
 
-    h1 {
-      font-size: rem-calc(64);
-      padding-top: 0;
-      padding-bottom: rem-calc(14);
-    }
+      h1 {
+        font-size: rem-calc(64);
+        margin: 0;
+        padding: 0 rem-calc(20) rem-calc(14);
+      }
 
-    p {
-      padding: rem-calc(16) rem-calc(36) rem-calc(18) ;
+      p {
+        border: 1px solid white;
+        padding: rem-calc(16) rem-calc(36) rem-calc(18) ;
+      }
     }
   }
 
@@ -39,7 +50,7 @@ body.page-template-secondary {
 
       h1 {
         font-size: rem-calc(64);
-        padding: 0 0 rem-calc(20);
+        padding: 0 0 rem-calc(36);
       }
 
       p {
