@@ -25,18 +25,43 @@ get_header(); ?>
             <img src="<?php echo $iconImage['url']; ?>" alt="icon" />
         <?php endif; ?>
 
+        <?php $title = get_field( 'secondary_title'); ?>
+        <?php if($title): ?>
+            <h2><?php echo $title; ?></h2>
+        <?php endif; ?>
+
         <p><?php echo get_field( 'secondary_text' ); ?></p>
     </section>
 </div>
 
-<?php $brandImage = get_field( 'brand_image' ); ?>
-<div id="second"
-    <?php if($brandImage): ?>
-        style="background: url(<?php echo $brandImage['url']; ?>)"
-    <?php endif; ?>>
-
-    <h2><?php echo get_field( 'brand_story' ); ?></h2>
+<?php $form = get_field( 'form' ); ?>
+<?php if($form): ?>
+<div id="visit-us">
+    <div id="form" class="content-container">
+        <?php echo $form; ?>
+    </div>
+    <div id="information" class="content-container">
+        <div id="location">
+            <p><?php the_field('location'); ?></p>
+        </div>
+        <div id="hours">
+            <p><?php the_field('hours'); ?></p>
+        </div>
+    </div>
 </div>
+<?php endif; ?>
+
+<?php $brandImage = get_field( 'brand_image' ); ?>
+<?php $brandStory = get_field( 'brand_story' ); ?>
+<?php if($brandStory): ?>
+    <div id="second"
+        <?php if($brandImage): ?>
+            style="background: url(<?php echo $brandImage['url']; ?>)"
+        <?php endif; ?>>
+
+        <h2><?php echo get_field( 'brand_story' ); ?></h2>
+    </div>
+<?php endif; ?>
 
 <?php do_action( 'foundationpress_after_content' ); ?>
 
