@@ -16,6 +16,18 @@ get_header(); ?>
         </div>
     </header>
 
+<?php $heroImageMobile = get_field( 'hero_image_mobile' ); ?>
+    <header id="hero-mobile" role="banner"
+        <?php if($heroImageMobile): ?>
+            style="background: url(<?php echo $heroImageMobile['url']; ?>)"
+        <?php endif; ?>>
+        <div class="content-container">
+            <h1><?php echo get_field( 'hero_title' ); ?></h1>
+            <p><?php echo get_field( 'hero_introduction' ); ?></p>
+            <?php echo get_field( 'sub_navigation' ); ?>
+        </div>
+    </header>
+
 <?php do_action( 'foundationpress_before_content' ); ?>
 
 <?php if( function_exists('yoast_breadcrumb') ): ?>
