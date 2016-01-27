@@ -38,10 +38,22 @@ body.page-template-primary {
     #description {
       padding: rem-calc(52) rem-calc(25);
 
+      h2 {
+        margin: 0;
+        padding-top: rem-calc(20);
+        font-size: rem-calc(48);
+        line-height: rem-calc(48);
+        color: black;
+      }
+
       p {
         margin: 0;
         padding-top: rem-calc(40);
         color: black;
+      }
+
+      h2 + p {
+        padding-top: rem-calc(8);
       }
 
       @include breakpoint(small) {
@@ -58,7 +70,7 @@ body.page-template-primary {
     display: none;
 
     @include breakpoint(small) {
-      display: block;
+      //display: block;
 
       h2 {
         margin: 0;
@@ -71,6 +83,62 @@ body.page-template-primary {
     @include breakpoint(medium) {
       h2 {
         padding: rem-calc(80) rem-calc(52);
+      }
+    }
+  }
+
+  #form.content-container {
+    max-width: rem-calc(494);
+  }
+
+  #visit-us {
+    color: black;
+    padding: 0 rem-calc(25);
+
+    #information {
+      @include clearfix;
+    }
+
+    p {
+      margin: 0;
+      padding: rem-calc(48) 0;
+      font-size: rem-calc(18);
+      line-height: rem-calc(30);
+    }
+
+    #location {
+      float: none;
+      width: 100%;
+      border-bottom: 1px solid black;
+
+      @include breakpoint(small) {
+        float: left;
+        width: 50%;
+        border-bottom: none;
+        border-right: 1px solid black;
+      }
+    }
+
+    #hours {
+      float: none;
+      width: 100%;
+
+      @include breakpoint(small) {
+        float: right;
+        width: 50%;
+      }
+    }
+
+    @include breakpoint(small) {
+      padding-bottom: rem-calc(30);
+
+      p {
+        text-align: left;
+        padding: rem-calc(48) rem-calc(64);
+      }
+
+      #information.content-container {
+        max-width: rem-calc(640);
       }
     }
   }
