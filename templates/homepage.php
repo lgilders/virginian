@@ -7,11 +7,11 @@ get_header(); ?>
 <?php $heroImage = get_field( 'hero_image' ); ?>
 <header id="hero" role="banner"
         <?php if($heroImage): ?>
-        style="background: url(<?php echo $heroImage['url']; ?>)"
+        style="background: #706259 url(<?php echo $heroImage['url']; ?>)"
         <?php endif; ?>>
     <div class="content-container">
-        <h1><?php echo get_field( 'hero_title' ); ?></h1>
-        <p><?php echo get_field( 'hero_introduction' ); ?></p>
+        <h1><?php the_field( 'hero_title' ); ?></h1>
+        <p><?php the_field( 'hero_introduction' ); ?></p>
     </div>
 </header>
 
@@ -21,8 +21,8 @@ get_header(); ?>
         style="background: url(<?php echo $heroImageMobile['url']; ?>)"
     <?php endif; ?>>
     <div class="content-container">
-        <h1><?php echo get_field( 'hero_title' ); ?></h1>
-        <p><?php echo get_field( 'hero_introduction' ); ?></p>
+        <h1><?php the_field( 'hero_title' ); ?></h1>
+        <p><?php the_field( 'hero_introduction' ); ?></p>
     </div>
 </header>
 
@@ -32,23 +32,23 @@ get_header(); ?>
     <?php $firstLeftImage = get_field( 'first_left_image' ); ?>
     <section id="real-estate"
              <?php if($firstLeftImage): ?>
-             style="background: url(<?php echo $firstLeftImage['url']; ?>)"
+             style="background: #706259 url(<?php echo $firstLeftImage['url']; ?>)"
              <?php endif; ?>>
 
-            <h2><?php echo get_field( 'first_left_title' ); ?></h2>
-            <p><?php echo get_field( 'first_left_description' ); ?></p>
-            <a href="<?php the_field( 'first_left_button_link' ); ?>" class="button"><?php echo get_field( 'first_left_button' ); ?></a>
+            <h2><?php the_field( 'first_left_title' ); ?></h2>
+            <p><?php the_field( 'first_left_description' ); ?></p>
+            <a href="<?php the_field( 'first_left_button_link' ); ?>" class="button"><?php the_field( 'first_left_button' ); ?></a>
     </section>
 
     <?php $firstRightImage = get_field( 'first_right_image' ); ?>
     <section id="discovery-visit"
              <?php if($firstRightImage): ?>
-             style="background: url(<?php echo $firstRightImage['url']; ?>)"
+             style="background: #1B5A7C url(<?php echo $firstRightImage['url']; ?>)"
              <?php endif; ?>>
 
-            <h2><?php echo get_field( 'first_right_title' ); ?></h2>
-            <p><?php echo get_field( 'first_right_description' ); ?></p>
-            <a href="<?php the_field( 'first_right_button_link' ); ?>" class="button"><?php echo get_field( 'first_right_button' ); ?></a>
+            <h2><?php the_field( 'first_right_title' ); ?></h2>
+            <p><?php the_field( 'first_right_description' ); ?></p>
+            <a href="<?php the_field( 'first_right_button_link' ); ?>" class="button"><?php the_field( 'first_right_button' ); ?></a>
     </section>
 </div>
 
@@ -58,7 +58,7 @@ get_header(); ?>
      style="background: url(<?php echo $centerImage['url']; ?>)"
      <?php endif; ?>>
     <div class="content-container">
-        <h1><?php echo get_field( 'center_title' ); ?></h1>
+        <h1><?php the_field( 'center_title' ); ?></h1>
     </div>
 </div>
 
@@ -66,26 +66,26 @@ get_header(); ?>
     <?php $secondLeftImage = get_field( 'second_left_image' ); ?>
     <section id="golf-course"
              <?php if($secondLeftImage): ?>
-             style="background: url(<?php echo $secondLeftImage['url']; ?>)"
+             style="background: #1B5A7C url(<?php echo $secondLeftImage['url']; ?>)"
              <?php endif; ?>>
 
             <div class="overlay">
-                <h2><?php echo get_field( 'second_left_title' ); ?></h2>
-                <p><?php echo get_field( 'second_left_description' ); ?></p>
-                <a href="<?php the_field( 'second_left_button_link' ); ?>" class="button"><?php echo get_field( 'second_left_button' ); ?></a>
+                <h2><?php the_field( 'second_left_title' ); ?></h2>
+                <p><?php the_field( 'second_left_description' ); ?></p>
+                <a href="<?php the_field( 'second_left_button_link' ); ?>" class="button"><?php the_field( 'second_left_button' ); ?></a>
             </div>
     </section>
 
     <?php $secondRightImage = get_field( 'second_right_image' ); ?>
     <section id="the-club"
              <?php if($secondRightImage): ?>
-             style="background: url(<?php echo $secondRightImage['url']; ?>)"
+             style="background: #706259 url(<?php echo $secondRightImage['url']; ?>)"
              <?php endif; ?>>
 
             <div class="overlay">
-                <h2><?php echo get_field( 'second_right_title' ); ?></h2>
-                <p><?php echo get_field( 'second_right_description' ); ?></p>
-                <a href="<?php the_field( 'second_right_button_link' ); ?>" class="button"><?php echo get_field( 'second_right_button' ); ?></a>
+                <h2><?php the_field( 'second_right_title' ); ?></h2>
+                <p><?php the_field( 'second_right_description' ); ?></p>
+                <a href="<?php the_field( 'second_right_button_link' ); ?>" class="button"><?php the_field( 'second_right_button' ); ?></a>
             </div>
     </section>
 </div>
