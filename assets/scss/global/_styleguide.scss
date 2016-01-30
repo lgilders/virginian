@@ -1,0 +1,106 @@
+// Color guide
+
+$primary-color: #007940;
+$secondary-color: #706259;
+$secondary-color-50: #B8B2AE;
+$tertiary-color: #1B5A7C;
+$accent-color-1: #D0B42B;
+$accent-color-2: #799A3D;
+$black: #474747;
+$white: #fff;
+
+
+// Typography
+$body-font-family: 'FF Scala Sans OT Regular', Ariel, Sans-Serif;
+$headline-font-family-1: 'vendemed', Palatino, Serif;
+$headline-font-family-2: $body-font-family;
+
+h1 {
+  font-family: $headline-font-family-1;
+  font-weight: 400;
+  font-size: rem-calc(64);
+  line-height: rem-calc(64);
+}
+
+h2 {
+  font-family: $headline-font-family-2;
+  font-weight: 700;
+  font-size: rem-calc(48);
+  line-height: rem-calc(52);
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: $headline-font-family-2;
+  font-weight: 400;
+  font-size: rem-calc(24);
+  line-height: rem-calc(29);
+}
+
+p {
+  font-family: $body-font-family;
+  font-weight: 400;
+  font-size: rem-calc(16);
+  line-height: rem-calc(30);
+}
+
+
+
+// Lists
+ul {
+  list-style: disc;
+}
+
+li {
+  font-family: $body-font-family;
+  font-size: rem-calc(20);
+  line-height: rem-calc(30);
+  color: #141414;
+}
+
+
+
+// Links
+a {
+  font-size: rem-calc(14);
+  line-height: rem-calc(20);
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover {
+    font-size: rem-calc(20);
+    line-height: rem-calc(30);
+    color: $accent-color-2;
+  }
+}
+
+a.primary {
+  color: #191919;
+}
+
+a.secondary {
+  color: #808080;
+}
+
+
+// Buttons
+button, .button {
+  width: rem-calc(205);
+  height: rem-calc(52);
+  font-family: $body-font-family;
+  font-weight: 400;
+  font-size: rem-calc(24);
+  line-height: rem-calc(24);
+  vertical-align: middle;
+  text-align: center;
+  text-transform: uppercase;
+  color: $accent-color-2;
+  background-color: $white;
+  border: 1px solid $accent-color-2;
+
+  &:hover {
+    font-weight: 700;
+    color: $white;
+    background-color: $accent-color-2;
+  }
+}

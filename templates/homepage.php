@@ -37,7 +37,7 @@ get_header(); ?>
 
             <h3><?php echo get_field( 'first_left_title' ); ?></h3>
             <p><?php echo get_field( 'first_left_description' ); ?></p>
-            <a href="" class="button"><?php echo get_field( 'first_left_button' ); ?></a>
+            <a href="<?php the_field( 'first_left_button_link' ); ?>" class="button"><?php echo get_field( 'first_left_button' ); ?></a>
     </section>
 
     <?php $firstRightImage = get_field( 'first_right_image' ); ?>
@@ -48,7 +48,7 @@ get_header(); ?>
 
             <h3><?php echo get_field( 'first_right_title' ); ?></h3>
             <p><?php echo get_field( 'first_right_description' ); ?></p>
-            <a href="" class="button"><?php echo get_field( 'first_right_button' ); ?></a>
+            <a href="<?php the_field( 'first_right_button_link' ); ?>" class="button"><?php echo get_field( 'first_right_button' ); ?></a>
     </section>
 </div>
 
@@ -72,7 +72,7 @@ get_header(); ?>
             <div class="overlay">
                 <h3><?php echo get_field( 'second_left_title' ); ?></h3>
                 <p><?php echo get_field( 'second_left_description' ); ?></p>
-                <a href="" class="button"><?php echo get_field( 'second_left_button' ); ?></a>
+                <a href="<?php the_field( 'second_left_button_link' ); ?>" class="button"><?php echo get_field( 'second_left_button' ); ?></a>
             </div>
     </section>
 
@@ -85,7 +85,7 @@ get_header(); ?>
             <div class="overlay">
                 <h3><?php echo get_field( 'second_right_title' ); ?></h3>
                 <p><?php echo get_field( 'second_right_description' ); ?></p>
-                <a href="" class="button"><?php echo get_field( 'second_right_button' ); ?></a>
+                <a href="<?php the_field( 'second_right_button_link' ); ?>" class="button"><?php echo get_field( 'second_right_button' ); ?></a>
             </div>
     </section>
 </div>
