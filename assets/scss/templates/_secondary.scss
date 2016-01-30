@@ -165,14 +165,35 @@ body.page-template-secondary {
   }
 
   // Secondary navigation styling
-  #second + nav,
-  #desktop-carousel + nav {
-    background-color: $accent-color-2 !important;
-  }
-
-  #second + nav {
+  #second + nav, #desktop-carousel + nav {
     ul {
       padding: rem-calc(48) rem-calc(60);
+    }
+
+    .menu > li:not(.menu-text) > a {
+      margin-bottom: rem-calc(32);
+      border: 1px solid $white;
+      color: $white;
+      font-size: rem-calc(24);
+      line-height: rem-calc(30);
+      text-transform: uppercase;
+      transition: background-color 0.25s ease-out, color 0.25s ease-out;
+
+      &:hover {
+        font-weight: 700;
+        background-color: $white;
+        color: $accent-color-2;
+      }
+
+      @include breakpoint(small) {
+        color: $accent-color-2;
+        border-color: $accent-color-2;
+
+        &:hover {
+          color: $white;
+          background-color: $accent-color-2;
+        }
+      }
     }
   }
 }

@@ -1,6 +1,7 @@
 body.page-template-secondary {
 
   #desktop-carousel {
+
     @include breakpoint(medium) {
       padding: 0 rem-calc(30);
     }
