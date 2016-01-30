@@ -157,7 +157,9 @@ get_header(); ?>
     <?php endif; ?>
         </div>
 
-    <?php echo get_field( 'secondary_nav' ); ?>
+    <div class="content-container">
+        <?php the_field( 'secondary_nav' ); ?>
+    </div>
 
 <?php do_action( 'foundationpress_after_content' ); ?>
 
