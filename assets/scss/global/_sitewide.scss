@@ -35,14 +35,14 @@ body {
     padding: 0;
 
     h1 {
-      margin: 0;
+      margin: 0 auto;
       padding: 0;
       font-size: rem-calc(48);
       line-height: rem-calc(48);
     }
 
     p {
-      margin: 0;
+      margin: 0 auto;
       padding: 0;
       font-size: rem-calc(16);
       line-height: rem-calc(30);
@@ -55,11 +55,17 @@ body {
 
     @include breakpoint(small) {
       display: block;
+      margin: 0 0 rem-calc(14);
       padding: rem-calc(48) rem-calc(87) rem-calc(56);
 
-      h1 {
+      .content-container {
         margin: 0;
-        font-size: rem-calc(48);
+
+        h1 {
+          margin: 0 auto;
+          font-size: rem-calc(48);
+          line-height: rem-calc(48);
+        }
       }
     }
 

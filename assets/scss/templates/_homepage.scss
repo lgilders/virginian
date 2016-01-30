@@ -3,23 +3,24 @@ body.page-template-homepage {
 // Hero styling
   #hero-mobile {
     display: block;
-    margin: 0 0 rem-calc(20);
-    padding: rem-calc(15) rem-calc(15) rem-calc(46);
+    margin: 0 0 rem-calc(16);
+    padding: rem-calc(15) rem-calc(15) rem-calc(30);
 
     @include breakpoint(small) {
       display: none;
     }
 
     h1 {
+      margin: 0 auto;
+      padding: rem-calc(24) rem-calc(30) rem-calc(20);
       font-size: rem-calc(48);
       line-height: rem-calc(48);
-      margin: 0;
-      padding: rem-calc(20) rem-calc(30);
     }
 
     p {
-      border: 1px solid white;
+      margin: 0 auto;
       padding: rem-calc(18) rem-calc(14) rem-calc(22);
+      border: 1px solid white;
     }
   }
 
@@ -30,18 +31,19 @@ body.page-template-homepage {
   @include breakpoint(small) {
     #hero {
       display: block;
-      margin-bottom: rem-calc(15);
+      margin-bottom: rem-calc(14);
       padding: rem-calc(45) rem-calc(45) rem-calc(50);
 
       h1 {
+        margin: 0 auto;
+        padding: rem-calc(8) rem-calc(20) rem-calc(20);
         font-size: rem-calc(64);
-        margin: 0;
-        padding: 0 rem-calc(20) rem-calc(14);
       }
 
       p {
+        margin: 0 auto;
+        padding: rem-calc(16) rem-calc(36) rem-calc(18);
         border: 1px solid white;
-        padding: rem-calc(16) rem-calc(36) rem-calc(18) ;
       }
     }
   }
@@ -71,9 +73,19 @@ body.page-template-homepage {
 // Highlights styling
   #first, #second {
     margin: 0 auto;
+    margin-bottom: rem-calc(14);
     max-width: rem-calc(1024);
     width: 100%;
   }
+
+  #real-estate, #the-club {
+    background-color: $secondary-color;
+  }
+
+  #discovery-visit, #golf-course {
+    background-color: $tertiary-color;
+  }
+
 
   div {
     margin-bottom: rem-calc(15);
@@ -87,20 +99,14 @@ body.page-template-homepage {
 
   section, .overlay {
     position: relative;
-    min-height: rem-calc(304);
-    padding: rem-calc(25) rem-calc(12) rem-calc(20);
+    padding: rem-calc(25) rem-calc(12) rem-calc(24);
 
     h2 {
-      margin: 0;
-      padding: rem-calc(20) rem-calc(14) rem-calc(14);
-      font-family: $body-font-family;
+      margin: 0 auto;
+      padding: rem-calc(20) 0 rem-calc(14);
       font-size: rem-calc(30);
-      font-weight: bold;
       line-height: rem-calc(30);
-      letter-spacing: 0.0875em;
-      text-transform: uppercase;
-      background-color: white;
-      color: #787878;
+      letter-spacing: 0.05em;
     }
 
     p {
@@ -109,13 +115,9 @@ body.page-template-homepage {
       padding: rem-calc(24) 0;
     }
 
-    .button {
+    a.button {
       min-width: rem-calc(205);
-      font-size: rem-calc(24);
-      margin: 0;
-      padding: rem-calc(14);
-      background-color: #535353;
-      color: white;
+      margin: 0 auto;
     }
   }
 
@@ -124,20 +126,18 @@ body.page-template-homepage {
       padding: 0;
 
       .overlay {
-        margin: 0;
-        padding: rem-calc(20);
+        margin: 0 auto;
         background: rgba(256, 256, 256, 0.8);
-      }
 
-      h2 {
-        padding: 0;
-        background-color: transparent;
-        color: #727272;
-      }
+        h2 {
+          padding: 0;
+          color: $secondary-color;
+        }
 
-      p {
-        padding: rem-calc(14) 0;
-        color: black;
+        p {
+          padding: rem-calc(14) 0;
+          color: $secondary-color;
+        }
       }
     }
   }
@@ -145,14 +145,25 @@ body.page-template-homepage {
   @include breakpoint(small) {
 
     section, .overlay {
-      min-height: rem-calc(330);
       padding-left: rem-calc(20);
       padding-right: rem-calc(20);
+
+      h2 {
+        font-size: rem-calc(36);
+      }
+
+      p {
+        min-height: rem-calc(138);
+      }
     }
 
     div + div {
       section {
         .overlay {
+          h2 {
+            padding: rem-calc(8) 0 0;
+          }
+
           p {
             min-height: rem-calc(154);
             padding: rem-calc(18) 0 rem-calc(14);
@@ -169,8 +180,8 @@ body.page-template-homepage {
 
   @include breakpoint(medium) {
     section {
-      min-height: rem-calc(494);
-      padding: rem-calc(66) rem-calc(42) rem-calc(67.5);
+      min-height: rem-calc(400);
+      padding: rem-calc(68) rem-calc(42);
 
       h2 {
         max-width: rem-calc(382);
@@ -185,19 +196,18 @@ body.page-template-homepage {
 
     div + div {
       section {
-        padding: rem-calc(57) rem-calc(44);
+        padding: rem-calc(56) rem-calc(44);
 
         .overlay {
-          max-height: rem-calc(284);
-          padding: rem-calc(16) rem-calc(32);
+          padding: rem-calc(16) rem-calc(36);
 
           h2 {
-            background-color: transparent !important;
+            padding: rem-calc(16);
           }
 
           p {
-            min-height: rem-calc(145);
-            padding: 0 0 rem-calc(24);
+            min-height: rem-calc(140);
+            padding: 0 0 rem-calc(20);
           }
         }
       }
@@ -206,7 +216,8 @@ body.page-template-homepage {
 
   @include breakpoint(large) {
     section {
-      min-height: rem-calc(434);
+      min-height: 0;
+      max-height: rem-calc(400);
     }
   }
 
