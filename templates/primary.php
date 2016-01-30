@@ -27,7 +27,7 @@ get_header(); ?>
 
         <?php $title = get_field( 'secondary_title'); ?>
         <?php if($title): ?>
-            <h2><?php echo $title; ?></h2>
+            <h1><?php echo $title; ?></h1>
         <?php endif; ?>
 
         <p><?php echo get_field( 'secondary_text' ); ?></p>
@@ -59,7 +59,7 @@ get_header(); ?>
             style="background: url(<?php echo $brandImage['url']; ?>)"
         <?php endif; ?>>
 
-        <h2><?php echo get_field( 'brand_story' ); ?></h2>
+        <h1><?php echo get_field( 'brand_story' ); ?></h1>
     </div>
 <?php endif; ?>
 

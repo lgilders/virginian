@@ -38,7 +38,7 @@ body.page-template-primary {
     #description {
       padding: rem-calc(52) rem-calc(25);
 
-      h2 {
+      h1 {
         margin: 0;
         padding-top: rem-calc(20);
         font-size: rem-calc(48);
@@ -52,7 +52,7 @@ body.page-template-primary {
         color: black;
       }
 
-      h2 + p {
+      h1 + p {
         padding-top: rem-calc(8);
       }
 
@@ -70,9 +70,9 @@ body.page-template-primary {
     display: none;
 
     @include breakpoint(small) {
-      //display: block;
+      display: block;
 
-      h2 {
+      h1 {
         margin: 0;
         padding: rem-calc(52);
         font-size: rem-calc(48);
@@ -81,7 +81,7 @@ body.page-template-primary {
     }
 
     @include breakpoint(medium) {
-      h2 {
+      h1 {
         padding: rem-calc(80) rem-calc(52);
       }
     }
