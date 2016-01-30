@@ -105,8 +105,8 @@ body.page-template-homepage {
       margin: 0 auto;
       padding: rem-calc(20) 0 rem-calc(14);
       font-size: rem-calc(30);
+      font-weight: 400;
       line-height: rem-calc(30);
-      letter-spacing: 0.05em;
     }
 
     p {
@@ -118,6 +118,8 @@ body.page-template-homepage {
     a.button {
       min-width: rem-calc(205);
       margin: 0 auto;
+      text-transform: none;
+      font-weight: 400;
     }
   }
 
@@ -145,6 +147,7 @@ body.page-template-homepage {
   @include breakpoint(small) {
 
     section, .overlay {
+      min-height: rem-calc(340);
       padding-left: rem-calc(20);
       padding-right: rem-calc(20);
 
@@ -199,6 +202,7 @@ body.page-template-homepage {
         padding: rem-calc(56) rem-calc(44);
 
         .overlay {
+          min-height: rem-calc(284);
           padding: rem-calc(16) rem-calc(36);
 
           h2 {
