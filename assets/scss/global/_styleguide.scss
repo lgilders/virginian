@@ -55,7 +55,7 @@ li {
   font-family: $body-font-family;
   font-size: rem-calc(20);
   line-height: rem-calc(30);
-  color: #141414;
+  color: $white;
 }
 
 
@@ -75,11 +75,11 @@ a {
 }
 
 a.primary {
-  color: #191919;
+  color: $black;
 }
 
 a.secondary {
-  color: #808080;
+  color: $secondary-color-50;
 }
 
 
