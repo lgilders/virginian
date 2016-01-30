@@ -88,9 +88,10 @@ body {
 
   // Secondary nav styling
   #hero nav,
+  #hero-mobile nav,
   #second + nav,
   #desktop-carousel + nav {
-    background-color: #959595;
+    background-color: $accent-color-2;
 
     ul {
       padding: rem-calc(36) rem-calc(60);
@@ -101,12 +102,19 @@ body {
     }
 
     .menu > li:not(.menu-text) > a {
-      margin-bottom: rem-calc(30);
+      margin-bottom: rem-calc(32);
       border: 1px solid white;
       color: white;
       font-size: rem-calc(24);
       line-height: rem-calc(30);
       text-transform: uppercase;
+      transition: background-color 0.25s ease-out, color 0.25s ease-out;
+
+      &:hover {
+        font-weight: 700;
+        background-color: $white;
+        color: $accent-color-2;
+      }
     }
 
     li:last-child > a {
@@ -118,6 +126,7 @@ body {
 
       ul {
         padding-top: rem-calc(14);
+        padding-bottom: rem-calc(48);
       }
 
       li {
@@ -139,7 +148,7 @@ body {
 
     @include breakpoint(medium) {
       ul {
-        padding-top: rem-calc(52);
+        padding-top: rem-calc(56);
         padding-bottom: rem-calc(62);
       }
 

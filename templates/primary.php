@@ -10,9 +10,21 @@ get_header(); ?>
             style="background: url(<?php echo $heroImage['url']; ?>)"
         <?php endif; ?>>
         <div class="content-container">
-            <h1><?php echo get_field( 'hero_title' ); ?></h1>
-            <p><?php echo get_field( 'hero_introduction' ); ?></p>
-            <?php echo get_field( 'sub_navigation' ); ?>
+            <h1><?php the_field( 'hero_title' ); ?></h1>
+            <p><?php the_field( 'hero_introduction' ); ?></p>
+            <?php the_field( 'sub_navigation' ); ?>
+        </div>
+    </header>
+
+<?php $heroImageMobile = get_field( 'hero_image_mobile' ); ?>
+    <header id="hero-mobile" role="banner"
+        <?php if($heroImageMobile): ?>
+            style="background: url(<?php echo $heroImage['url']; ?>)"
+        <?php endif; ?>>
+        <div class="content-container">
+            <h1><?php the_field( 'hero_title' ); ?></h1>
+            <p><?php the_field( 'hero_introduction' ); ?></p>
+            <?php the_field( 'sub_navigation' ); ?>
         </div>
     </header>
 
@@ -30,7 +42,7 @@ get_header(); ?>
             <h1><?php echo $title; ?></h1>
         <?php endif; ?>
 
-        <p><?php echo get_field( 'secondary_text' ); ?></p>
+        <p><?php the_field( 'secondary_text' ); ?></p>
     </section>
 </div>
 
@@ -59,7 +71,7 @@ get_header(); ?>
             style="background: url(<?php echo $brandImage['url']; ?>)"
         <?php endif; ?>>
 
-        <h1><?php echo get_field( 'brand_story' ); ?></h1>
+        <h1><?php the_field( 'brand_story' ); ?></h1>
     </div>
 <?php endif; ?>
 
