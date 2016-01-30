@@ -84,18 +84,18 @@ a.secondary {
 
 
 // Buttons
-button, .button {
-  width: rem-calc(205);
+button, a.button {
+  min-width: rem-calc(205);
   height: rem-calc(52);
   font-family: $body-font-family;
   font-weight: 400;
   font-size: rem-calc(24);
-  line-height: rem-calc(32);
+  line-height: rem-calc(12);
   vertical-align: middle;
   text-align: center;
   text-transform: uppercase;
-  color: $accent-color-2;
-  background-color: $white;
+  color: $white;
+  background-color: $accent-color-2;
   border: 1px solid $accent-color-2;
 
   &:hover {
