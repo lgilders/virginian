@@ -35,7 +35,7 @@ get_header(); ?>
              style="background: url(<?php echo $firstLeftImage['url']; ?>)"
              <?php endif; ?>>
 
-            <h3><?php echo get_field( 'first_left_title' ); ?></h3>
+            <h2><?php echo get_field( 'first_left_title' ); ?></h2>
             <p><?php echo get_field( 'first_left_description' ); ?></p>
             <a href="<?php the_field( 'first_left_button_link' ); ?>" class="button"><?php echo get_field( 'first_left_button' ); ?></a>
     </section>
@@ -46,7 +46,7 @@ get_header(); ?>
              style="background: url(<?php echo $firstRightImage['url']; ?>)"
              <?php endif; ?>>
 
-            <h3><?php echo get_field( 'first_right_title' ); ?></h3>
+            <h2><?php echo get_field( 'first_right_title' ); ?></h2>
             <p><?php echo get_field( 'first_right_description' ); ?></p>
             <a href="<?php the_field( 'first_right_button_link' ); ?>" class="button"><?php echo get_field( 'first_right_button' ); ?></a>
     </section>
@@ -58,7 +58,7 @@ get_header(); ?>
      style="background: url(<?php echo $centerImage['url']; ?>)"
      <?php endif; ?>>
     <div class="content-container">
-        <h2><?php echo get_field( 'center_title' ); ?></h2>
+        <h1><?php echo get_field( 'center_title' ); ?></h1>
     </div>
 </div>
 
@@ -70,7 +70,7 @@ get_header(); ?>
              <?php endif; ?>>
 
             <div class="overlay">
-                <h3><?php echo get_field( 'second_left_title' ); ?></h3>
+                <h2><?php echo get_field( 'second_left_title' ); ?></h2>
                 <p><?php echo get_field( 'second_left_description' ); ?></p>
                 <a href="<?php the_field( 'second_left_button_link' ); ?>" class="button"><?php echo get_field( 'second_left_button' ); ?></a>
             </div>
@@ -83,7 +83,7 @@ get_header(); ?>
              <?php endif; ?>>
 
             <div class="overlay">
-                <h3><?php echo get_field( 'second_right_title' ); ?></h3>
+                <h2><?php echo get_field( 'second_right_title' ); ?></h2>
                 <p><?php echo get_field( 'second_right_description' ); ?></p>
                 <a href="<?php the_field( 'second_right_button_link' ); ?>" class="button"><?php echo get_field( 'second_right_button' ); ?></a>
             </div>
