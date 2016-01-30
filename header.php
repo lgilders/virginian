@@ -27,18 +27,7 @@
 
         <!-- Insert Fontfaces -->
         <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/components/vendemed/css/vendemed.css" type="text/css" charset="utf-8" />
-        <script type="text/javascript">
-            (function() {
-                var path = '//easy.myfonts.net/v2/js?sid=161316(font-family=FF+Scala+Sans+OT+Regular)&key=K6aPYua6ag',
-                    protocol = ('https:' == document.location.protocol ? 'https:' : 'http:'),
-                    trial = document.createElement('script');
-                trial.type = 'text/javascript';
-                trial.async = true;
-                trial.src = protocol + path;
-                var head = document.getElementsByTagName("head")[0];
-                head.appendChild(trial);
-            })();
-        </script>
+        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/components/scalasansproregular/css/ScalaSansProRegular.css" type="text/css" charset="utf-8" />
 
 		<?php wp_head(); ?>
 	</head>
