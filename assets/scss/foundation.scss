@@ -64,6 +64,20 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+//  My custom styles:
+//  Add your scss files below to structure your project styles
+@import "util/if-resolution";
+@import "util/sprite-icon";
+@import "global/styleguide";
+@import "global/sitewide";
+@import "modules/contact-form";
+@import "components/hamburger";
+@import "components/featured-property";
+@import "components/hole-by-hole";
+@import "templates/homepage";
+@import "templates/primary";
+@import "templates/secondary";
+
 // Modules
 @import "modules/topbar";
 @import "modules/footer";
@@ -82,16 +96,3 @@
 @import "templates/page-sidebar-left";
 @import "templates/page-full-width";
 @import "templates/single-post";
-
-
-//  My custom styles:
-//  Add your scss files below to structure your project styles
-@import "global/styleguide";
-@import "global/sitewide";
-@import "modules/contact-form";
-@import "components/hamburger";
-@import "components/featured-property";
-@import "components/hole-by-hole";
-@import "templates/homepage";
-@import "templates/primary";
-@import "templates/secondary";

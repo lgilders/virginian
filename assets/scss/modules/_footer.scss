@@ -21,19 +21,15 @@
 
 #footer-container {
   margin: 0;
-  padding: rem-calc(36) rem-calc(30);
+  padding: rem-calc(24) rem-calc(30) rem-calc(36);
   border: none;
-  background-color: #525252;
+  background-color: $secondary-color;
 
-  footer {
-    padding: 0 !important;
-
-    @include breakpoint(small) {
-      padding: 1.875rem 2rem !important;
-    }
+  @include breakpoint(small) {
+    padding: rem-calc(40) rem-calc(26);
   }
 
-  #menu-footer-primary {
+  footer + ul {
     float: none;
 
     @include breakpoint(small) {
@@ -42,9 +38,13 @@
   }
 
   #footer {
+    margin: 0 auto;
+    max-width: rem-calc(1024);
+    width: 100%;
     display: block;
     float: none;
     padding: 0 !important;
+    padding-bottom: rem-calc(4) !important;
     text-align: justify;
 
     &:after {
@@ -67,13 +67,12 @@
       @include breakpoint(small) {
         padding: 0;
       }
-
-      @include breakpoint(medium) {
-        padding: 1rem;
-      }
     }
 
     a {
+      padding: 0;
+      font-size: rem-calc(18);
+      line-height: rem-calc(30);
       text-transform: uppercase;
       color: white;
     }
@@ -83,35 +82,67 @@
     @include breakpoint(small) {
       li {
         float: left;
+        margin-right: rem-calc(32);
+      }
+
+      li:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        font-size: rem-calc(16);
       }
     }
   }
 
   #menu-footer-primary {
 
-    li:nth-child(1), li:nth-child(2), li:nth-child(3) {
-      &:before {
-        display: none;
+    .calendar:before,
+    .gallery:before,
+    .press:before {
+      display: none;
 
         @include breakpoint(small) {
           display: block;
-        }
       }
+    }
+
+    .calendar:before {
+      margin: 0 auto;
+      margin-bottom: rem-calc(14);
+      content: '';
+      @include sprite-icon(-27px, -295px, 50px, 50px);
+    }
+
+    .gallery:before {
+      margin: 0 auto;
+      margin-bottom: rem-calc(14);
+      content: '';
+      @include sprite-icon(-123px, -301px, 50px, 50px);
+    }
+
+    .press:before {
+      margin: 0 auto;
+      margin-bottom: rem-calc(14);
+      content: '';
+      @include sprite-icon(-221px, -300px, 50px, 50px);
     }
   }
 
   #social-media-footer {
     display: inline-block;
     width: 100%;
-    margin: 0;
+    margin: 0 auto;
+    padding-top: rem-calc(16);
 
     @include breakpoint(small) {
       float: right;
-      width: 25%;
+      width: 30%;
+      padding: 0;
     }
 
     @include breakpoint(medium) {
-      width: 30%;
+      width: 25%;
     }
 
     .social-media {
@@ -119,6 +150,7 @@
       float: none;
       text-align: justify;
       margin: 0;
+      max-height: rem-calc(64);
 
       &:after {
         content: '';
@@ -133,13 +165,55 @@
       li {
         display: inline-block;
         float: none;
-        padding: 0;
+        padding: rem-calc(16);
         min-width: 50px;
         text-align: center;
+        margin: 0;
+      }
 
-        @include breakpoint(medium) {
-          padding: 1rem;
+      @include breakpoint(small) {
+        li:last-child {
+          padding-right: 0;
         }
+      }
+
+      @include breakpoint(medium) {
+        li:last-child {
+          padding-right: rem-calc(16);
+        }
+      }
+
+      #twitter {
+        display: block;
+        background: url(../images/virginian/icons.png) no-repeat -438px -44px;
+        width: 42px;
+        height: 35px;
+        overflow: hidden;
+        text-indent: 100%;
+        white-space: nowrap;
+        padding: 0;
+      }
+
+      #facebook {
+        display: block;
+        background: url(../images/virginian/icons.png) no-repeat -287px -37px;
+        width: 25px;
+        height: 42px;
+        overflow: hidden;
+        text-indent: 100%;
+        white-space: nowrap;
+        padding: 0;
+      }
+
+      #instagram {
+        display: block;
+        background: url(../images/virginian/icons.png) no-repeat -354px -41px;
+        width: 42px;
+        height: 42px;
+        overflow: hidden;
+        text-indent: 100%;
+        white-space: nowrap;
+        padding: 0;
       }
     }
   }
@@ -147,9 +221,15 @@
 
 #subfooter {
   min-height: rem-calc(60);
-  padding: rem-calc(30);
-  color: white;
-  background-color: #3b3b3b;
+  padding: rem-calc(46) 0 rem-calc(56);
+  color: $secondary-color-50;
+  background-color: $black;
+
+  .content-container {
+    margin: 0 auto;
+    max-width: rem-calc(1024);
+    width: 100%;
+  }
 
   p {
     margin: 0;
@@ -159,5 +239,15 @@
 
   @include breakpoint(small) {
     text-align: left;
+
+    .content-container {
+      padding-left: rem-calc(26);
+    }
+  }
+
+  @include breakpoint(large) {
+    .content-container {
+      padding: 0;
+    }
   }
 }
