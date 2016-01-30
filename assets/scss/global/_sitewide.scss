@@ -103,8 +103,8 @@ body {
 
     .menu > li:not(.menu-text) > a {
       margin-bottom: rem-calc(32);
-      border: 1px solid white;
-      color: white;
+      border: 1px solid $white;
+      color: $white;
       font-size: rem-calc(24);
       line-height: rem-calc(30);
       text-transform: uppercase;
@@ -131,6 +131,10 @@ body {
 
       li {
         display: inline-block;
+      }
+
+      .menu > li {
+        vertical-align: inherit;
       }
 
       .menu > li:not(.menu-text) > a {

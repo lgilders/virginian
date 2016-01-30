@@ -1,12 +1,13 @@
 body.page-template-secondary {
 
   #desktop-carousel {
+
     @include breakpoint(medium) {
       padding: 0 rem-calc(30);
     }
 
     .item {
-      background-color: #b8b2ae;
+      background-color: $secondary-color-50;
 
       p {
         margin: 0;
@@ -14,10 +15,10 @@ body.page-template-secondary {
     }
 
     .synced .item {
-      background-color: #474747 !important;
+      background-color: $black !important;
 
       p {
-        color: #d0b42b;
+        color: $accent-color-1;
       }
     }
 
@@ -41,16 +42,16 @@ body.page-template-secondary {
         font-size: rem-calc(22);
         line-height: rem-calc(30);
         text-transform: uppercase;
-        color: white;
+        color: $white;
       }
     }
 
     .synced .item {
       p {
-        color: white;
+        color: $white;
 
         span {
-          color: #d0b42b;
+          color: $accent-color-1;
         }
       }
     }
@@ -67,7 +68,7 @@ body.page-template-secondary {
     }
 
     .item {
-      border-right: rem-calc(4) solid white;
+      border-right: rem-calc(4) solid $white;
 
       p {
         padding: 0.25rem;
@@ -123,7 +124,7 @@ body.page-template-secondary {
         font-size: rem-calc(28);
         line-height: rem-calc(30);
         text-transform: uppercase;
-        color: white;
+        color: $white;
         vertical-align: middle;
       }
     }
@@ -135,14 +136,14 @@ body.page-template-secondary {
     .description {
       margin: 0;
       padding: rem-calc(20) rem-calc(28);
-      color: #474747;
-      background-color: #b8b2ae;
+      color: $white;
+      background-color: $secondary-color-50;
     }
 
     .hole-details {
       padding: rem-calc(8);
       font-size: rem-calc(14);
-      color: white;
+      color: $white;
       text-transform: uppercase;
 
       ul {

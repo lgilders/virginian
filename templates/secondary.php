@@ -7,24 +7,24 @@ get_header(); ?>
 <?php $heroImage = get_field( 'hero_image' ); ?>
     <header id="hero" role="banner"
         <?php if($heroImage): ?>
-            style="background: url(<?php echo $heroImage['url']; ?>)"
+            style="background: #706259 url(<?php echo $heroImage['url']; ?>)"
         <?php endif; ?>>
         <div class="content-container">
-            <h1><?php echo get_field( 'hero_title' ); ?></h1>
-            <p><?php echo get_field( 'hero_introduction' ); ?></p>
-            <?php echo get_field( 'sub_navigation' ); ?>
+            <h1><?php the_field( 'hero_title' ); ?></h1>
+            <p><?php the_field( 'hero_introduction' ); ?></p>
+            <?php the_field( 'sub_navigation' ); ?>
         </div>
     </header>
 
 <?php $heroImageMobile = get_field( 'hero_image_mobile' ); ?>
     <header id="hero-mobile" role="banner"
         <?php if($heroImageMobile): ?>
-            style="background: url(<?php echo $heroImageMobile['url']; ?>)"
+            style="background: #706259 url(<?php echo $heroImageMobile['url']; ?>)"
         <?php endif; ?>>
         <div class="content-container">
-            <h1><?php echo get_field( 'hero_title' ); ?></h1>
-            <p><?php echo get_field( 'hero_introduction' ); ?></p>
-            <?php echo get_field( 'sub_navigation' ); ?>
+            <h1><?php the_field( 'hero_title' ); ?></h1>
+            <p><?php the_field( 'hero_introduction' ); ?></p>
+            <?php the_field( 'sub_navigation' ); ?>
         </div>
     </header>
 
@@ -36,7 +36,7 @@ get_header(); ?>
 
     <div id="first">
         <section id="title">
-            <h1><?php echo get_field( 'first_section_title' ); ?></h1>
+            <h1><?php the_field( 'first_section_title' ); ?></h1>
         </section>
 
         <?php $firstImage = get_field( 'first_section_image' ); ?>
@@ -51,7 +51,7 @@ get_header(); ?>
             </section>
 
             <section id="description">
-                <p><?php echo get_field( 'first_section_description' ); ?></p>
+                <p><?php the_field( 'first_section_description' ); ?></p>
             </section>
         <?php endif; ?>
     </div>
@@ -60,10 +60,12 @@ get_header(); ?>
     <?php if($centerImage): ?>
         <div id="center"
             <?php if($centerImage): ?>
-                style="background: url(<?php echo $centerImage['url']; ?>)"
+                style="background: #706259 url(<?php echo $centerImage['url']; ?>)"
             <?php endif; ?>>
 
-            <h2><?php echo get_field( 'center_title' ); ?></h2>
+            <div class="content-container">
+                <h1><?php the_field( 'center_title' ); ?></h1>
+            </div>
         </div>
     <?php endif; ?>
 
@@ -71,7 +73,7 @@ get_header(); ?>
     <?php if($secondImage): ?>
         <div id="second">
             <section id="title">
-                <h1><?php echo get_field( 'second_section_title' ); ?></h1>
+                <h1><?php the_field( 'second_section_title' ); ?></h1>
             </section>
 
             <?php $secondVideo = get_field( 'second_section_video' ); ?>
@@ -84,7 +86,7 @@ get_header(); ?>
             </section>
 
             <section id="description">
-                <p><?php echo get_field( 'second_section_description' ); ?></p>
+                <p><?php the_field( 'second_section_description' ); ?></p>
             </section>
         </div>
     <?php endif; ?>

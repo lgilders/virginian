@@ -4,20 +4,21 @@ body.page-template-secondary {
   #hero-mobile {
     display: block;
     margin: 0 0 rem-calc(20);
-    padding: rem-calc(15) rem-calc(15) rem-calc(46);
+    padding: rem-calc(14) rem-calc(14) rem-calc(46);
 
     @include breakpoint(small) {
       display: none;
     }
 
     h1 {
-      margin: 0;
-      padding: rem-calc(20) rem-calc(30);
+      margin: 0 auto;
+      padding: rem-calc(24) rem-calc(30) rem-calc(20);
     }
 
     p {
-      border: 1px solid white;
-      padding: rem-calc(18) rem-calc(14) rem-calc(22);
+      margin: 0 auto;
+      padding: rem-calc(20) rem-calc(14) rem-calc(22);
+      border: 1px solid $white;
     }
   }
 
@@ -28,33 +29,33 @@ body.page-template-secondary {
   @include breakpoint(small) {
     #hero {
       display: block;
-      margin-bottom: rem-calc(15);
-      padding: rem-calc(45) rem-calc(45) rem-calc(50);
+      margin-bottom: rem-calc(16);
+      padding: rem-calc(46) rem-calc(46) rem-calc(56);
 
       h1 {
+        margin: 0 auto;
+        padding: rem-calc(8) rem-calc(20) rem-calc(24);
         font-size: rem-calc(64);
-        margin: 0;
-        padding: 0 rem-calc(20) rem-calc(14);
+        line-height: rem-calc(64);
       }
 
       p {
-        border: 1px solid white;
-        padding: rem-calc(16) rem-calc(36) rem-calc(18) ;
+        margin: 0 auto;
+        padding: rem-calc(16) rem-calc(36) rem-calc(18);
+        border: 1px solid $white;
       }
     }
   }
 
   @include breakpoint(medium) {
     #hero {
-      padding: rem-calc(72) rem-calc(100) rem-calc(96);
+      padding: rem-calc(64) rem-calc(100) rem-calc(96);
 
       h1 {
-        font-size: rem-calc(64);
-        padding: 0 0 rem-calc(36);
+        padding: 0 0 rem-calc(30);
       }
 
       p {
-        border: 1px solid white;
         padding: rem-calc(12) rem-calc(30);
       }
     }
@@ -62,7 +63,7 @@ body.page-template-secondary {
 
   @include breakpoint(large) {
     #hero {
-      padding: rem-calc(72) rem-calc(170) rem-calc(96);
+      //padding: rem-calc(72) rem-calc(170) rem-calc(96);
     }
   }
 
@@ -87,12 +88,8 @@ body.page-template-secondary {
     @include clearfix;
 
     #title h1 {
-      padding: rem-calc(20) rem-calc(14) rem-calc(32);
-      color: #868686;
-
-      @include breakpoint(small) {
-        padding-top: rem-calc(8);
-      }
+      padding: rem-calc(20) rem-calc(14) rem-calc(40);
+      color: $accent-color-2;
 
       @include breakpoint(medium) {
         padding-top: rem-calc(16);
@@ -115,7 +112,7 @@ body.page-template-secondary {
       margin: 0;
       padding: rem-calc(32) 0 rem-calc(14);
       text-align: left;
-      color: black;
+      color: $black;
 
       @include breakpoint(700) {
         float: left;
@@ -132,22 +129,24 @@ body.page-template-secondary {
   }
 
   #second {
+    padding-bottom: rem-calc(30);
+
     @include breakpoint(medium) {
       padding-bottom: rem-calc(36);
     }
     
     #title h1 {
       padding-top: rem-calc(62);
-      border-top: 1px solid #868686;
+      border-top: 1px solid $secondary-color-50;
 
       @include breakpoint(small) {
-        padding-top: rem-calc(14);
-        padding-bottom: rem-calc(36);
+        padding-top: 0;
+        padding-bottom: rem-calc(40);
         border: none;
       }
 
       @include breakpoint(medium) {
-        padding-top: rem-calc(30);
+        padding-top: rem-calc(14);
         padding-bottom: rem-calc(24);
       }
     }
@@ -166,8 +165,35 @@ body.page-template-secondary {
   }
 
   // Secondary navigation styling
-  #second + nav,
-  #desktop-carousel + nav {
-    background-color: #959595 !important;
+  #second + nav, #desktop-carousel + nav {
+    ul {
+      padding: rem-calc(48) rem-calc(60);
+    }
+
+    .menu > li:not(.menu-text) > a {
+      margin-bottom: rem-calc(32);
+      border: 1px solid $white;
+      color: $white;
+      font-size: rem-calc(24);
+      line-height: rem-calc(30);
+      text-transform: uppercase;
+      transition: background-color 0.25s ease-out, color 0.25s ease-out;
+
+      &:hover {
+        font-weight: 700;
+        background-color: $white;
+        color: $accent-color-2;
+      }
+
+      @include breakpoint(small) {
+        color: $accent-color-2;
+        border-color: $accent-color-2;
+
+        &:hover {
+          color: $white;
+          background-color: $accent-color-2;
+        }
+      }
+    }
   }
 }
