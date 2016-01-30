@@ -1,13 +1,15 @@
 body.page-template-primary {
 
   // Hero styling
-  #hero {
+  #hero-mobile {
+    display: block;
+
     .content-container {
-      max-width: rem-calc(1024);
+      margin: 0 auto;
     }
 
     h1 {
-      padding: rem-calc(36);
+      padding: rem-calc(56) rem-calc(36) rem-calc(36);
 
       @include breakpoint(small) {
         padding-top: rem-calc(44);
@@ -22,7 +24,7 @@ body.page-template-primary {
     }
 
     p {
-      padding: 0 rem-calc(45) rem-calc(45);
+      padding: 0 rem-calc(36) rem-calc(48);
 
       @include breakpoint(small) {
         padding: 0 rem-calc(80);
@@ -32,36 +34,84 @@ body.page-template-primary {
         padding: 0 rem-calc(200);
       }
     }
+
+    @include breakpoint(small) {
+      display: none;
+    }
+  }
+
+  #hero {
+    display: none;
+
+    @include breakpoint(small) {
+      display: block;
+
+      .content-container {
+        max-width: rem-calc(1024);
+        margin: 0 auto;
+      }
+
+      h1 {
+        padding: rem-calc(36) 0;
+
+        @include breakpoint(small) {
+          padding-top: rem-calc(40);
+          padding-bottom: rem-calc(8);
+          font-size: rem-calc(64);
+          line-height: rem-calc(64);
+        }
+
+        @include breakpoint(medium) {
+          padding-top: rem-calc(62);
+        }
+      }
+
+      p {
+        padding: 0 rem-calc(45) rem-calc(45);
+
+        @include breakpoint(small) {
+          padding: 0 rem-calc(80);
+        }
+
+        @include breakpoint(medium) {
+          padding: 0 rem-calc(200);
+        }
+      }
+    }
   }
 
   #first {
     #description {
-      padding: rem-calc(52) rem-calc(25);
+      padding: rem-calc(56) rem-calc(26);
 
-      h2 {
-        margin: 0;
+      h1 {
+        margin: 0 auto;
         padding-top: rem-calc(20);
         font-size: rem-calc(48);
         line-height: rem-calc(48);
-        color: black;
+        color: $accent-color-2;
       }
 
       p {
-        margin: 0;
+        margin: 0 auto;
         padding-top: rem-calc(40);
-        color: black;
+        color: $black;
       }
 
-      h2 + p {
+      h1 + p {
         padding-top: rem-calc(8);
       }
 
       @include breakpoint(small) {
-        padding: rem-calc(52) rem-calc(48);
+        padding: rem-calc(56);
+
+        p {
+          padding-top: rem-calc(32);
+        }
       }
 
       @include breakpoint(medium) {
-        padding: rem-calc(68) rem-calc(200);
+        padding: rem-calc(68) rem-calc(200) rem-calc(72);
       }
     }
   }
@@ -70,19 +120,19 @@ body.page-template-primary {
     display: none;
 
     @include breakpoint(small) {
-      //display: block;
+      display: block;
 
-      h2 {
-        margin: 0;
-        padding: rem-calc(52);
+      h1 {
+        margin: 0 auto;
+        padding: rem-calc(52) 0;
         font-size: rem-calc(48);
         line-height: rem-calc(48);
       }
     }
 
     @include breakpoint(medium) {
-      h2 {
-        padding: rem-calc(80) rem-calc(52);
+      h1 {
+        padding: rem-calc(72) 0 rem-calc(80);
       }
     }
   }
@@ -92,7 +142,7 @@ body.page-template-primary {
   }
 
   #visit-us {
-    color: black;
+    color: $black;
     padding: 0 rem-calc(25);
 
     #information {
@@ -109,13 +159,13 @@ body.page-template-primary {
     #location {
       float: none;
       width: 100%;
-      border-bottom: 1px solid black;
+      border-bottom: 1px solid $black;
 
       @include breakpoint(small) {
         float: left;
         width: 50%;
         border-bottom: none;
-        border-right: 1px solid black;
+        border-right: 1px solid $black;
       }
     }
 
