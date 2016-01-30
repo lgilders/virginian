@@ -216,7 +216,7 @@ body.page-template-homepage {
 
   @include breakpoint(large) {
     section {
-      min-height: 0;
+      min-height: rem-calc(400);
       max-height: rem-calc(400);
     }
   }

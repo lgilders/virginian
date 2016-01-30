@@ -1,0 +1,11 @@
+// Spritesheet
+@mixin sprite-icon($xpos, $ypos, $width, $height) {
+  background: url(../images/virginian/icons.png) no-repeat $xpos $ypos;
+  height: $height;
+  width: $width;
+
+  @include if-min-resolution(2) {
+    //background-image: url(../images/virginian/icons2x.png);
+    //background-size: 1024px 2098px;
+  }
+}
