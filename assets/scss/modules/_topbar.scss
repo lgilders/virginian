@@ -76,7 +76,7 @@
 }
 
 // Styles all nav menu items
-.top-bar .menu {
+.top-bar-left .menu {
   li {
     border-bottom: 1px solid black;
 
@@ -86,8 +86,6 @@
   }
 
   li:not(:last-child) {
-    padding: 0 !important;
-
     @include breakpoint(medium) {
       border: none;
       padding-right: rem-calc(60) !important;
@@ -157,6 +155,10 @@
 nav.vertical.menu {
   text-align: center;
 
+  li {
+    border-bottom: 2px solid black;
+  }
+
   .is-accordion-submenu-parent > a::after {
     border-color: $accent-color-2 transparent transparent;
   }
@@ -166,7 +168,7 @@ nav.vertical.menu {
   margin: 0 auto;
 
   li {
-    border: none;
+    border: none !important;
     background-color: $secondary-color-50;
   }
 
@@ -210,7 +212,28 @@ button.c-hamburger.c-hamburger--htx {
   margin: 0 auto !important;
 
   li:not(:last-child) {
-    padding-right: rem-calc(28) !important;
+
+    @include breakpoint(medium) {
+      padding-right: rem-calc(28) !important;
+      border-right: none !important;
+    }
+  }
+
+  li:not(.menu-text) > a {
+    font-size: rem-calc(16);
+    font-weight: 400;
+
+    @include breakpoint(medium) {
+
+      &:hover {
+        border-bottom: 2px solid $accent-color-2;
+      }
+
+      &:active {
+        color: $accent-color-2;
+        border-bottom: 2px solid $accent-color-2;
+      }
+    }
   }
 
   @include breakpoint(medium) {
