@@ -194,6 +194,14 @@ nav.vertical.menu {
   z-index: 10;
 }
 
+button.c-hamburger.c-hamburger--htx {
+  min-width: 40px;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
 // Styles for secondary nav
 .top-bar-right {
   //float: none;
