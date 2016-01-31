@@ -9,7 +9,12 @@ iframe {
 #contact-form {
   min-height: 0 !important;
   z-index: 1000;
-  color: black;
+  color: $black;
+  background-color: $black;
+
+  @include breakpoint(medium) {
+    background-color: $white;
+  }
 }
 
 #contact-form-header {
@@ -36,7 +41,7 @@ iframe {
 #contact-form-mobile {
   display: block;
   max-height: 17rem;
-  color: black;
+  color: $white;
 
   @include breakpoint(medium) {
     display: none;

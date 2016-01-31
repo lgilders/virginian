@@ -48,7 +48,11 @@
 }
 
 .vertical &.menu {
-  padding: 1rem;
+  padding: 0;
+
+  @include breakpoint(medium) {
+    padding: 1rem 0;
+  }
 }
 
 .title-bar {
@@ -73,9 +77,21 @@
 
 // Styles all nav menu items
 .top-bar .menu {
+  li {
+    border-bottom: 1px solid black;
+
+    @include breakpoint(medium) {
+      border: none;
+    }
+  }
+
   li:not(:last-child) {
-    border: none;
-    padding-right: rem-calc(60);
+    padding: 0 !important;
+
+    @include breakpoint(medium) {
+      border: none;
+      padding-right: rem-calc(60) !important;
+    }
   }
 
   a {
@@ -86,20 +102,28 @@
     line-height: rem-calc(30);
 
     &:hover {
-      border-bottom: 2px solid $accent-color-2;
+      @include breakpoint(medium) {
+        border-bottom: 2px solid $accent-color-2;
+      }
     }
 
     &:active {
-      border-bottom: 2px solid $accent-color-2;
-      color: $accent-color-2;
+      @include breakpoint(medium) {
+        border-bottom: 2px solid $accent-color-2;
+        color: $accent-color-2;
+      }
     }
   }
 }
 
 // Styles for main nav
 #desktop-menu {
-  height: rem-calc(45);
-  padding: 0 rem-calc(40);
+  margin: 0 auto !important;
+
+  @include breakpoint(medium) {
+    height: rem-calc(45);
+    padding: 0 rem-calc(40);
+  }
 }
 
 .top-bar-left {
@@ -131,8 +155,28 @@
 
 // Styles for main nav for MOBILE
 nav.vertical.menu {
-  padding-top: 2rem;
   text-align: center;
+
+  .is-accordion-submenu-parent > a::after {
+    border-color: $accent-color-2 transparent transparent;
+  }
+}
+
+.menu.nested {
+  margin: 0 auto;
+
+  li {
+    border: none;
+    background-color: $secondary-color-50;
+  }
+
+  a {
+    color: $white !important;
+
+    &:hover, &:active {
+      color: $black !important;
+    }
+  }
 }
 
 #menu-header-mobile {
@@ -152,8 +196,10 @@ nav.vertical.menu {
 
 // Styles for secondary nav
 .top-bar-right {
-  float: none;
+  //float: none;
   max-height: none;
+  background-color: $black;
+  margin: 0 auto !important;
 
   li:not(:last-child) {
     padding-right: rem-calc(28) !important;
@@ -164,6 +210,7 @@ nav.vertical.menu {
     min-height: 0 !important;
     max-height: rem-calc(45);
     padding-right: rem-calc(16);
+    background-color: $white;
   }
 }
 
@@ -173,6 +220,7 @@ nav.vertical.menu {
 
   @include breakpoint(medium) {
     display: block;
+    margin-bottom: 0 !important;
     float: right;
     max-height: rem-calc(45);
   }
@@ -203,6 +251,8 @@ nav.vertical.menu {
 #social-media-mobile {
   display: inline-block;
   width: 100%;
+  background-color: $black;
+  padding: 0 rem-calc(48);
 
   @include breakpoint(medium) {
     display: none;
@@ -212,7 +262,6 @@ nav.vertical.menu {
     display: block !important;
     float: none;
     text-align: justify;
-    border-top: 1px solid white;
 
     &:after {
       content: '';
@@ -224,19 +273,21 @@ nav.vertical.menu {
   ul {
     text-align: center;
     margin: 0 auto;
+    padding-top: rem-calc(32);
+    background-color: $black;
+    border-top: 1px solid $white;
   }
 
   li {
     display: inline-block;
     float: none;
-    padding: 1rem;
-    min-width: rem-calc(50);
+    padding: 0 0.5rem !important;
     text-align: center;
   }
 }
 
 // Social media icons from sprite sheet
-#social-media-mobile, .social-media {
+.social-media {
   #twitter {
     display: block;
     background: url(../images/virginian/icons.png) no-repeat -203px -44px;
@@ -271,6 +322,44 @@ nav.vertical.menu {
   }
 }
 
+#social-media-mobile {
+  #twitter {
+    display: block;
+    background: url(../images/virginian/icons.png) no-repeat -438px -44px;
+    width: 42px;
+    height: 35px;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    padding: 0;
+    border: none;
+  }
+
+  #facebook {
+    display: block;
+    background: url(../images/virginian/icons.png) no-repeat -287px -37px;
+    width: 25px;
+    height: 42px;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    padding: 0;
+    border: none;
+  }
+
+  #instagram {
+    display: block;
+    background: url(../images/virginian/icons.png) no-repeat -354px -41px;
+    width: 42px;
+    height: 42px;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    padding: 0;
+    border: none;
+  }
+}
+
 // Logo styles
 #logo, #logo-mobile {
   min-width: rem-calc(100);
@@ -283,6 +372,7 @@ nav.vertical.menu {
 
 #logo-mobile {
   display: block;
+  margin-top: rem-calc(14);
   margin-bottom: rem-calc(14);
 
   img {
@@ -302,6 +392,8 @@ nav.vertical.menu {
   @include breakpoint(medium) {
     float: left;
     margin-top: 0;
+    margin-bottom: 0 !important;
+    background-color: $white;
   }
 
   form#searchform {
@@ -362,10 +454,6 @@ nav.vertical.menu {
     height: 100%;
     margin: 0;
     padding: 0 0 0 1rem;
-    border: none;
-    background-color: $white;
-    color: $black;
-    font-size: rem-calc(18);
     backface-visibility: none;
     border-radius: 0;
     transition: left 0;
@@ -385,9 +473,9 @@ nav.vertical.menu {
   }
 }
 
-// Placeholder styles for wireframe
+// Other color styles
 .top-bar, .top-bar ul, .title-bar {
-  background-color: $white;
+  background-color: $black;
   margin-bottom: 0 !important;
 
   @include breakpoint(medium) {
@@ -396,9 +484,9 @@ nav.vertical.menu {
 }
 
 .top-bar .menu a, .top-bar a, .search-form #label label {
-  color: $secondary-color;
-}
+  color: $secondary-color-50;
 
-.search-form #input input {
-  background-color: $secondary-color-50;
+  @include breakpoint(medium) {
+    color: $secondary-color;
+  }
 }
