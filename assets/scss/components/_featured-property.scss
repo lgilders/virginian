@@ -48,6 +48,10 @@ body.page-template-secondary {
       margin: 0 auto;
       max-width: rem-calc(1024);
       width: 100%;
+
+      @include breakpoint(medium) {
+        padding: 0 rem-calc(44);
+      }
     }
 
     p.listing-address {
@@ -90,6 +94,10 @@ body.page-template-secondary {
       float: left;
       width: 42%;
     }
+
+    @include breakpoint(medium) {
+      width: 45.5%;
+    }
   }
 
   .widget .listing-wrap span.listing-status {
@@ -113,7 +121,12 @@ body.page-template-secondary {
     }
 
     @include breakpoint(medium) {
+      width: 54.5%;
       padding-left: rem-calc(43);
+    }
+
+    @include breakpoint(large) {
+      padding-left: rem-calc(88);
     }
   }
 
