@@ -4,7 +4,7 @@ body.page-template-secondary {
 
   // Featured property styling
 
-  section.wplistings-featured-listings {
+  section.widget_virginian_featured_listing {
     float: none !important;
     padding: 0 !important;
     color: $black;
@@ -137,7 +137,7 @@ body.page-template-secondary {
   // Fixes for strange section sizes during resize events
   @media screen and (max-width: 625px) {
 
-    section.wplistings-featured-listings h3 {
+    section.widget_virginian_featured_listing h2 {
       padding-top: rem-calc(18);
     }
 
