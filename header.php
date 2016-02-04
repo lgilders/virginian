@@ -72,13 +72,11 @@
 
 		<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
             <div id="contact-form" class="height-transition height-transition-hidden">
-                <?php get_template_part( '/parts/contact-form' ); ?>
-
                 <!-- SharpSpring Form for Contact  -->
                 <script type="text/javascript">
                     var ss_form = {'account': 'MzQxMze2NAYA', 'formID': 'MzI0S0w1NTbUTTGxMNA1STQ10000SDXVNbc0SE0zs0iysDRKAgA'};
                     ss_form.width = '100%';
-                    ss_form.height = '1000';
+                    ss_form.height = '200';
                     ss_form.domain = 'app-N24YKLWU.marketingautomation.services';
                     ss_form.hidden = {'_usePlaceholders' : true}; // Modify this for sending hidden variables, or overriding values
                 </script>
@@ -99,13 +97,11 @@
                         <?php get_template_part( 'parts/mobile-top-bar' ); ?>
 
                         <div id="contact-form-mobile">
-                            <?php get_template_part( '/parts/contact-form' ); ?>
-
-                            <!-- SharpSpring Form for Contact  -->
+                            <!-- SharpSpring Form for test:ContactCondensedMobile  -->
                             <script type="text/javascript">
-                                var ss_form = {'account': 'MzQxMze2NAYA', 'formID': 'MzI0S0w1NTbUTTGxMNA1STQ10000SDXVNbc0SE0zs0iysDRKAgA'};
+                                var ss_form = {'account': 'MzQxMze2NAYA', 'formID': 'MzY2TzI3tkjRTbQwMtE1MU410LUwMjTSNbZMTrRMNE81tjS1AAA'};
                                 ss_form.width = '100%';
-                                ss_form.height = '1000';
+                                ss_form.height = '260';
                                 ss_form.domain = 'app-N24YKLWU.marketingautomation.services';
                                 ss_form.hidden = {'_usePlaceholders' : true}; // Modify this for sending hidden variables, or overriding values
                             </script>

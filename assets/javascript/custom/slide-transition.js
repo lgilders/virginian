@@ -55,8 +55,8 @@
 
             // temporarily make visible to get the size
             $el.css("max-height", "none");
-            //var height = $el.outerHeight();
-            var height = 208;
+            var height = $el.outerHeight();
+            //var height = 400;
 
             // reset to 0 then animate with small delay
             $el.css("max-height", "0");
