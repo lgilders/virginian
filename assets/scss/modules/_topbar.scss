@@ -15,12 +15,13 @@
     font-size: 0.8rem;
 
     &:hover:not(.button) {
-      background-color: #2a2a2a;
+      //background-color: #2a2a2a;
     }
   }
 
   .menu>li:not(.menu-text)>a {
-    padding: 1rem;
+    //padding: 1rem;
+    padding: 1rem 0 0;
   }
 
   .menu li:not(:last-child) {
@@ -47,7 +48,11 @@
 }
 
 .vertical &.menu {
-  padding: 1rem;
+  padding: 0;
+
+  @include breakpoint(medium) {
+    padding: 1rem 0;
+  }
 }
 
 .title-bar {
@@ -64,32 +69,67 @@
 
 
 // Additional styles for The Virginian site
+#site-navigation {
+  max-width: rem-calc(1024);
+  margin: 0 auto;
+  width: 100%;
+}
 
 // Styles all nav menu items
-.top-bar .menu {
+.top-bar-left .menu {
+  li {
+    border-bottom: 1px solid black;
+
+    @include breakpoint(medium) {
+      border: none;
+    }
+  }
+
   li:not(:last-child) {
-    border: none;
+    @include breakpoint(medium) {
+      border: none;
+      padding-right: rem-calc(60) !important;
+    }
   }
 
   a {
     text-transform: uppercase;
     letter-spacing: 0.1rem;
-    font-size: rem-calc(18);
+    font-size: rem-calc(16);
+    font-weight: 400;
     line-height: rem-calc(30);
+
+    &:hover {
+      @include breakpoint(medium) {
+        border-bottom: 2px solid $accent-color-2;
+      }
+    }
+
+    &:active {
+      @include breakpoint(medium) {
+        border-bottom: 2px solid $accent-color-2;
+        color: $accent-color-2;
+      }
+    }
   }
 }
 
 // Styles for main nav
 #desktop-menu {
-  height: rem-calc(45);
+  margin: 0 auto !important;
+
+  @include breakpoint(medium) {
+    height: rem-calc(45);
+    padding: 0 rem-calc(40);
+  }
 }
 
 .top-bar-left {
   margin: 0 !important;
+  padding-bottom: rem-calc(16);
   float: none;
   display: block;
   text-align: justify;
-  max-height: rem-calc(60);
 
   &:after {
     content: '';
@@ -113,8 +153,32 @@
 
 // Styles for main nav for MOBILE
 nav.vertical.menu {
-  padding-top: 2rem;
   text-align: center;
+
+  li {
+    border-bottom: 2px solid black;
+  }
+
+  .is-accordion-submenu-parent > a::after {
+    border-color: $accent-color-2 transparent transparent;
+  }
+}
+
+.menu.nested {
+  margin: 0 auto;
+
+  li {
+    border: none !important;
+    background-color: $secondary-color-50;
+  }
+
+  a {
+    color: $white !important;
+
+    &:hover, &:active {
+      color: $black !important;
+    }
+  }
 }
 
 #menu-header-mobile {
@@ -132,15 +196,52 @@ nav.vertical.menu {
   z-index: 10;
 }
 
+button.c-hamburger.c-hamburger--htx {
+  min-width: 40px;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
 // Styles for secondary nav
 .top-bar-right {
-  float: none;
+  //float: none;
   max-height: none;
+  background-color: $black;
+  margin: 0 auto !important;
+
+  li:not(:last-child) {
+
+    @include breakpoint(medium) {
+      padding-right: rem-calc(28) !important;
+      border-right: none !important;
+    }
+  }
+
+  li:not(.menu-text) > a {
+    font-size: rem-calc(16);
+    font-weight: 400;
+
+    @include breakpoint(medium) {
+
+      &:hover {
+        border-bottom: 2px solid $accent-color-2;
+      }
+
+      &:active {
+        color: $accent-color-2;
+        border-bottom: 2px solid $accent-color-2;
+      }
+    }
+  }
 
   @include breakpoint(medium) {
     float: right;
     min-height: 0 !important;
     max-height: rem-calc(45);
+    padding-right: rem-calc(16);
+    background-color: $white;
   }
 }
 
@@ -150,6 +251,7 @@ nav.vertical.menu {
 
   @include breakpoint(medium) {
     display: block;
+    margin-bottom: 0 !important;
     float: right;
     max-height: rem-calc(45);
   }
@@ -161,6 +263,11 @@ nav.vertical.menu {
   li {
     display: table-cell;
     vertical-align: middle;
+    padding: 0 rem-calc(8);
+
+    &:last-child {
+      padding-right: 0;
+    }
 
     a {
       display: block;
@@ -175,6 +282,8 @@ nav.vertical.menu {
 #social-media-mobile {
   display: inline-block;
   width: 100%;
+  background-color: $black;
+  padding: 0 rem-calc(48);
 
   @include breakpoint(medium) {
     display: none;
@@ -184,7 +293,6 @@ nav.vertical.menu {
     display: block !important;
     float: none;
     text-align: justify;
-    border-top: 1px solid white;
 
     &:after {
       content: '';
@@ -195,15 +303,91 @@ nav.vertical.menu {
 
   ul {
     text-align: center;
-    margin: 0;
+    margin: 0 auto;
+    padding-top: rem-calc(32);
+    background-color: $black;
+    border-top: 1px solid $white;
   }
 
   li {
     display: inline-block;
     float: none;
-    padding: 1rem;
-    min-width: rem-calc(50);
+    padding: 0 0.5rem !important;
     text-align: center;
+  }
+}
+
+// Social media icons from sprite sheet
+.social-media {
+  #twitter {
+    display: block;
+    background: url(../images/virginian/icons.png) no-repeat -203px -44px;
+    width: 42px;
+    height: 35px;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    padding: 0;
+  }
+
+  #facebook {
+    display: block;
+    background: url(../images/virginian/icons.png) no-repeat -123px -37px;
+    width: 25px;
+    height: 42px;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    padding: 0;
+  }
+
+  #instagram {
+    display: block;
+    background: url(../images/virginian/icons.png) no-repeat -27px -37px;
+    width: 42px;
+    height: 42px;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    padding: 0;
+  }
+}
+
+#social-media-mobile {
+  #twitter {
+    display: block;
+    background: url(../images/virginian/icons.png) no-repeat -438px -44px;
+    width: 42px;
+    height: 35px;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    padding: 0;
+    border: none;
+  }
+
+  #facebook {
+    display: block;
+    background: url(../images/virginian/icons.png) no-repeat -287px -37px;
+    width: 25px;
+    height: 42px;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    padding: 0;
+    border: none;
+  }
+
+  #instagram {
+    display: block;
+    background: url(../images/virginian/icons.png) no-repeat -354px -41px;
+    width: 42px;
+    height: 42px;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    padding: 0;
+    border: none;
   }
 }
 
@@ -219,6 +403,7 @@ nav.vertical.menu {
 
 #logo-mobile {
   display: block;
+  margin-top: rem-calc(14);
   margin-bottom: rem-calc(14);
 
   img {
@@ -238,6 +423,8 @@ nav.vertical.menu {
   @include breakpoint(medium) {
     float: left;
     margin-top: 0;
+    margin-bottom: 0 !important;
+    background-color: $white;
   }
 
   form#searchform {
@@ -275,7 +462,7 @@ nav.vertical.menu {
 
   #label label {
     display: block;
-    color: white;
+    color: $white;
     cursor: pointer;
   }
 
@@ -298,10 +485,6 @@ nav.vertical.menu {
     height: 100%;
     margin: 0;
     padding: 0 0 0 1rem;
-    border: none;
-    background-color: white;
-    color: black;
-    font-size: rem-calc(18);
     backface-visibility: none;
     border-radius: 0;
     transition: left 0;
@@ -321,20 +504,20 @@ nav.vertical.menu {
   }
 }
 
-// Placeholder styles for wireframe
+// Other color styles
 .top-bar, .top-bar ul, .title-bar {
-  background-color: whitesmoke;
+  background-color: $black;
   margin-bottom: 0 !important;
 
   @include breakpoint(medium) {
-    background-color: white;
+    background-color: $white;
   }
 }
 
 .top-bar .menu a, .top-bar a, .search-form #label label {
-  color: grey;
-}
+  color: $secondary-color-50;
 
-.search-form #input input {
-  background-color: lightgray;
+  @include breakpoint(medium) {
+    color: $secondary-color;
+  }
 }
