@@ -1,0 +1,139 @@
+body.single-listing {
+
+  #primary {
+    width: 100%;
+    max-width: rem-calc(1024);
+    margin: 0 auto;
+  }
+
+  .entry-title {
+    float: left;
+    color: $accent-color-2;
+  }
+
+  @include breakpoint(medium) {
+
+    .entry-header {
+      margin-top: rem-calc(64);
+    }
+
+    .listing-image-wrap {
+      float: left;
+      width: 50%;
+      margin-bottom: rem-calc(30);
+    }
+
+    #listing-tabs {
+      float: right;
+      width: 48%;
+      clear: none;
+
+      @include clearfix;
+    }
+
+  }
+
+
+  span.listing-status, li.listing-price {
+    background-color: $accent-color-2 !important;
+  }
+
+  #listing-tabs {
+
+    a {
+      color: $black;
+    }
+
+    a:hover {
+      color: $accent-color-2;
+      line-height: 1.25rem !important;
+    }
+  }
+
+  .wplistings-single-listing .ui-tabs .ui-tabs-nav li a {
+    background-color: $secondary-color-50;
+  }
+
+  .wplistings-single-listing .ui-tabs .ui-tabs-nav li.ui-tabs-active a {
+    background-color: $accent-color-2;
+    color: $white !important;
+  }
+
+  #listing-description {
+    text-align: left;
+    color: $black;
+  }
+
+  .ui-tabs .ui-tabs-panel {
+    padding-bottom: 0;
+  }
+
+  .listing-details {
+    margin: 0;
+
+    td {
+      color: $black;
+      border: none;
+    }
+  }
+
+  .label {
+    background-color: transparent !important;
+    color: $black;
+  }
+
+  .listing-meta li {
+    color: $black;
+  }
+
+  .listing-property-type {
+    a {
+      color: $accent-color-1;
+    }
+  }
+
+  h3 {
+    color: $accent-color-2;
+    text-align: left;
+    padding-left: rem-calc(20);
+  }
+
+  #listing-map {
+    iframe {
+      width: 100%;
+    }
+  }
+
+  .listing-navigation {
+    h1 {
+      display: none;
+    }
+
+    a {
+      width: 50%;
+      float: left;
+      text-align: left;
+
+      span {
+        color: $black;
+
+        &:hover {
+          color: $accent-color-2;
+        }
+      }
+    }
+
+    a + a {
+      float: right;
+      text-align: right;
+    }
+
+    @include breakpoint(medium) {
+      margin: 0 auto;
+      padding: 0;
+      max-width: rem-calc(1024);
+      width: 100%;
+    }
+  }
+
+}
