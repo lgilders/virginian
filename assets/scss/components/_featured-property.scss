@@ -1,6 +1,7 @@
 body.page-template-homepage,
 body.page-template-primary,
-body.page-template-secondary {
+body.page-template-secondary,
+body.single-listing {
 
   // Featured property styling
 
@@ -10,6 +11,8 @@ body.page-template-secondary {
     padding: 0 !important;
     color: $black;
     background-color: $secondary-color-50;
+
+    @include clearfix;
 
     @include breakpoint(small) {
       padding: rem-calc(30) rem-calc(24) 0 !important;

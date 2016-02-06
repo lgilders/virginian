@@ -53,7 +53,7 @@ function single_listing_post_content() {
 				<?php } ?>
 
 				<?php if (get_post_meta( $post->ID, '_listing_video', true) != '') { ?>
-					<li><a href="#listing-video">Video / Virtual Tour</a></li>
+					<li><a href="#listing-video">Video</a></li>
 				<?php } ?>
 
 				<?php if (get_post_meta( $post->ID, '_listing_school_neighborhood', true) != '') { ?>
@@ -148,14 +148,6 @@ function single_listing_post_content() {
 			</div><!-- #listing-video -->
 			<?php } ?>
 
-			<?php if (get_post_meta( $post->ID, '_listing_school_neighborhood', true) != '') { ?>
-			<div id="listing-school-neighborhood">
-				<p>
-				<?php echo do_shortcode(get_post_meta( $post->ID, '_listing_school_neighborhood', true)); ?>
-				</p>
-			</div><!-- #listing-school-neighborhood -->
-			<?php } ?>
-
 		</div><!-- #listing-tabs.listing-data -->
 
         <?php
@@ -199,7 +191,7 @@ function single_listing_post_content() {
 
 		<?php
 			if (get_post_meta( $post->ID, '_listing_map', true) != '') {
-				echo '<div id="listing-map"><h3>Location Map</h3>';
+				echo '<div id="listing-map"><h4>Location Map</h4>';
 				echo do_shortcode(get_post_meta( $post->ID, '_listing_map', true) );
 				echo '</div><!-- .listing-map -->';
 			}
@@ -239,15 +231,6 @@ function single_listing_post_content() {
 				</script>
 				';
 				echo '<div id="listing-map"><h3>Location Map</h3><div id="map-canvas" style="width: 100%; height: 350px;"></div></div><!-- .listing-map -->';
-			}
-		?>
-
-		<?php
-			if (function_exists('_p2p_init') && function_exists('agent_profiles_init') ) {
-				echo'<div id="listing-agent">
-				<div class="connected-agents">';
-				aeprofiles_connected_agents_markup();
-				echo '</div></div><!-- .listing-agent -->';
 			}
 		?>
 
@@ -361,7 +344,7 @@ function single_listing_post_content() {
 						</li>
 
 						<li>
-							<input id="submit" type="submit" value="Send Inquiry"></input>
+							<input id="submit" class="button" type="submit" value="Send Inquiry"></input>
 						</li>
 					</ul>
 					<input type="hidden" name="submitted" id="submitted" value="true" />
@@ -371,6 +354,15 @@ function single_listing_post_content() {
 			}
 			?>
 		</div><!-- .listing-contact -->
+
+        <?php
+        if (function_exists('_p2p_init') && function_exists('agent_profiles_init') ) {
+            echo'<div id="listing-agent">
+				<div class="connected-agents">';
+            aeprofiles_connected_agents_markup();
+            echo '</div></div><!-- .listing-agent -->';
+        }
+        ?>
 
 	</div><!-- .entry-content -->
 
@@ -419,9 +411,10 @@ get_header(); ?>
         </div>
     </header>
 
-    <small><?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<p id="breadcrumbs">','</p>'); } ?></small>
+    <div id="primary" class="content-area container inner">
 
-	<div id="primary" class="content-area container inner">
+        <small><?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<p id="breadcrumbs">','</p>'); } ?></small>
+
 		<div id="content" class="site-content" role="main">
 
 			<?php
@@ -445,7 +438,12 @@ get_header(); ?>
 			?>
 
 		</div><!-- #content -->
+
+        <?php dynamic_sidebar( 'search-property-widget' ); ?>
+
 	</div><!-- #primary -->
+
+    <?php dynamic_sidebar( 'featured-property-widgets' ); ?>
 
 <?php
 get_footer();
