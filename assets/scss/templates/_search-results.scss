@@ -1,0 +1,46 @@
+body.search-results {
+
+  color: $black;
+
+  .row > .content-container {
+    width: 100%;
+    max-width: rem-calc(1024);
+    margin: 0 auto;
+  }
+
+  h1 {
+    color: $secondary-color;
+  }
+
+  h2 {
+    font-size: rem-calc(20);
+    line-height: rem-calc(32);
+    text-transform: none;
+    color: $secondary-color-50;
+  }
+
+  .listing {
+    padding: 0 rem-calc(16);
+
+    header {
+      margin-top: rem-calc(16);
+    }
+
+    time, p.byline {
+      display: none;
+    }
+
+    h2 a {
+      color: $accent-color-1;
+      font-size: rem-calc(18);
+
+      &:hover {
+        font-size: rem-calc(20);
+      }
+    }
+
+    .entry-content {
+      text-align: left;
+    }
+  }
+}

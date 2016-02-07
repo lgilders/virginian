@@ -162,5 +162,81 @@ body {
       }
     }
   }
+
+  // Real Estate default search styles
+  .real-estate-search {
+    // Sticky search widget
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: rem-calc(16);
+    background-color: $black;
+    z-index: 999;
+
+    .c-hamburger {
+      display: inline-block;
+    }
+
+    h5 {
+      display: inline-block;
+      font-family: $body-font-family;
+      font-size: rem-calc(20) !important;
+      line-height: rem-calc(16);
+      color: $secondary-color-50;
+    }
+
+    h6 {
+      display: none;
+    }
+
+    @include breakpoint(large) {
+      position: relative;
+      bottom: inherit;
+      background-color: $white;
+
+      .c-hamburger, h4 {
+        display: none;
+      }
+    }
+  }
+
+  .widget.listings-search {
+    // Generic styles
+    float: none !important;
+    width: 100%;
+    max-width: rem-calc(1024);
+    margin: 0 auto;
+    padding: rem-calc(16);
+
+    @include clearfix;
+
+    @include breakpoint(large) {
+      margin-top: rem-calc(48);
+      margin-bottom: rem-calc(64);
+      padding: 0 rem-calc(16);
+      position: relative;
+      bottom: inherit;
+      background-color: $white;
+      z-index: auto;
+
+      h6 {
+        display: block;
+        color: $accent-color-2;
+        margin-bottom: rem-calc(20);
+        font-size: rem-calc(32);
+      }
+
+      select {
+        float: left;
+        width: 18%;
+        margin-bottom: 0;
+        margin-right: rem-calc(16);
+      }
+
+      button.searchsubmit {
+        height: rem-calc(39);
+      }
+    }
+  }
 }
 

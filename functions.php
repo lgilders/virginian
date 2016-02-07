@@ -48,4 +48,7 @@ require_once( 'library/sticky-posts.php' );
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/protocol-relative-theme-assets.php' );
 
+/** Add custom query vars */
+require_once( 'library/query-vars.php' );
+
 ?>

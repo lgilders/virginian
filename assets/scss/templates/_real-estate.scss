@@ -1,0 +1,42 @@
+body.page-template-real-estate {
+  color: $black;
+
+  #hero,
+  .content-container {
+    width: 100%;
+    max-width: rem-calc(1024);
+    margin: 0 auto;
+
+    @include clearfix;
+  }
+
+  #hero {
+    h1 {
+      color: $secondary-color;
+    }
+
+    h4 {
+      color: $secondary-color-50;
+    }
+  }
+
+  .listings-search {
+    @include clearfix;
+  }
+
+  .listing-widget-details li {
+    font-size: rem-calc(16);
+    line-height: rem-calc(16);
+  }
+
+  .listing-wrap span.listing-status,
+  .listing-wrap .listing-thumb-meta span.listing-price {
+    background-color: $accent-color-2;
+  }
+}
+
+body.page-id-322 {
+  .widget.listings-search select {
+    width: 24%;
+  }
+}

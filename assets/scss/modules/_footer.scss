@@ -21,6 +21,7 @@
 
 #footer-container {
   margin: 0;
+  margin-top: 0 !important; // Something from forms adding to page causing issue after initial load
   padding: rem-calc(24) rem-calc(30) rem-calc(36);
   border: none;
   background-color: $secondary-color;

@@ -159,6 +159,7 @@ body.single-listing {
       width: 50%;
       float: left;
       text-align: left;
+      border: none;
 
       span {
         color: $black;
@@ -176,42 +177,9 @@ body.single-listing {
 
     @include breakpoint(medium) {
       margin: 0 auto;
-      padding: 0;
+      padding: 0 rem-calc(16);
       max-width: rem-calc(1024);
       width: 100%;
     }
   }
-
-  .listings-search {
-
-    @include clearfix;
-
-    h6 {
-      display: none;
-    }
-
-    @include breakpoint(medium) {
-      margin-top: rem-calc(48);
-      margin-bottom: rem-calc(64);
-
-      h6 {
-        display: block;
-        color: $accent-color-2;
-        margin-bottom: rem-calc(20);
-        font-size: rem-calc(32);
-      }
-
-      select {
-        float: left;
-        width: 18%;
-        margin-bottom: 0;
-        margin-right: rem-calc(16);
-      }
-
-      button.searchsubmit {
-        height: rem-calc(39);
-      }
-    }
-  }
-
 }
