@@ -185,17 +185,13 @@ body {
       color: $secondary-color-50;
     }
 
-    h6 {
-      display: none;
-    }
-
     @include breakpoint(large) {
       display: block !important;
       position: relative;
       bottom: inherit;
       background-color: $white;
 
-      .c-hamburger, h4 {
+      .c-hamburger, h5 {
         display: none;
       }
     }
@@ -213,6 +209,10 @@ body {
 
     select {
       margin-bottom: rem-calc(20);
+    }
+
+    h6 {
+      display: none;
     }
 
     @include breakpoint(large) {
@@ -233,7 +233,7 @@ body {
 
       select {
         float: left;
-        width: 18%;
+        width: 17%;
         margin-bottom: 0;
         margin-right: rem-calc(16);
       }
