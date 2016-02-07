@@ -7,7 +7,7 @@ get_header(); ?>
 <?php $heroImage = get_field( 'hero_image' ); ?>
     <header id="hero" role="banner"
         <?php if($heroImage): ?>
-            style="background: #706259 url(<?php echo $heroImage['url']; ?>)"
+            style="background: #706259 url(<?php echo $heroImage['url']; ?>) no-repeat center"
         <?php endif; ?>>
         <div class="content-container">
             <h1><?php the_field( 'hero_title' ); ?></h1>
@@ -222,8 +222,70 @@ get_header(); ?>
                 <?php endwhile; ?>
             </div>
 
-    <?php endif; ?>
+    <?php endif; /* Ends Hole by Hole Repeater */?>
         </div>
+
+    <?php /* Membership Repeater */ ?>
+    <?php if( have_rows('membership') ): ?>
+
+    <?php $index = 0; ?>
+    <?php $fieldDescriptionList = array(); ?>
+    <?php $golfFullList = array(); ?>
+    <?php $golfJuniorList = array(); ?>
+    <?php $socialFullList = array(); ?>
+    <?php $socialJuniorList = array(); ?>
+
+    <?php while( have_rows('membership') ): the_row();
+        $fieldDescriptionList[$index] = get_sub_field('field_description');
+        $golfFullList[$index] = get_sub_field('golf_full');
+        $golfJuniorList[$index] = get_sub_field('golf_junior');
+        $socialFullList[$index] = get_sub_field('social_full');
+        $socialJuniorList[$index] = get_sub_field('social_junior');
+        $index += 1; ?>
+    <?php endwhile; ?>
+
+    <div class="content-container">
+        <div class="membership-container">
+            <ul class="field-description">
+                <?php foreach ($fieldDescriptionList as $fieldDescription) : ?>
+                    <li><?php echo $fieldDescription; ?></li>
+                <?php endforeach; ?>
+            </ul>
+
+            <ul class="golf-full">
+                <?php foreach ($golfFullList as $golfFull) : ?>
+                    <li><?php echo $golfFull; ?></li>
+                <?php endforeach; ?>
+            </ul>
+
+            <ul class="golf-junior">
+                <?php foreach ($golfJuniorList as $golfJunior) : ?>
+                    <li><?php echo $golfJunior; ?></li>
+                <?php endforeach; ?>
+            </ul>
+
+            <ul class="social-full">
+                <?php foreach ($socialFullList as $socialFull) : ?>
+                    <li><?php echo $socialFull; ?></li>
+                <?php endforeach; ?>
+            </ul>
+
+            <ul class="social-junior">
+                <?php foreach ($socialJuniorList as $socialJunior) : ?>
+                    <li><?php echo $socialJunior; ?></li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+
+        <div class="membership-details">
+            <?php the_field( 'terms_1' ); ?>
+            <?php the_field( 'terms_2' ); ?>
+            <?php the_field( 'membership_notes' ); ?>
+        </div>
+    </div>
+
+    <?php endif; ?>
+    <?php /* Ends Membership Repeater */ ?>
 
     <div class="content-container secondary-nav">
         <?php the_field( 'secondary_nav' ); ?>

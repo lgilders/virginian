@@ -5,14 +5,23 @@ Template Name: Primary
 get_header(); ?>
 
 <?php $heroImage = get_field( 'hero_image' ); ?>
+<?php $showNav = get_field( 'show_sub_navigation' ); ?>
     <header id="hero" role="banner"
         <?php if($heroImage): ?>
-            style="background: #706259 url(<?php echo $heroImage['url']; ?>)"
-        <?php endif; ?>>
+            style="background: #706259 url(<?php echo $heroImage['url']; ?>) no-repeat center"
+        <?php endif; ?>
+
+        <?php if(!$showNav): ?>
+            class="hide-nav"
+        <?php endif; ?> >
+
         <div class="content-container">
             <h1><?php the_field( 'hero_title' ); ?></h1>
             <p><?php the_field( 'hero_introduction' ); ?></p>
-            <?php the_field( 'sub_navigation' ); ?>
+
+            <?php if($showNav): ?>
+                <?php the_field( 'sub_navigation' ); ?>
+            <?php endif; ?>
         </div>
     </header>
 
@@ -21,10 +30,18 @@ get_header(); ?>
         <?php if($heroImageMobile): ?>
             style="background: #706259 url(<?php echo $heroImage['url']; ?>)"
         <?php endif; ?>>
+
+        <?php if(!$showNav): ?>
+            class="hide-nav"
+        <?php endif; ?> >
+
         <div class="content-container">
             <h1><?php the_field( 'hero_title' ); ?></h1>
             <p><?php the_field( 'hero_introduction' ); ?></p>
-            <?php the_field( 'sub_navigation' ); ?>
+
+            <?php if($showNav): ?>
+                <?php the_field( 'sub_navigation' ); ?>
+            <?php endif; ?>
         </div>
     </header>
 
@@ -68,7 +85,7 @@ get_header(); ?>
 <?php if($brandStory): ?>
     <div id="second"
         <?php if($brandImage): ?>
-            style="background: #706259 url(<?php echo $brandImage['url']; ?>)"
+            style="background: #706259 url(<?php echo $brandImage['url']; ?>) no-repeat center"
         <?php endif; ?>>
 
         <h1><?php the_field( 'brand_story' ); ?></h1>

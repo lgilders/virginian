@@ -5,6 +5,7 @@ body.page-template-homepage {
     display: block;
     margin: 0 0 rem-calc(16);
     padding: rem-calc(15) rem-calc(15) rem-calc(30);
+    background-color: $secondary-color-50;
 
     @include breakpoint(small) {
       display: none;
@@ -33,6 +34,7 @@ body.page-template-homepage {
       display: block;
       margin-bottom: rem-calc(14);
       padding: rem-calc(45) rem-calc(45) rem-calc(50);
+      background-color: $secondary-color;
 
       h1 {
         margin: 0 auto;
