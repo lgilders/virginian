@@ -245,39 +245,6 @@ button.c-hamburger.c-hamburger--htx {
   }
 }
 
-// Social media links for DESKTOP
-.social-media {
-  display: none;
-
-  @include breakpoint(medium) {
-    display: block;
-    margin-bottom: 0 !important;
-    float: right;
-    max-height: rem-calc(45);
-  }
-
-  ul {
-    list-style: none;
-  }
-
-  li {
-    display: table-cell;
-    vertical-align: middle;
-    padding: 0 rem-calc(8);
-
-    &:last-child {
-      padding-right: 0;
-    }
-
-    a {
-      display: block;
-      height: rem-calc(45);
-      padding: 1rem;
-      font-size: rem-calc(18);
-    }
-  }
-}
-
 // Social media links for MOBILE
 #social-media-mobile {
   display: inline-block;
@@ -318,41 +285,6 @@ button.c-hamburger.c-hamburger--htx {
 }
 
 // Social media icons from sprite sheet
-.social-media {
-  #twitter {
-    display: block;
-    background: url(../images/virginian/icons.png) no-repeat -203px -44px;
-    width: 42px;
-    height: 35px;
-    overflow: hidden;
-    text-indent: 100%;
-    white-space: nowrap;
-    padding: 0;
-  }
-
-  #facebook {
-    display: block;
-    background: url(../images/virginian/icons.png) no-repeat -123px -37px;
-    width: 25px;
-    height: 42px;
-    overflow: hidden;
-    text-indent: 100%;
-    white-space: nowrap;
-    padding: 0;
-  }
-
-  #instagram {
-    display: block;
-    background: url(../images/virginian/icons.png) no-repeat -27px -37px;
-    width: 42px;
-    height: 42px;
-    overflow: hidden;
-    text-indent: 100%;
-    white-space: nowrap;
-    padding: 0;
-  }
-}
-
 #social-media-mobile {
   #twitter {
     display: block;
