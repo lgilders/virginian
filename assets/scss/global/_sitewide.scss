@@ -190,6 +190,7 @@ body {
     }
 
     @include breakpoint(large) {
+      display: block !important;
       position: relative;
       bottom: inherit;
       background-color: $white;
@@ -209,6 +210,10 @@ body {
     padding: rem-calc(16);
 
     @include clearfix;
+
+    select {
+      margin-bottom: rem-calc(20);
+    }
 
     @include breakpoint(large) {
       margin-top: rem-calc(48);

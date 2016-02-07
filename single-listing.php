@@ -443,7 +443,7 @@ get_header(); ?>
 
     <div class="real-estate-search" data-responsive-toggle="search-form">
         <h5>Real Estate Search</h5>
-        <button class="c-hamburger c-hamburger--htx" type="button" data-toggle="offCanvas">
+        <button class="c-hamburger c-hamburger--htx c-hamburger-search" type="button" data-toggle="offCanvas">
             <span>toggle menu</span>
         </button>
         <script>
@@ -451,7 +451,7 @@ get_header(); ?>
 
                 "use strict";
 
-                var toggles = document.querySelectorAll(".c-hamburger");
+                var toggles = document.querySelectorAll(".c-hamburger-search");
 
                 for (var i = toggles.length - 1; i >= 0; i--) {
                     var toggle = toggles[i];
