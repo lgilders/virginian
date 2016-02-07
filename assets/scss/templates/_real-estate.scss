@@ -33,6 +33,10 @@ body.page-template-real-estate {
   .listing-wrap .listing-thumb-meta span.listing-price {
     background-color: $accent-color-2;
   }
+
+  .listing-wrap .listing-thumb-meta span.listing-price {
+    display: none;
+  }
 }
 
 body.page-id-322 {

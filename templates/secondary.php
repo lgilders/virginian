@@ -30,9 +30,11 @@ get_header(); ?>
 
 <?php do_action( 'foundationpress_before_content' ); ?>
 
-<?php if( function_exists('yoast_breadcrumb') ): ?>
-    <?php {yoast_breadcrumb( '<p id="breadcrumbs" ', '</p>' );} ?>
-<?php endif; ?>
+    <div id="breadcrumbs" class="content-container">
+        <?php if( function_exists('yoast_breadcrumb') ): ?>
+            <?php {yoast_breadcrumb( '<p ', '</p>' );} ?>
+        <?php endif; ?>
+    </div>
 
     <div id="first">
         <section id="title">
@@ -70,13 +72,13 @@ get_header(); ?>
     <?php endif; ?>
 
     <?php $secondImage = get_field('second_section_image'); ?>
-    <?php if($secondImage): ?>
+    <?php $secondVideo = get_field( 'second_section_video' ); ?>
+    <?php if($secondImage || $secondVideo): ?>
         <div id="second">
             <section id="title">
                 <h1><?php the_field( 'second_section_title' ); ?></h1>
             </section>
 
-            <?php $secondVideo = get_field( 'second_section_video' ); ?>
             <section id="media">
                 <?php if($secondVideo) { ?>
                     <?php echo $secondVideo; ?>
@@ -87,6 +89,72 @@ get_header(); ?>
 
             <section id="description">
                 <p><?php the_field( 'second_section_description' ); ?></p>
+            </section>
+        </div>
+    <?php endif; ?>
+
+    <?php $thirdImage = get_field('third_section_image'); ?>
+    <?php $thirdVideo = get_field( 'third_section_video' ); ?>
+    <?php if($thirdImage || $thirdVideo): ?>
+        <div id="third">
+            <section id="title">
+                <h1><?php the_field( 'third_section_title' ); ?></h1>
+            </section>
+
+            <section id="media">
+                <?php if($thirdVideo) { ?>
+                    <?php echo $thirdVideo; ?>
+                <?php } else { ?>
+                    <img src="<?php echo $thirdImage['url']; ?>" alt="icon" />
+                <?php } ?>
+            </section>
+
+            <section id="description">
+                <p><?php the_field( 'third_section_description' ); ?></p>
+            </section>
+        </div>
+    <?php endif; ?>
+
+    <?php $fourthImage = get_field('fourth_section_image'); ?>
+    <?php $fourthVideo = get_field( 'fourth_section_video' ); ?>
+    <?php if($fourthImage || $fourthVideo): ?>
+        <div id="fourth">
+            <section id="title">
+                <h1><?php the_field( 'fourth_section_title' ); ?></h1>
+            </section>
+
+            <section id="media">
+                <?php if($fourthVideo) { ?>
+                    <?php echo $fourthVideo; ?>
+                <?php } else { ?>
+                    <img src="<?php echo $fourthImage['url']; ?>" alt="icon" />
+                <?php } ?>
+            </section>
+
+            <section id="description">
+                <p><?php the_field( 'fourth_section_description' ); ?></p>
+            </section>
+        </div>
+    <?php endif; ?>
+
+    <?php $fifthImage = get_field('fifth_section_image'); ?>
+    <?php $fifthVideo = get_field( 'fifth_section_video' ); ?>
+    <?php if($fifthImage || $fifthVideo): ?>
+        <div id="fifth">
+            <section id="title">
+                <h1><?php the_field( 'fifth_section_title' ); ?></h1>
+            </section>
+
+            <section id="media">
+                <?php if($fifthVideo) { ?>
+                    <?php echo $fifthVideo; ?>
+                <?php } else { ?>
+                    <img src="<?php echo $fifthImage['url']; ?>" alt="icon" />
+                <?php } ?>
+            </section>
+
+            <section id="description">
+                <p><?php the_field( 'fifth_section_description' ); ?></p>
             </section>
         </div>
     <?php endif; ?>
@@ -157,7 +225,7 @@ get_header(); ?>
     <?php endif; ?>
         </div>
 
-    <div class="content-container">
+    <div class="content-container secondary-nav">
         <?php the_field( 'secondary_nav' ); ?>
     </div>
 

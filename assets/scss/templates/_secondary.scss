@@ -29,7 +29,7 @@ body.page-template-secondary, body.single-listing {
   @include breakpoint(small) {
     #hero {
       display: block;
-      margin-bottom: rem-calc(16);
+      margin-bottom: rem-calc(14);
       padding: rem-calc(46) rem-calc(46) rem-calc(56);
 
       h1 {
@@ -61,21 +61,30 @@ body.page-template-secondary, body.single-listing {
     }
   }
 
-  @include breakpoint(large) {
-    #hero {
-      //padding: rem-calc(72) rem-calc(170) rem-calc(96);
-    }
-  }
-
   #breadcrumbs {
     display: none;
 
     @include breakpoint(small) {
       display: block;
+      width: 100%;
+      max-width: rem-calc(1024);
+      margin: 0 auto;
+      padding: 0 rem-calc(28);
+      text-align: left;
+      color: $secondary-color-50;
+      text-transform: uppercase;
+
+      a {
+        color: $secondary-color;
+      }
+    }
+
+    @include breakpoint(large) {
+      padding: 0;
     }
   }
 
-  #first, #second {
+  #first, #second, #third, #fourth, #fifth {
     padding: rem-calc(28);
     margin: 0 auto;
     max-width: rem-calc(1024);
@@ -83,6 +92,10 @@ body.page-template-secondary, body.single-listing {
 
     @include breakpoint(medium) {
       padding: rem-calc(28) rem-calc(42);
+    }
+
+    @include breakpoint(large) {
+      padding: rem-calc(18) 0;
     }
 
     @include clearfix;
@@ -128,7 +141,7 @@ body.page-template-secondary, body.single-listing {
     }
   }
 
-  #second {
+  #second, #fourth {
     padding-bottom: rem-calc(30);
 
     @include breakpoint(medium) {
@@ -165,14 +178,7 @@ body.page-template-secondary, body.single-listing {
   }
 
   // Secondary navigation styling
-  #second + .content-container,
-  #desktop-carousel + .content-container {
-    background-color: $accent-color-2;
-
-    @include breakpoint(small) {
-      background-color: transparent;
-    }
-
+  .secondary-nav {
     nav {
       float: none;
       text-align: justify;
@@ -185,7 +191,11 @@ body.page-template-secondary, body.single-listing {
 
       ul {
         text-align: center;
-        padding: rem-calc(48) 0;
+        padding: rem-calc(40) 0 rem-calc(16);
+
+        @include breakpoint(small) {
+          padding: rem-calc(16) 0;
+        }
       }
 
       .menu > li {
@@ -198,7 +208,6 @@ body.page-template-secondary, body.single-listing {
       }
 
       .menu > li:not(.menu-text) > a {
-        margin-bottom: rem-calc(32);
         border: 1px solid $white;
         color: $white;
         font-size: rem-calc(24);

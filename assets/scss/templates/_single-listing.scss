@@ -37,6 +37,7 @@ body.single-listing {
 
   span.listing-status, li.listing-price {
     background-color: $accent-color-2 !important;
+    display: none !important;
   }
 
   #listing-tabs {

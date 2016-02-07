@@ -90,7 +90,8 @@ body {
   #hero nav,
   #hero-mobile nav,
   #second .content-container + nav,
-  #desktop-carousel .content-container + nav {
+  #desktop-carousel .content-container + nav,
+  .secondary-nav nav {
     background-color: $accent-color-2;
 
     ul {
