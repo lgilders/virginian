@@ -220,7 +220,7 @@ button.c-hamburger.c-hamburger--htx {
   }
 
   li:not(.menu-text) > a {
-    font-size: rem-calc(16);
+    font-size: rem-calc(12);
     font-weight: 400;
 
     @include breakpoint(medium) {
