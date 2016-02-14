@@ -152,7 +152,13 @@ nav.vertical.menu {
   text-align: center;
 
   li {
-    border-bottom: 2px solid black;
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid black;
+  }
+
+  a {
+    font-size: rem-calc(16);
   }
 
   .is-accordion-submenu-parent > a::after {
@@ -202,7 +208,7 @@ button.c-hamburger.c-hamburger--htx {
 
 // Styles for secondary nav
 .top-bar-right {
-  //float: none;
+  float: none;
   max-height: none;
   background-color: $black;
   margin: 0 auto !important;
@@ -216,7 +222,7 @@ button.c-hamburger.c-hamburger--htx {
   }
 
   li:not(.menu-text) > a {
-    font-size: rem-calc(12);
+    font-size: rem-calc(16);
     font-weight: 400;
 
     @include breakpoint(medium) {
@@ -229,6 +235,10 @@ button.c-hamburger.c-hamburger--htx {
         color: $accent-color-2;
         border-bottom: 2px solid $accent-color-2;
       }
+    }
+
+    @include breakpoint(large) {
+      font-size: rem-calc(12);
     }
   }
 
@@ -433,9 +443,17 @@ button.c-hamburger.c-hamburger--htx {
 }
 
 // Other color styles
-.top-bar, .top-bar ul, .title-bar {
-  background-color: $black;
+.title-bar {
+  background-color: $white;
   margin-bottom: 0 !important;
+}
+
+.title-bar.is-active {
+  background-color: $black;
+}
+
+.top-bar, .top-bar ul {
+  background-color: $black;
 
   @include breakpoint(medium) {
     background-color: $white;

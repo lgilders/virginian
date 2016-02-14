@@ -51,7 +51,7 @@
                 (function() {
 
                     "use strict";
-
+                    // Adds class to hamburger button when active
                     var toggles = document.querySelectorAll(".c-hamburger");
 
                     for (var i = toggles.length - 1; i >= 0; i--) {
@@ -63,6 +63,21 @@
                         toggle.addEventListener( "click", function(e) {
                             e.preventDefault();
                             (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
+                        });
+                    }
+
+                    // Adds class to title-bar menu when active
+                    var togglesMenu = document.querySelectorAll('#masthead .title-bar');
+
+                    for (var i = togglesMenu.length - 1; i >=0; i--) {
+                        var toggleMenu = togglesMenu[i];
+                        toggleClass(toggleMenu);
+                    };
+
+                    function toggleClass(toggleMenu) {
+                        toggleMenu.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            (this.classList.contains('is-active') === true) ? this.classList.remove('is-active') : this.classList.add('is-active');
                         });
                     }
 
