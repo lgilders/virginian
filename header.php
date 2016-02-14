@@ -27,9 +27,9 @@
 
         <!-- Insert Fontfaces -->
         <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/components/vendemed/css/vendemed.css" type="text/css" charset="utf-8" />
-        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/components/scalasansproregular/css/ScalaSansProRegular.css" type="text/css" charset="utf-8" />
+        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/components/scalasansproregular/ScalaSansProRegular.css" type="text/css" charset="utf-8" />
 
-		<?php wp_head(); ?>
+        <?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
 	<?php do_action( 'foundationpress_after_body' ); ?>
