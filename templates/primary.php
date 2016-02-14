@@ -29,7 +29,7 @@ get_header(); ?>
     <header id="hero-mobile" role="banner"
         <?php if($heroImageMobile): ?>
             style="background: url(<?php echo $heroImage['url']; ?>)"
-        <?php endif; ?>>
+        <?php endif; ?>
 
         <?php if(!$showNav): ?>
             class="hide-nav"

@@ -67,7 +67,7 @@ body.page-template-secondary, body.single-listing {
     @include breakpoint(small) {
       display: block;
       width: 100%;
-      max-width: rem-calc(1024);
+      max-width: rem-calc(1440);
       margin: 0 auto;
       padding: 0 rem-calc(28);
       text-align: left;
@@ -87,7 +87,7 @@ body.page-template-secondary, body.single-listing {
   #first, #second, #third, #fourth, #fifth {
     padding: rem-calc(28);
     margin: 0 auto;
-    max-width: rem-calc(1024);
+    max-width: rem-calc(1440);
     width: 100%;
 
     @include breakpoint(medium) {

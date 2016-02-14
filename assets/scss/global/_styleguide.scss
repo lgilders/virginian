@@ -68,8 +68,8 @@ a {
   text-transform: uppercase;
 
   &:hover {
-    font-size: rem-calc(20);
-    line-height: rem-calc(30);
+    //font-size: rem-calc(20);
+    //line-height: rem-calc(30);
     color: $accent-color-2;
   }
 }

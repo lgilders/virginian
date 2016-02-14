@@ -47,7 +47,7 @@ body.page-template-primary {
       display: block;
 
       .content-container {
-        max-width: rem-calc(1024);
+        max-width: rem-calc(1440);
         margin: 0 auto;
       }
 
@@ -75,6 +75,11 @@ body.page-template-primary {
 
         @include breakpoint(medium) {
           padding: 0 rem-calc(200);
+        }
+
+        @include breakpoint(large) {
+          max-width: rem-calc(580);
+          padding: 0;
         }
       }
     }
