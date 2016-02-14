@@ -99,14 +99,49 @@ body.page-template-secondary {
     .owl-nav {
       margin: 0;
       position: relative;
-      top: -450px;
+      top: -500px;
+
+      @include breakpoint(small) {
+        top: -400px;
+      }
+
+      @include breakpoint(medium) {
+        top: -450px;
+      }
 
       .owl-prev {
         float: left;
+        display: block;
+        background: url(../images/virginian/icons.png) no-repeat -34px -935px;
+        width: 32px;
+        height: 53px;
+        overflow: hidden;
+        text-indent: 100%;
+        white-space: nowrap;
+        border: none;
+        padding: rem-calc(32);
+        margin-left: rem-calc(16);
+
+        @include breakpoint(small) {
+          margin-left: rem-calc(32);
+        }
       }
 
       .owl-next {
         float: right;
+        display: block;
+        background: url(../images/virginian/icons.png) no-repeat -203px -935px;
+        width: 32px;
+        height: 53px;
+        overflow: hidden;
+        text-indent: 100%;
+        white-space: nowrap;
+        border: none;
+        padding: rem-calc(16);
+
+        @include breakpoint(small) {
+          padding: rem-calc(32);
+        }
       }
     }
 
