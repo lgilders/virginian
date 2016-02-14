@@ -7,8 +7,8 @@ get_header(); ?>
 <?php do_action( 'foundationpress_before_content' ); ?>
 
     <header id="hero" class="content-container">
-        <h1>Available Homes</h1>
-        <h4>Start searching for your dream home today</h4>
+        <h1><?php the_field( 'hero_title' ); ?></h1>
+        <h4><?php the_field( 'hero_subtitle' ); ?></h4>
     </header>
 
     <div class="content-container">
@@ -55,6 +55,8 @@ get_header(); ?>
         <div class="entry-content">
             <?php the_content(); ?>
         </div>
+
+        <?php the_field( 'secondary_nav' ); ?>
     </div>
 
 <?php do_action( 'foundationpress_after_content' ); ?>
