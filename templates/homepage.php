@@ -7,7 +7,7 @@ get_header(); ?>
 <?php $heroImage = get_field( 'hero_image' ); ?>
 <header id="hero" role="banner"
         <?php if($heroImage): ?>
-        style="background: #706259 url(<?php echo $heroImage['url']; ?>) no-repeat center"
+        style="background: url(<?php echo $heroImage['url']; ?>) no-repeat center"
         <?php endif; ?>>
     <div class="content-container">
         <h1><?php the_field( 'hero_title' ); ?></h1>
@@ -32,7 +32,7 @@ get_header(); ?>
     <?php $firstLeftImage = get_field( 'first_left_image' ); ?>
     <section id="real-estate"
              <?php if($firstLeftImage): ?>
-             style="background: #706259 url(<?php echo $firstLeftImage['url']; ?>)"
+             style="background: url(<?php echo $firstLeftImage['url']; ?>)"
              <?php endif; ?>>
 
             <h2><?php the_field( 'first_left_title' ); ?></h2>
@@ -43,7 +43,7 @@ get_header(); ?>
     <?php $firstRightImage = get_field( 'first_right_image' ); ?>
     <section id="discovery-visit"
              <?php if($firstRightImage): ?>
-             style="background: #1B5A7C url(<?php echo $firstRightImage['url']; ?>)"
+             style="background: url(<?php echo $firstRightImage['url']; ?>)"
              <?php endif; ?>>
 
             <h2><?php the_field( 'first_right_title' ); ?></h2>
@@ -66,7 +66,7 @@ get_header(); ?>
     <?php $secondLeftImage = get_field( 'second_left_image' ); ?>
     <section id="golf-course"
              <?php if($secondLeftImage): ?>
-             style="background: #1B5A7C url(<?php echo $secondLeftImage['url']; ?>)"
+             style="background: url(<?php echo $secondLeftImage['url']; ?>)"
              <?php endif; ?>>
 
             <div class="overlay">
@@ -79,7 +79,7 @@ get_header(); ?>
     <?php $secondRightImage = get_field( 'second_right_image' ); ?>
     <section id="the-club"
              <?php if($secondRightImage): ?>
-             style="background: #706259 url(<?php echo $secondRightImage['url']; ?>)"
+             style="background: url(<?php echo $secondRightImage['url']; ?>)"
              <?php endif; ?>>
 
             <div class="overlay">

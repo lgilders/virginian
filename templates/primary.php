@@ -8,7 +8,7 @@ get_header(); ?>
 <?php $showNav = get_field( 'show_sub_navigation' ); ?>
     <header id="hero" role="banner"
         <?php if($heroImage): ?>
-            style="background: #706259 url(<?php echo $heroImage['url']; ?>) no-repeat center"
+            style="background: url(<?php echo $heroImage['url']; ?>) no-repeat center"
         <?php endif; ?>
 
         <?php if(!$showNav): ?>
@@ -28,7 +28,7 @@ get_header(); ?>
 <?php $heroImageMobile = get_field( 'hero_image_mobile' ); ?>
     <header id="hero-mobile" role="banner"
         <?php if($heroImageMobile): ?>
-            style="background: #706259 url(<?php echo $heroImage['url']; ?>)"
+            style="background: url(<?php echo $heroImage['url']; ?>)"
         <?php endif; ?>>
 
         <?php if(!$showNav): ?>
@@ -85,7 +85,7 @@ get_header(); ?>
 <?php if($brandStory): ?>
     <div id="second"
         <?php if($brandImage): ?>
-            style="background: #706259 url(<?php echo $brandImage['url']; ?>) no-repeat center"
+            style="background: url(<?php echo $brandImage['url']; ?>) no-repeat center"
         <?php endif; ?>>
 
         <h1><?php the_field( 'brand_story' ); ?></h1>

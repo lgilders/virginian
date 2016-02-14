@@ -7,7 +7,7 @@ get_header(); ?>
 <?php $heroImage = get_field( 'hero_image' ); ?>
     <header id="hero" role="banner"
         <?php if($heroImage): ?>
-            style="background: #706259 url(<?php echo $heroImage['url']; ?>) no-repeat center"
+            style="background: url(<?php echo $heroImage['url']; ?>) no-repeat center"
         <?php endif; ?>>
         <div class="content-container">
             <h1><?php the_field( 'hero_title' ); ?></h1>
@@ -19,7 +19,7 @@ get_header(); ?>
 <?php $heroImageMobile = get_field( 'hero_image_mobile' ); ?>
     <header id="hero-mobile" role="banner"
         <?php if($heroImageMobile): ?>
-            style="background: #706259 url(<?php echo $heroImageMobile['url']; ?>)"
+            style="background: url(<?php echo $heroImageMobile['url']; ?>)"
         <?php endif; ?>>
         <div class="content-container">
             <h1><?php the_field( 'hero_title' ); ?></h1>
@@ -62,7 +62,7 @@ get_header(); ?>
     <?php if($centerImage): ?>
         <div id="center"
             <?php if($centerImage): ?>
-                style="background: #706259 url(<?php echo $centerImage['url']; ?>)"
+                style="background: url(<?php echo $centerImage['url']; ?>) no-repeat center"
             <?php endif; ?>>
 
             <div class="content-container">
