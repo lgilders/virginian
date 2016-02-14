@@ -228,60 +228,30 @@ get_header(); ?>
     <?php /* Membership Repeater */ ?>
     <?php if( have_rows('membership') ): ?>
 
-    <?php $index = 0; ?>
-    <?php $fieldDescriptionList = array(); ?>
-    <?php $golfFullList = array(); ?>
-    <?php $golfJuniorList = array(); ?>
-    <?php $socialFullList = array(); ?>
-    <?php $socialJuniorList = array(); ?>
-
-    <?php while( have_rows('membership') ): the_row();
-        $fieldDescriptionList[$index] = get_sub_field('field_description');
-        $golfFullList[$index] = get_sub_field('golf_full');
-        $golfJuniorList[$index] = get_sub_field('golf_junior');
-        $socialFullList[$index] = get_sub_field('social_full');
-        $socialJuniorList[$index] = get_sub_field('social_junior');
-        $index += 1; ?>
-    <?php endwhile; ?>
-
-    <div class="content-container">
-        <div class="membership-container">
-            <ul class="field-description">
-                <?php foreach ($fieldDescriptionList as $fieldDescription) : ?>
-                    <li><?php echo $fieldDescription; ?></li>
-                <?php endforeach; ?>
-            </ul>
-
-            <ul class="golf-full">
-                <?php foreach ($golfFullList as $golfFull) : ?>
-                    <li><?php echo $golfFull; ?></li>
-                <?php endforeach; ?>
-            </ul>
-
-            <ul class="golf-junior">
-                <?php foreach ($golfJuniorList as $golfJunior) : ?>
-                    <li><?php echo $golfJunior; ?></li>
-                <?php endforeach; ?>
-            </ul>
-
-            <ul class="social-full">
-                <?php foreach ($socialFullList as $socialFull) : ?>
-                    <li><?php echo $socialFull; ?></li>
-                <?php endforeach; ?>
-            </ul>
-
-            <ul class="social-junior">
-                <?php foreach ($socialJuniorList as $socialJunior) : ?>
-                    <li><?php echo $socialJunior; ?></li>
-                <?php endforeach; ?>
+    <div id="membership-content">
+        <h5>Membership Types</h5>
+        <div class="headers">
+            <ul>
+                <li></li>
+                <li><h6>Social</h6></li>
+                <li><h6>Golf</h6></li>
             </ul>
         </div>
+        <?php while( have_rows('membership') ): the_row(); ?>
+        <ul class="membership-row">
+            <li><?php echo get_sub_field('field_description'); ?></li>
+            <li><?php echo get_sub_field('golf_full'); ?></li>
+            <li><?php echo get_sub_field('golf_junior'); ?></li>
+            <li><?php echo get_sub_field('social_full'); ?></li>
+            <li><?php echo get_sub_field('social_junior'); ?></li>
+        </ul>
+        <?php endwhile; ?>
+    </div>
 
-        <div class="membership-details">
-            <?php the_field( 'terms_1' ); ?>
-            <?php the_field( 'terms_2' ); ?>
-            <?php the_field( 'membership_notes' ); ?>
-        </div>
+    <div id="membership-details">
+        <p id="terms-1"><?php the_field( 'terms_1' ); ?></p>
+        <p id="terms-2"><?php the_field( 'terms_2' ); ?></p>
+        <p id="notes"><?php the_field( 'membership_notes' ); ?></p>
     </div>
 
     <?php endif; ?>

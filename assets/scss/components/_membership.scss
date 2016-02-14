@@ -1,3 +1,108 @@
 body.page-template-secondary {
+  #membership-content {
+    width: 100%;
+    max-width: rem-calc(1024);
+    margin: 0 auto;
+    margin-bottom: rem-calc(40);
+    text-align: center;
 
+    @include clearfix;
+
+    ul {
+      margin: 0;
+      list-style: none;
+    }
+
+    li {
+      color: $black;
+      font-size: rem-calc(16);
+      line-height: rem-calc(16);
+      line-height: rem-calc(30);
+    }
+
+    h5 {
+      padding: rem-calc(8) 0;
+      margin-bottom: rem-calc(20);
+      background-color: $accent-color-2;
+      color: $white;
+    }
+
+    h6 {
+      color: $accent-color-2;
+    }
+
+    .headers {
+      @include clearfix;
+
+      li {
+        float: right;
+        width: 38%;
+        border: none;
+      }
+    }
+
+    .membership-row {
+      @include clearfix;
+
+      li {
+        float: left;
+        width: 18.5%;
+        border-top: 1px solid $black;
+        border-left: 1px solid $black;
+      }
+
+      li:first-child {
+        width: 25%;
+        text-align: right;
+        padding-right: rem-calc(8);
+        border-left: none;
+      }
+
+      li:last-child {
+        border-right: 1px solid $black;
+      }
+
+      &:last-of-type {
+        li {
+          border-bottom: 1px solid $black;
+        }
+      }
+    }
+  }
+
+  #membership-details {
+    width: 100%;
+    max-width: rem-calc(1024);
+    margin: 0 auto;
+
+    text-align: left;
+    color: $black;
+
+    @include clearfix;
+
+    #terms-1 {
+      float: left;
+      width: 46%;
+      border-right: 1px solid $black;
+      margin-bottom: rem-calc(40);
+    }
+
+    #terms-2 {
+      float: right;
+      width: 50%;
+      margin-bottom: rem-calc(40);
+    }
+
+    #notes {
+      @include clearfix;
+      clear: both;
+      width: 100%;
+      max-width: rem-calc(1024);
+      margin: 0 auto;
+      text-align: center;
+      border-top: 1px solid $black;
+      padding-top: rem-calc(20);
+      margin-bottom: rem-calc(20);
+    }
+  }
 }
