@@ -181,7 +181,8 @@ body.page-template-secondary, body.single-listing {
         float: none;
         text-align: center;
         margin: 0 auto;
-        padding: 0 rem-calc(8);
+        width: 100%;
+        padding: 0 rem-calc(32);
       }
 
       .menu > li:not(.menu-text) > a {
