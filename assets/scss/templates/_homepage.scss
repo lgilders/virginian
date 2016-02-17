@@ -231,6 +231,13 @@ body.page-template-homepage {
       min-height: rem-calc(400);
     }
 
+    div + div {
+      section {
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+      }
+    }
+
     .overlay {
       a {
         border-color: $accent-color-2;

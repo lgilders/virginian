@@ -28,44 +28,34 @@ body.page-template-page-full-width {
 
     h2 {
       margin: 0 auto;
-      padding: rem-calc(20) 0 rem-calc(14);
+      padding: rem-calc(14) 0 rem-calc(16);
       max-width: none;
-      line-height: rem-calc(52);
       background-color: transparent;
       font-family: $body-font-family;
-      font-size: rem-calc(30);
+      font-size: rem-calc(36);
       font-weight: 400;
-      line-height: rem-calc(30);
-      letter-spacing: 0.0875rem;
+      line-height: rem-calc(36);
       text-transform: uppercase;
       color: $secondary-color;
 
-      @include breakpoint(small) {
-        padding-top: 0;
-        padding-right: 0;
-      }
-
       @include breakpoint(medium) {
         padding: 0 0 rem-calc(14);
-        margin: 0;
+        margin: 0 auto;
       }
     }
 
     .listing {
       margin: 0 auto;
-      max-width: rem-calc(1024);
+      padding: 0;
+      max-width: rem-calc(1440);
       width: 100%;
-
-      @include breakpoint(medium) {
-        padding: 0 rem-calc(44);
-      }
     }
 
     p.listing-address {
       font-size: rem-calc(24);
       line-height: rem-calc(29);
       margin-bottom: 0;
-      padding: 0 0 rem-calc(10);
+      padding: 0 0 rem-calc(20);
       color: $white;
 
       @include breakpoint(small) {
@@ -80,8 +70,9 @@ body.page-template-page-full-width {
     }
 
     .description {
-      margin-bottom: rem-calc(16);
-      padding: 0 rem-calc(24);
+      max-width: rem-calc(430);
+      margin: 0 auto;
+      padding: 0 rem-calc(12) rem-calc(40);
     }
 
     a.button {
@@ -97,13 +88,9 @@ body.page-template-page-full-width {
   .widget .listing-widget-thumb {
     margin: 0 !important;
 
-    @include breakpoint(small) {
-      float: left;
-      width: 42%;
-    }
-
     @include breakpoint(medium) {
-      width: 45.5%;
+      float: left;
+      width: 50%;
     }
   }
 
@@ -117,23 +104,13 @@ body.page-template-page-full-width {
 
   .listing-summary {
     margin-bottom: 0;
-    padding-bottom: rem-calc(20);
-
-    @include breakpoint(small) {
-      float: right;
-      width: 58%;
-      margin-bottom: rem-calc(10);
-      padding-bottom: 0;
-      padding-left: rem-calc(30);
-    }
+    padding: rem-calc(20) 0;
 
     @include breakpoint(medium) {
-      width: 54.5%;
-      padding-left: rem-calc(43);
-    }
-
-    @include breakpoint(large) {
-      padding-left: rem-calc(88);
+      float: right;
+      width: 50%;
+      margin-bottom: rem-calc(10);
+      padding-bottom: 0;
     }
   }
 
@@ -145,7 +122,7 @@ body.page-template-page-full-width {
   @media screen and (max-width: 625px) {
 
     section.widget_virginian_featured_listing h2 {
-      padding-top: rem-calc(18);
+      //padding-top: rem-calc(18);
     }
 
     .widget .listing-widget-thumb, .listing-summary {
