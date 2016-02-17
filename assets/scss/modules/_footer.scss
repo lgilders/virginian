@@ -59,14 +59,20 @@
     }
 
     li {
+      position: relative;
       display: inline-block;
       float: none;
       padding: 1.25rem;
       min-width: 50px;
       text-align: center;
+      transition: all 1s ease-in;
 
       @include breakpoint(small) {
         padding: 0;
+      }
+
+      &:hover {
+        top: -5px;
       }
     }
 
@@ -164,12 +170,18 @@
       }
 
       li {
+        position: relative;
         display: inline-block;
         float: none;
         padding: rem-calc(16);
         min-width: 50px;
         text-align: center;
         margin: 0;
+        transition: all 1s ease-in;
+
+        &:hover {
+          top: -5px;
+        }
       }
 
       @include breakpoint(small) {

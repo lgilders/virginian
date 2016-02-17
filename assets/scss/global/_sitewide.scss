@@ -24,10 +24,6 @@ body {
   text-align: center;
   color: white;
 
-  // Hover animations
-  .grow { transition: all .2s ease-in-out; }
-  .grow:hover { transform: scale(1.1); }
-
   // Set up body container
   section.container {
     max-height: none !important;

@@ -23,7 +23,7 @@ body.page-template-page-full-width {
 
     @include breakpoint(medium) {
       min-height: rem-calc(313);
-      padding: rem-calc(25) rem-calc(43) rem-calc(14) !important;
+      padding: rem-calc(25) rem-calc(43) !important;
     }
 
     h2 {
