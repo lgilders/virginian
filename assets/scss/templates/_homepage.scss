@@ -4,8 +4,7 @@ body.page-template-homepage {
   #hero-mobile {
     display: block;
     margin: 0 0 rem-calc(16);
-    padding: rem-calc(15) rem-calc(15) rem-calc(30);
-    background-color: $secondary-color-50;
+    padding: rem-calc(12) rem-calc(12) rem-calc(46);
 
     @include breakpoint(small) {
       display: none;
@@ -27,47 +26,51 @@ body.page-template-homepage {
 
   #hero {
     display: none;
-  }
 
-  @include breakpoint(small) {
-    #hero {
+    @include breakpoint(small) {
       display: block;
-      margin-bottom: rem-calc(14);
-      padding: rem-calc(45) rem-calc(45) rem-calc(50);
+      margin: 0 0 rem-calc(16);
+      padding: rem-calc(12) rem-calc(12) rem-calc(46);
+    }
 
-      h1 {
-        margin: 0 auto;
-        padding: rem-calc(8) rem-calc(20) rem-calc(20);
+    @include breakpoint(medium) {
+      padding: 0;
+    }
+
+    @include breakpoint(large) {
+      background-repeat: no-repeat !important;
+      background-position: center !important;
+    }
+
+    h1 {
+      margin: 0 auto;
+      padding: rem-calc(24) rem-calc(30) rem-calc(20);
+      font-size: rem-calc(48);
+      line-height: rem-calc(48);
+
+      @include breakpoint(small) {
+        padding: rem-calc(46) 0 rem-calc(20)
+      }
+
+      @include breakpoint(large) {
+        padding-top: rem-calc(72);
         font-size: rem-calc(64);
       }
-
-      p {
-        margin: 0 auto;
-        padding: rem-calc(16) rem-calc(36) rem-calc(18);
-        border: 1px solid white;
-      }
     }
-  }
 
-  @include breakpoint(medium) {
-    #hero {
-      padding: rem-calc(50) rem-calc(100);
+    p {
+      max-width: rem-calc(684);
+      margin: 0 auto;
+      padding: rem-calc(18) rem-calc(14) rem-calc(22);
+      border: 1px solid white;
 
-      h1 {
-        font-size: rem-calc(64);
-        padding: 0 0 rem-calc(20);
+      @include breakpoint(small) {
+        padding: rem-calc(18) rem-calc(14) rem-calc(12);
       }
 
-      p {
-        border: 1px solid white;
-        padding: rem-calc(12) rem-calc(30);
+      @include breakpoint(large) {
+        font-size: rem-calc(18);
       }
-    }
-  }
-
-  @include breakpoint(large) {
-    #hero {
-      padding: rem-calc(60) rem-calc(170);
     }
   }
 
@@ -95,25 +98,35 @@ body.page-template-homepage {
   section, .overlay {
     position: relative;
     padding: rem-calc(25) rem-calc(12) rem-calc(24);
+  }
 
+  .highlights {
     h2 {
       margin: 0 auto;
       padding: rem-calc(20) 0 rem-calc(14);
       font-size: rem-calc(30);
       font-weight: 400;
       line-height: rem-calc(30);
+
+      @include breakpoint(large) {
+        font-size: rem-calc(36);
+      }
     }
 
     p {
-      border: none;
-      margin: 0;
+      max-width: rem-calc(430px);
+      margin: 0 auto;
       padding: rem-calc(24) 0;
+      border: none;
+
+      @include breakpoint(large) {
+        font-size: rem-calc(18);
+      }
     }
 
     a.button {
       min-width: rem-calc(205);
       margin: 0 auto;
-      text-transform: none;
       font-weight: 400;
     }
   }
@@ -198,10 +211,10 @@ body.page-template-homepage {
 
         .overlay {
           min-height: rem-calc(284);
-          padding: rem-calc(16) rem-calc(36);
+          padding: rem-calc(16) rem-calc(36) rem-calc(30);
 
           h2 {
-            padding: rem-calc(16);
+            padding: rem-calc(16) 0;
           }
 
           p {
@@ -216,7 +229,19 @@ body.page-template-homepage {
   @include breakpoint(large) {
     section {
       min-height: rem-calc(400);
-      max-height: rem-calc(400);
+    }
+
+    .overlay {
+      a {
+        border-color: $accent-color-2;
+        color: $accent-color-2;
+        background-color: transparent;
+
+        &:hover {
+          background-color: $accent-color-2;
+          color: $white;
+        }
+      }
     }
   }
 

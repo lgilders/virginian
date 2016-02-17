@@ -10,9 +10,12 @@ body {
   }
 
   #hero {
+    min-height: 400px;
+    background-size: cover;
+
     .content-container {
       margin: 0 auto;
-      max-width: rem-calc(684);
+      max-width: rem-calc(1440);
       width: 100%;
     }
   }
@@ -71,6 +74,11 @@ body {
           line-height: rem-calc(48);
         }
       }
+    }
+
+    @include breakpoint(large) {
+      background-repeat: no-repeat !important;
+      background-position: center !important;
     }
   }
 
