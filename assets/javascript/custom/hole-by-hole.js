@@ -56,13 +56,21 @@ $(document).ready(function ($) {
             items: 1,
             nav: true,
             dots: false,
-            video: true
+            video: true,
+            navText: ''
         })
         .on('changed.owl.carousel', function (e) {
             if (!flag) {
                 flag = true;
                 sync2.trigger('to.owl.carousel', [e.item.index, duration, true]);
                 flag = false;
+            }
+        })
+        .on('dragged.owl.carousel', function (e) {
+            if (e.relatedTarget.state.direction == 'left') {
+                sync2.trigger('next.owl.carousel');
+            } else {
+                sync2.trigger('prev.owl.carousel');
             }
         });
 

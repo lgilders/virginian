@@ -9,6 +9,12 @@ get_header(); ?>
 <div id="page-full-width" role="main">
 
 <?php do_action( 'foundationpress_before_content' ); ?>
+
+    <header id="hero" class="content-container">
+        <h1><?php the_field( 'hero_title' ); ?></h1>
+        <h4><?php the_field( 'hero_subtitle' ); ?></h4>
+    </header>
+
 <?php while ( have_posts() ) : the_post(); ?>
   <article <?php post_class('main-content') ?> id="post-<?php the_ID(); ?>">
       <header>
@@ -31,5 +37,7 @@ get_header(); ?>
 <?php do_action( 'foundationpress_after_content' ); ?>
 
 </div>
+
+<?php dynamic_sidebar( 'featured-property-widgets' ); ?>
 
 <?php get_footer(); ?>
