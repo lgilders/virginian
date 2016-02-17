@@ -68,8 +68,6 @@ a {
   text-transform: uppercase;
 
   &:hover {
-    //font-size: rem-calc(20);
-    //line-height: rem-calc(30);
     color: $accent-color-2;
   }
 }
@@ -103,7 +101,6 @@ button, .button, a.button {
   transition: background-color 0.25s ease-out, color 0.25s ease-out;
 
   &:hover {
-    font-weight: 700;
     color: $accent-color-2;
     background-color: $white;
     background-image: none;
