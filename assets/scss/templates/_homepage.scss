@@ -65,7 +65,7 @@ body.page-template-homepage {
       border: 1px solid white;
 
       @include breakpoint(small) {
-        padding: rem-calc(18) rem-calc(14) rem-calc(12);
+        padding: rem-calc(18) rem-calc(32) rem-calc(12);
       }
 
       @include breakpoint(large) {

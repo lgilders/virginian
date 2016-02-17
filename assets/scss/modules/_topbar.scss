@@ -88,26 +88,27 @@
   li:not(:last-child) {
     @include breakpoint(medium) {
       border: none;
-      padding-right: rem-calc(60) !important;
     }
   }
 
   a {
     text-transform: uppercase;
-    letter-spacing: 0.1rem;
     font-size: rem-calc(16);
     font-weight: 400;
     line-height: rem-calc(30);
 
+    @include breakpoint(large) {
+      font-size: rem-calc(18);
+    }
+
     &:hover {
       @include breakpoint(medium) {
-        border-bottom: 2px solid $accent-color-2;
+        color: $accent-color-2;
       }
     }
 
     &:active {
       @include breakpoint(medium) {
-        border-bottom: 2px solid $accent-color-2;
         color: $accent-color-2;
       }
     }
@@ -119,8 +120,13 @@
   min-height: rem-calc(45);
 
   @include breakpoint(medium) {
-    padding: 0 rem-calc(40);
+    //padding: 0 rem-calc(40);
   }
+}
+
+.menu > li:not(.menu-text) > a {
+  padding: 0;
+  line-height: rem-calc(40);
 }
 
 .top-bar-left {
@@ -141,8 +147,8 @@
   li {
     display: inline-block;
     float: none;
-    padding: 1rem;
     min-width: rem-calc(50);
+    width: 11%;
     text-align: center;
   }
 }
@@ -227,13 +233,8 @@ button.c-hamburger.c-hamburger--htx {
 
     @include breakpoint(medium) {
 
-      &:hover {
-        border-bottom: 2px solid $accent-color-2;
-      }
-
-      &:active {
+      &:hover, &:active {
         color: $accent-color-2;
-        border-bottom: 2px solid $accent-color-2;
       }
     }
 
@@ -283,10 +284,16 @@ button.c-hamburger.c-hamburger--htx {
   }
 
   li {
+    position: relative;
     display: inline-block;
     float: none;
     padding: 0 0.5rem !important;
     text-align: center;
+    transition: all 1s ease-in;
+
+    &:hover {
+      top: -5px;
+    }
   }
 }
 
@@ -332,6 +339,7 @@ button.c-hamburger.c-hamburger--htx {
 // Logo styles
 #logo, #logo-mobile {
   min-width: rem-calc(100);
+  margin-bottom: rem-calc(16);
 
   img {
     display: block;

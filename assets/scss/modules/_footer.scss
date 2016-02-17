@@ -40,7 +40,7 @@
 
   #footer {
     margin: 0 auto;
-    max-width: rem-calc(1024);
+    max-width: rem-calc(1440);
     width: 100%;
     display: block;
     float: none;
@@ -109,7 +109,7 @@
     .press:before {
       display: none;
 
-        @include breakpoint(small) {
+        @include breakpoint(medium) {
           display: block;
       }
     }
@@ -142,14 +142,10 @@
     margin: 0 auto;
     padding-top: rem-calc(16);
 
-    @include breakpoint(small) {
+    @include breakpoint(medium) {
       float: right;
       width: 30%;
       padding: 0;
-    }
-
-    @include breakpoint(medium) {
-      width: 25%;
     }
 
     .social-media {
@@ -234,13 +230,13 @@
 
 #subfooter {
   min-height: rem-calc(60);
-  padding: rem-calc(46) 0 rem-calc(56);
+  padding: rem-calc(24) rem-calc(30) rem-calc(36);
   color: $secondary-color-50;
   background-color: $black;
 
   .content-container {
     margin: 0 auto;
-    max-width: rem-calc(1024);
+    max-width: rem-calc(1440);
     width: 100%;
   }
 
@@ -254,13 +250,13 @@
     text-align: left;
 
     .content-container {
-      padding-left: rem-calc(26);
+      //padding: 0 rem-calc(26);
     }
   }
 
   @include breakpoint(large) {
     .content-container {
-      padding: 0;
+      //padding: 0;
     }
   }
 }
