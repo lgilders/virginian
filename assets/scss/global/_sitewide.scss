@@ -10,14 +10,28 @@ body {
   }
 
   #hero {
-    min-height: 400px;
-    background-size: cover;
+    min-height: rem-calc(400);
+    max-width: rem-calc(1440);
+    width: 100%;
+    margin: 0 auto;
+    background-repeat: no-repeat !important;
+    background-position: top center !important;
+    background-size: cover !important;
 
     .content-container {
       margin: 0 auto;
       max-width: rem-calc(1440);
       width: 100%;
     }
+  }
+
+  #hero-mobile {
+    width: 100%;
+    min-height: rem-calc(600);
+    margin: 0 auto;
+    background-repeat: no-repeat !important;
+    background-position: bottom center !important;
+    background-size: cover !important;
   }
 
   // Other general styles
@@ -34,8 +48,6 @@ body {
 
   // Hero styling
   #hero, #hero-mobile, #title {
-    margin: 0;
-    padding: 0;
 
     h1 {
       margin: 0 auto;
@@ -55,10 +67,16 @@ body {
   // Center quote styling
   #center {
     display: none;
+    max-width: rem-calc(1440);
+    width: 100%;
+    margin: 0 auto;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
 
     @include breakpoint(small) {
       display: block;
-      margin: 0 0 rem-calc(14);
+      margin-bottom: rem-calc(14);
       padding: rem-calc(48) rem-calc(87) rem-calc(56);
 
       .content-container {
@@ -70,11 +88,6 @@ body {
           line-height: rem-calc(48);
         }
       }
-    }
-
-    @include breakpoint(large) {
-      background-repeat: no-repeat !important;
-      background-position: center !important;
     }
   }
 
@@ -90,49 +103,44 @@ body {
     padding: 0;
   }
 
-  // Secondary nav styling
+  // Secondary nav styling for primary template
   #hero nav,
-  #hero-mobile nav,
-  #second .content-container + nav,
-  #desktop-carousel .content-container + nav,
-  .secondary-nav nav {
+  #mobile-secondary-nav nav {
     background-color: $accent-color-2;
 
     ul {
-      padding: rem-calc(36) rem-calc(60);
+      padding: rem-calc(36) 0;
     }
 
     li {
-      display: inline;
+      display: inline-block;
     }
 
     .menu > li:not(.menu-text) > a {
+      min-width: rem-calc(205);
+      margin: 0 auto;
       margin-bottom: rem-calc(32);
-      border: 1px solid $white;
+      padding: rem-calc(8) rem-calc(32);
+      border: 2px solid $white;
       color: $white;
       font-size: rem-calc(24);
-      line-height: rem-calc(30);
+      line-height: rem-calc(46);
       text-transform: uppercase;
       transition: background-color 0.25s ease-out, color 0.25s ease-out;
 
       &:hover {
-        font-weight: 700;
         background-color: $white;
         color: $accent-color-2;
       }
     }
 
     li:last-child > a {
+      margin-right: 0 !important;
       margin-bottom: 0 !important;
     }
 
     @include breakpoint(small) {
       background-color: transparent;
-
-      ul {
-        padding-top: rem-calc(14);
-        padding-bottom: rem-calc(48);
-      }
 
       li {
         display: inline-block;
@@ -143,7 +151,6 @@ body {
       }
 
       .menu > li:not(.menu-text) > a {
-        margin: rem-calc(10);
         font-size: rem-calc(16);
         line-height: rem-calc(30);
         padding: rem-calc(5) rem-calc(52);
@@ -155,15 +162,71 @@ body {
       }
     }
 
-    @include breakpoint(medium) {
+    @include breakpoint(small) {
+
+      .menu > li:not(.menu-text) > a {
+        margin: rem-calc(8) rem-calc(16) rem-calc(24) 0;
+        padding: rem-calc(5) rem-calc(48);
+      }
+    }
+
+    @include breakpoint(large) {
+
+      .menu > li:not(.menu-text) > a {
+        font-size: rem-calc(18);
+      }
+    }
+  }
+
+  // Secondary nav styles for secondary and tertiary templates
+  // Secondary navigation styling
+  .secondary-nav {
+    display: none;
+
+    @include breakpoint(700) {
+      display: block;
+    }
+
+    nav {
+      float: none;
+      text-align: justify;
+
+      &:after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+      }
+
       ul {
-        padding-top: rem-calc(56);
-        padding-bottom: rem-calc(62);
+        text-align: center;
+        padding: rem-calc(40) 0 rem-calc(4);
+
+        @include breakpoint(large) {
+          padding-top: rem-calc(78);
+        }
+      }
+
+      .menu > li {
+        display: inline-block;
+        float: none;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0 rem-calc(16);
       }
 
       .menu > li:not(.menu-text) > a {
-        margin: rem-calc(8);
-        padding: rem-calc(5) rem-calc(48);
+        font-size: rem-calc(18);
+        line-height: rem-calc(30);
+        color: $secondary-color;
+        transition: background-color 0.25s ease-out, color 0.25s ease-out;
+
+        &:hover, &:active {
+          color: $accent-color-2;
+        }
+      }
+
+      .current-menu-item, .current-menu-item > a {
+        color: $accent-color-2 !important;
       }
     }
   }
@@ -266,10 +329,6 @@ body {
       a {
         color: $secondary-color;
       }
-    }
-
-    @include breakpoint(large) {
-      padding: 0;
     }
   }
 }

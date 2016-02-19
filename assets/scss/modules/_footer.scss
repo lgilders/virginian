@@ -27,7 +27,7 @@
   background-color: $secondary-color;
 
   @include breakpoint(small) {
-    padding: rem-calc(40) rem-calc(26);
+    padding: rem-calc(40);
   }
 
   footer + ul {
@@ -163,6 +163,10 @@
 
       ul {
         text-align: center;
+
+        @include breakpoint(medium) {
+          float: right;
+        }
       }
 
       li {
@@ -248,15 +252,6 @@
 
   @include breakpoint(small) {
     text-align: left;
-
-    .content-container {
-      //padding: 0 rem-calc(26);
-    }
-  }
-
-  @include breakpoint(large) {
-    .content-container {
-      //padding: 0;
-    }
+    padding: rem-calc(24) rem-calc(40) rem-calc(36);
   }
 }

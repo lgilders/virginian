@@ -51,4 +51,8 @@ require_once( 'library/sticky-posts.php' );
 /** Add custom query vars */
 require_once( 'library/query-vars.php' );
 
+/** Strips out extra paragraph formatting on content sections */
+remove_filter ('acf_the_content', 'wpautop');
+remove_filter ('the_content', 'wpautop');
+
 ?>

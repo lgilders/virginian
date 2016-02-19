@@ -56,7 +56,9 @@ get_header(); ?>
             <?php the_content(); ?>
         </div>
 
-        <?php the_field( 'secondary_nav' ); ?>
+        <div class="content-container secondary-nav">
+            <?php the_field( 'secondary_nav' ); ?>
+        </div>
     </div>
 
 <?php do_action( 'foundationpress_after_content' ); ?>

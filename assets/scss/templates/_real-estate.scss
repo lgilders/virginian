@@ -11,12 +11,21 @@ body.page-template-real-estate {
   }
 
   #hero {
+    min-height: rem-calc(120);
+
     h1 {
-      color: $secondary-color;
+      color: $accent-color-2;
+      font-size: rem-calc(48);
+      line-height: rem-calc(48);
+
+      @include breakpoint(large) {
+        font-size: rem-calc(64);
+        line-height: rem-calc(64);
+      }
     }
 
     h4 {
-      color: $secondary-color-50;
+      color: $secondary-color;
     }
   }
 
@@ -43,4 +52,8 @@ body.page-id-322 {
   .widget.listings-search select {
     width: 24%;
   }
+}
+
+.archive .listing-wrap span.listing-status.active, .wp-listings-shortcode .listing-wrap span.listing-status.active {
+  background: $accent-color-2 !important;
 }

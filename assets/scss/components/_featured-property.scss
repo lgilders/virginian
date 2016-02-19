@@ -23,7 +23,7 @@ body.page-template-page-full-width {
 
     @include breakpoint(medium) {
       min-height: rem-calc(313);
-      padding: rem-calc(25) rem-calc(43) !important;
+      padding: rem-calc(24) !important;
     }
 
     h2 {
@@ -41,6 +41,10 @@ body.page-template-page-full-width {
       @include breakpoint(medium) {
         padding: 0 0 rem-calc(14);
         margin: 0 auto;
+      }
+
+      @include breakpoint(large) {
+        font-size: rem-calc(40);
       }
     }
 
@@ -77,12 +81,14 @@ body.page-template-page-full-width {
 
     a.button {
       margin: 0 auto;
+      border-width: 2px;
     }
 
   }
 
   .widget .listing-wrap {
-    margin: 0 !important;
+    margin: 0 auto !important;
+    max-width: rem-calc(1354px); // Matches max width of above overlay sections together
   }
 
   .widget .listing-widget-thumb {
@@ -91,6 +97,7 @@ body.page-template-page-full-width {
     @include breakpoint(medium) {
       float: left;
       width: 50%;
+      max-width: rem-calc(632px); // Matches max width of overlay sections
     }
   }
 
@@ -109,6 +116,7 @@ body.page-template-page-full-width {
     @include breakpoint(medium) {
       float: right;
       width: 50%;
+      max-width: rem-calc(632px); // Matches max width of overlay sections
       margin-bottom: rem-calc(10);
       padding-bottom: 0;
     }

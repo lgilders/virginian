@@ -9,34 +9,36 @@ body.page-template-primary {
     }
 
     h1 {
-      padding: rem-calc(56) rem-calc(36) rem-calc(36);
+      max-width: rem-calc(248);
+      padding: rem-calc(52) 0 rem-calc(36);
 
       @include breakpoint(small) {
         padding-top: rem-calc(44);
         padding-bottom: rem-calc(8);
-        font-size: rem-calc(64);
-        line-height: rem-calc(64);
-      }
-
-      @include breakpoint(medium) {
-        padding-top: rem-calc(62);
+        font-size: rem-calc(48);
+        line-height: rem-calc(48);
       }
     }
 
     p {
-      padding: 0 rem-calc(36) rem-calc(48);
-
-      @include breakpoint(small) {
-        padding: 0 rem-calc(80);
-      }
-
-      @include breakpoint(medium) {
-        padding: 0 rem-calc(200);
-      }
+      padding-bottom: rem-calc(48);
+      max-width: rem-calc(248);
     }
 
     @include breakpoint(small) {
       display: none;
+    }
+  }
+
+  #mobile-secondary-nav nav {
+    display: block;
+
+    @include breakpoint(small) {
+      display: none;
+    }
+
+    .menu > li:not(.menu-text) > a {
+      min-width: rem-calc(245);
     }
   }
 
@@ -52,34 +54,35 @@ body.page-template-primary {
       }
 
       h1 {
-        padding: rem-calc(36) 0;
+        padding: rem-calc(52) 0 rem-calc(36);
 
         @include breakpoint(small) {
-          padding-top: rem-calc(40);
-          padding-bottom: rem-calc(8);
-          font-size: rem-calc(64);
-          line-height: rem-calc(64);
+          font-size: rem-calc(48);
+          line-height: rem-calc(48);
+          padding: rem-calc(52) rem-calc(46) rem-calc(36);
         }
 
         @include breakpoint(medium) {
           padding-top: rem-calc(62);
         }
+
+        @include breakpoint(large) {
+          font-size: rem-calc(64);
+          line-height: rem-calc(64);
+        }
       }
 
       p {
-        padding: 0 rem-calc(45) rem-calc(45);
-
-        @include breakpoint(small) {
-          padding: 0 rem-calc(80);
-        }
+        padding: 0 rem-calc(46);
 
         @include breakpoint(medium) {
-          padding: 0 rem-calc(200);
+          padding: 0 0 rem-calc(16);
+          max-width: rem-calc(615);
         }
 
         @include breakpoint(large) {
-          max-width: rem-calc(580);
-          padding: 0;
+          font-size: rem-calc(18);
+          max-width: rem-calc(585);
         }
       }
     }
@@ -87,7 +90,9 @@ body.page-template-primary {
 
   #first {
     #description {
-      padding: rem-calc(56) rem-calc(26);
+      width: 100%;
+      margin: 0 auto;
+      padding: rem-calc(62) rem-calc(16) rem-calc(64);
 
       h1 {
         margin: 0 auto;
@@ -108,25 +113,36 @@ body.page-template-primary {
       }
 
       @include breakpoint(small) {
-        padding: rem-calc(56);
+        padding: rem-calc(48) rem-calc(16) rem-calc(56);
 
         p {
-          padding-top: rem-calc(32);
+          padding: rem-calc(32) rem-calc(40) 0;
         }
       }
 
       @include breakpoint(medium) {
-        padding: rem-calc(68) rem-calc(184) rem-calc(72);
       }
 
       @include breakpoint(large) {
-        padding: rem-calc(68) rem-calc(376) rem-calc(72);
+        padding: rem-calc(50) 0 rem-calc(72);
+
+        p {
+          padding-top: rem-calc(46);
+          max-width: rem-calc(800);
+          font-size: rem-calc(18);
+        }
       }
     }
   }
 
   #second {
     display: none;
+    max-width: rem-calc(1440);
+    width: 100%;
+    margin: 0 auto;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
 
     @include breakpoint(small) {
       display: block;
@@ -155,6 +171,10 @@ body.page-template-primary {
     color: $black;
     padding: 0 rem-calc(25);
 
+    #form {
+      padding: rem-calc(16) 0 rem-calc(80);
+    }
+
     #information {
       @include clearfix;
     }
@@ -171,7 +191,7 @@ body.page-template-primary {
       width: 100%;
       border-bottom: 1px solid $black;
 
-      @include breakpoint(small) {
+      @include breakpoint(500) {
         float: left;
         width: 50%;
         border-bottom: none;
@@ -183,7 +203,7 @@ body.page-template-primary {
       float: none;
       width: 100%;
 
-      @include breakpoint(small) {
+      @include breakpoint(500) {
         float: right;
         width: 50%;
       }
@@ -263,9 +283,18 @@ body.page-template-primary {
       }
 
       p {
-        margin: 0 rem-calc(168);
+        margin: 0 auto;
         padding: rem-calc(12) rem-calc(30);
+
+        @include breakpoint(large) {
+          max-width: rem-calc(684);
+          font-size: rem-calc(18);
+        }
       }
     }
+  }
+
+  #description.hide-nav {
+    padding-bottom: 0 !important;
   }
 }

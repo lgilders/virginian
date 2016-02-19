@@ -3,7 +3,7 @@ body.page-template-homepage {
 // Hero styling
   #hero-mobile {
     display: block;
-    margin: 0 0 rem-calc(16);
+    margin-bottom: rem-calc(16);
     padding: rem-calc(12) rem-calc(12) rem-calc(46);
 
     @include breakpoint(small) {
@@ -29,17 +29,12 @@ body.page-template-homepage {
 
     @include breakpoint(small) {
       display: block;
-      margin: 0 0 rem-calc(16);
+      margin-bottom: rem-calc(16);
       padding: rem-calc(12) rem-calc(12) rem-calc(46);
     }
 
     @include breakpoint(medium) {
       padding: 0;
-    }
-
-    @include breakpoint(large) {
-      background-repeat: no-repeat !important;
-      background-position: center !important;
     }
 
     h1 {
@@ -109,7 +104,7 @@ body.page-template-homepage {
       line-height: rem-calc(30);
 
       @include breakpoint(large) {
-        font-size: rem-calc(36);
+        font-size: rem-calc(48);
       }
     }
 
@@ -128,12 +123,16 @@ body.page-template-homepage {
       min-width: rem-calc(205);
       margin: 0 auto;
       font-weight: 400;
+      border-width: 2px;
     }
   }
 
   div + div {
     section {
       padding: 0;
+      background-repeat: no-repeat !important;
+      background-position: center !important;
+      background-size: cover !important;
 
       .overlay {
         margin: 0 auto;
@@ -142,6 +141,10 @@ body.page-template-homepage {
         h2 {
           padding: 0;
           color: $secondary-color;
+
+          @include breakpoint(large) {
+            font-size: rem-calc(40);
+          }
         }
 
         p {
@@ -203,6 +206,19 @@ body.page-template-homepage {
         min-height: rem-calc(181);
         padding: rem-calc(36) 0 rem-calc(56);
       }
+
+      .overlay {
+        a {
+          border-color: $accent-color-2;
+          color: $accent-color-2;
+          background-color: transparent;
+
+          &:hover {
+            background-color: $accent-color-2;
+            color: $white;
+          }
+        }
+      }
     }
 
     div + div {
@@ -211,7 +227,7 @@ body.page-template-homepage {
 
         .overlay {
           min-height: rem-calc(284);
-          padding: rem-calc(16) rem-calc(36) rem-calc(30);
+          padding: rem-calc(48);
 
           h2 {
             padding: rem-calc(16) 0;
@@ -229,26 +245,6 @@ body.page-template-homepage {
   @include breakpoint(large) {
     section {
       min-height: rem-calc(400);
-    }
-
-    div + div {
-      section {
-        background-repeat: no-repeat !important;
-        background-position: center !important;
-      }
-    }
-
-    .overlay {
-      a {
-        border-color: $accent-color-2;
-        color: $accent-color-2;
-        background-color: transparent;
-
-        &:hover {
-          background-color: $accent-color-2;
-          color: $white;
-        }
-      }
     }
   }
 

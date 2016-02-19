@@ -52,8 +52,10 @@ get_header(); ?>
                 <?php } ?>
             </section>
 
+            <?php $firstDescription = strip_tags( get_field( 'first_section_description' ) ); ?>
+            <?php $firstDescription = apply_filters( 'the_content', $firstDescription ); ?>
             <section id="description">
-                <p><?php the_field( 'first_section_description' ); ?></p>
+                <p><?php echo $firstDescription; ?></p>
             </section>
         <?php endif; ?>
     </div>
@@ -87,8 +89,10 @@ get_header(); ?>
                 <?php } ?>
             </section>
 
+            <?php $secondDescription = strip_tags( get_field( 'second_section_description' ) ); ?>
+            <?php $secondDescription = apply_filters( 'the_content', $secondDescription); ?>
             <section id="description">
-                <p><?php the_field( 'second_section_description' ); ?></p>
+                <p><?php echo $secondDescription; ?></p>
             </section>
         </div>
     <?php endif; ?>
@@ -109,8 +113,10 @@ get_header(); ?>
                 <?php } ?>
             </section>
 
+            <?php $thirdDescription = strip_tags( get_field( 'third_section_description' ) ); ?>
+            <?php $thirdDescription = apply_filters( 'the_content', $thirdDescription); ?>
             <section id="description">
-                <p><?php the_field( 'third_section_description' ); ?></p>
+                <p><?php echo $thirdDescription; ?></p>
             </section>
         </div>
     <?php endif; ?>
@@ -131,8 +137,10 @@ get_header(); ?>
                 <?php } ?>
             </section>
 
+            <?php $fourthDescription = strip_tags( get_field( 'fourth_section_description' ) ); ?>
+            <?php $fourthDescription = apply_filters( 'the_content', $fourthDescription); ?>
             <section id="description">
-                <p><?php the_field( 'fourth_section_description' ); ?></p>
+                <p><?php echo $fourthDescription; ?></p>
             </section>
         </div>
     <?php endif; ?>
@@ -153,8 +161,10 @@ get_header(); ?>
                 <?php } ?>
             </section>
 
+            <?php $fifthDescription = strip_tags( get_field( 'fifth_section_description' ) ); ?>
+            <?php $fifthDescription = apply_filters( 'the_content', $fifthDescription); ?>
             <section id="description">
-                <p><?php the_field( 'fifth_section_description' ); ?></p>
+                <p><?php echo $fifthDescription; ?></p>
             </section>
         </div>
     <?php endif; ?>

@@ -8,7 +8,7 @@ get_header(); ?>
 <?php $showNav = get_field( 'show_sub_navigation' ); ?>
     <header id="hero" role="banner"
         <?php if($heroImage): ?>
-            style="background: url(<?php echo $heroImage['url']; ?>) no-repeat center"
+            style="background: url(<?php echo $heroImage['url']; ?>)"
         <?php endif; ?>
 
         <?php if(!$showNav): ?>
@@ -28,7 +28,7 @@ get_header(); ?>
 <?php $heroImageMobile = get_field( 'hero_image_mobile' ); ?>
     <header id="hero-mobile" role="banner"
         <?php if($heroImageMobile): ?>
-            style="background: url(<?php echo $heroImage['url']; ?>)"
+            style="background: url(<?php echo $heroImageMobile['url']; ?>)"
         <?php endif; ?>
 
         <?php if(!$showNav): ?>
@@ -38,18 +38,24 @@ get_header(); ?>
         <div class="content-container">
             <h1><?php the_field( 'hero_title' ); ?></h1>
             <p><?php the_field( 'hero_introduction' ); ?></p>
-
-            <?php if($showNav): ?>
-                <?php the_field( 'sub_navigation' ); ?>
-            <?php endif; ?>
         </div>
     </header>
+    <div id="mobile-secondary-nav">
+        <?php if($showNav): ?>
+            <?php the_field( 'sub_navigation' ); ?>
+        <?php endif; ?>
+    </div>
+
 
 <?php do_action( 'foundationpress_before_content' ); ?>
 
 <div id="first" class="content-container">
     <?php $iconImage = get_field( 'secondary_icon' ); ?>
-    <section id="description">
+    <section id="description"
+        <?php if(!$showNav): ?>
+            class="hide-nav"
+        <?php endif; ?> >
+
         <?php if($iconImage): ?>
             <img src="<?php echo $iconImage['url']; ?>" alt="icon" />
         <?php endif; ?>
@@ -63,7 +69,8 @@ get_header(); ?>
     </section>
 </div>
 
-<?php $form = get_field( 'form' ); ?>
+<?php $form = strip_tags( get_field( 'form' ) ); ?>
+<?php $form = apply_filters( 'the_content', $form); ?>
 <?php if($form): ?>
 <div id="visit-us">
     <div id="form" class="content-container">
@@ -85,7 +92,7 @@ get_header(); ?>
 <?php if($brandStory): ?>
     <div id="second"
         <?php if($brandImage): ?>
-            style="background: url(<?php echo $brandImage['url']; ?>) no-repeat center"
+            style="background: url(<?php echo $brandImage['url']; ?>)"
         <?php endif; ?>>
 
         <h1><?php the_field( 'brand_story' ); ?></h1>

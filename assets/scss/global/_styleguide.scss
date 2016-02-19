@@ -95,7 +95,7 @@ button, .button, a.button {
   color: $white;
   background-color: $accent-color-2;
   background-image: none;
-  border: 1px solid $accent-color-2;
+  border: 2px solid $accent-color-2;
   text-shadow: none;
   box-shadow: none;
   transition: background-color 0.25s ease-out, color 0.25s ease-out;
@@ -140,9 +140,61 @@ button, .button, a.button {
 [type='color'],
 textarea,
 input {
-  font-size: rem-calc(14);
+  font-size: rem-calc(14) !important;
   line-height: rem-calc(18);
   background-color: $white;
   color: $black;
   border: 1px solid $black;
+}
+
+label {
+  display: none !important;
+}
+
+
+// Gravity forms
+.gform_wrapper .top_label input.medium,
+.gform_wrapper .top_label select.medium,
+.gform_wrapper textarea.medium,
+.gform_wrapper .gform_footer input.button,
+.gform_wrapper .gform_footer input[type=image],
+.gform_wrapper .gform_footer input[type=submit] {
+  width: 100% !important;
+}
+
+.gform_wrapper {
+  max-width: 100% !important;
+  margin: 0 auto !important;
+}
+
+.gform_wrapper .gform_footer input.button,
+.gform_wrapper .gform_footer input[type=image],
+.gform_wrapper .gform_footer input[type=submit] {
+  text-transform: capitalize !important;
+  font-size: rem-calc(24) !important;
+}
+
+.gform_wrapper .top_label li.gfield.gf_left_half,
+.gform_wrapper .top_label li.gfield.gf_right_half {
+  width: 100% !important;
+
+  @include breakpoint(small) {
+    width: 49% !important;
+  }
+}
+
+.ginput_container.ginput_container_checkbox {
+  label {
+    display: block !important;
+  }
+
+  li {
+    display: inline-block !important;
+    margin-right: 1.5rem !important;
+  }
+}
+
+.gform_footer.top_label {
+  margin: 0 auto !important;
+  padding: 0 !important;
 }

@@ -3,60 +3,69 @@ body.page-template-secondary, body.single-listing {
   // Hero styling
   #hero-mobile {
     display: block;
-    margin: 0 0 rem-calc(20);
-    padding: rem-calc(14) rem-calc(14) rem-calc(46);
+    margin-bottom: rem-calc(16);
+    padding: rem-calc(8) rem-calc(12) rem-calc(46);
 
     @include breakpoint(small) {
       display: none;
     }
 
     h1 {
+      max-width: rem-calc(270);
       margin: 0 auto;
-      padding: rem-calc(24) rem-calc(30) rem-calc(20);
+      padding: rem-calc(24) 0 rem-calc(16);
+      font-size: rem-calc(48);
+      line-height: rem-calc(48);
     }
 
     p {
       margin: 0 auto;
       padding: rem-calc(20) rem-calc(14) rem-calc(22);
-      border: 1px solid $white;
+      border: 1px solid white;
     }
   }
 
   #hero {
     display: none;
-  }
 
-  @include breakpoint(small) {
-    #hero {
+    @include breakpoint(small) {
       display: block;
-      margin-bottom: rem-calc(14);
-      padding: rem-calc(46) rem-calc(46) rem-calc(56);
+      margin-bottom: rem-calc(16);
+      padding: rem-calc(12) rem-calc(12) rem-calc(46);
+    }
 
-      h1 {
-        margin: 0 auto;
-        padding: rem-calc(8) rem-calc(20) rem-calc(24);
-        font-size: rem-calc(64);
-        line-height: rem-calc(64);
+    @include breakpoint(medium) {
+      padding: 0;
+    }
+
+    h1 {
+      margin: 0 auto;
+      padding: rem-calc(24) rem-calc(30) rem-calc(20);
+      font-size: rem-calc(48);
+      line-height: rem-calc(48);
+
+      @include breakpoint(small) {
+        padding: rem-calc(46) 0 rem-calc(20)
       }
 
-      p {
-        margin: 0 auto;
-        padding: rem-calc(16) rem-calc(36) rem-calc(18);
-        border: 1px solid $white;
+      @include breakpoint(large) {
+        padding-top: rem-calc(72);
+        font-size: rem-calc(64);
       }
     }
-  }
 
-  @include breakpoint(medium) {
-    #hero {
-      padding: rem-calc(64) rem-calc(100) rem-calc(96);
+    p {
+      max-width: rem-calc(684);
+      margin: 0 auto;
+      padding: rem-calc(18) rem-calc(14) rem-calc(22);
+      border: 1px solid white;
 
-      h1 {
-        padding: 0 0 rem-calc(30);
+      @include breakpoint(small) {
+        padding: rem-calc(18) rem-calc(32) rem-calc(12);
       }
 
-      p {
-        padding: rem-calc(12) rem-calc(30);
+      @include breakpoint(large) {
+        font-size: rem-calc(18);
       }
     }
   }
@@ -64,10 +73,10 @@ body.page-template-secondary, body.single-listing {
   #first, #second, #third, #fourth, #fifth {
     padding: rem-calc(28);
     margin: 0 auto;
-    max-width: rem-calc(1440);
+    max-width: rem-calc(1024);
     width: 100%;
 
-    @include breakpoint(medium) {
+    @include breakpoint(700) {
       padding: rem-calc(28) rem-calc(42);
     }
 
@@ -78,50 +87,38 @@ body.page-template-secondary, body.single-listing {
     @include clearfix;
 
     #title h1 {
-      padding: rem-calc(20) rem-calc(14) rem-calc(40);
+      margin: 0 auto;
+      padding: rem-calc(20) 0 rem-calc(32);
       color: $accent-color-2;
 
-      @include breakpoint(medium) {
+      @include breakpoint(700) {
         padding-top: rem-calc(16);
         padding-bottom: rem-calc(36);
       }
     }
 
     #media {
+      float: none;
+      width: 100%;
+
       @include breakpoint(700) {
         float: right;
-        width: 36%;
-      }
-
-      @include breakpoint(medium) {
         width: 50%;
       }
     }
 
     #description p {
-      margin: 0;
-      padding: rem-calc(32) 0 rem-calc(14);
+      margin: 0 auto;
+      padding: 0;
       text-align: left;
       color: $black;
-
-      @include breakpoint(700) {
-        float: left;
-        width: 64%;
-        padding-top: 0;
-        padding-right: rem-calc(46);
-      }
-
-      @include breakpoint(medium) {
-        width: 50%;
-        padding-top: rem-calc(16);
-      }
     }
   }
 
   #second, #fourth {
     padding-bottom: rem-calc(30);
 
-    @include breakpoint(medium) {
+    @include breakpoint(700) {
       padding-bottom: rem-calc(36);
     }
     
@@ -135,7 +132,7 @@ body.page-template-secondary, body.single-listing {
         border: none;
       }
 
-      @include breakpoint(medium) {
+      @include breakpoint(700) {
         padding-top: rem-calc(14);
         padding-bottom: rem-calc(24);
       }
@@ -145,69 +142,49 @@ body.page-template-secondary, body.single-listing {
       #media {
         float: left;
       }
+    }
 
-      #description p {
+    #description {
+      float: none;
+      width: 100%;
+      padding: rem-calc(16);
+
+      @include breakpoint(700) {
         float: right;
-        padding-left: rem-calc(46);
-        padding-right: 0;
+        width: 50%;
+        padding: rem-calc(16) 0 rem-calc(16) rem-calc(46);
       }
     }
   }
 
-  // Secondary navigation styling
-  .secondary-nav {
-    nav {
+  #first, #third, #fifth {
+    #description {
       float: none;
-      text-align: justify;
+      width: 100%;
+      padding: rem-calc(16);
 
-      &:after {
-        content: '';
-        display: inline-block;
-        width: 100%;
+      @include breakpoint(700) {
+        float: left;
+        width: 50%;
+        padding: rem-calc(16) rem-calc(46) rem-calc(16) 0;
+      }
+    }
+  }
+
+  #third, #fifth {
+    #title h1 {
+      padding-top: rem-calc(62);
+      border-top: 1px solid $secondary-color-50;
+
+      @include breakpoint(small) {
+        padding-top: 0;
+        padding-bottom: rem-calc(40);
+        border: none;
       }
 
-      ul {
-        text-align: center;
-        padding: rem-calc(40) 0 rem-calc(16);
-
-        @include breakpoint(small) {
-          padding: rem-calc(16) 0;
-        }
-      }
-
-      .menu > li {
-        min-width: rem-calc(205);
-        display: inline-block;
-        float: none;
-        text-align: center;
-        margin: 0 auto;
-        width: 100%;
-        padding: 0 rem-calc(32);
-      }
-
-      .menu > li:not(.menu-text) > a {
-        border: 1px solid $white;
-        color: $white;
-        font-size: rem-calc(24);
-        line-height: rem-calc(30);
-        text-transform: uppercase;
-        transition: background-color 0.25s ease-out, color 0.25s ease-out;
-
-        &:hover {
-          font-weight: 700;
-          background-color: $white;
-          color: $accent-color-2;
-        }
-
-        @include breakpoint(small) {
-          color: $accent-color-2;
-          border-color: $accent-color-2;
-
-          &:hover {
-            color: $white;
-            background-color: $accent-color-2;
-          }
-        }
+      @include breakpoint(700) {
+        padding-top: rem-calc(14);
+        padding-bottom: rem-calc(24);
       }
     }
   }
