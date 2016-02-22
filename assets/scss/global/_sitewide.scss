@@ -38,12 +38,66 @@ body {
   text-align: center;
   color: white;
 
+  // Set up sticky nav
+  header#masthead {
+    position: fixed;
+    z-index: 10;
+
+    @include breakpoint(medium) {
+      position: relative;
+      z-index: inherit;
+    }
+  }
+
+  nav#site-navigation {
+    position: fixed;
+    height: 242px;
+    z-index: 10;
+  }
+
+  // Logo styles
+  #logo, #logo-mobile {
+    min-width: rem-calc(100);
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: rem-calc(16);
+    background-color: $white;
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  #logo-mobile {
+    display: block;
+    margin: 0 auto;
+    margin-top: rem-calc(14);
+    margin-bottom: rem-calc(14);
+    width: 100%;
+
+    img {
+      width: rem-calc(135);
+    }
+
+    @include breakpoint(medium) {
+      display: none;
+    }
+  }
+
+
   // Set up body container
   section.container {
+    position: relative;
+    top: 36px; // Matches the height of the sticky nav
     max-height: none !important;
     padding: 0 !important;
 
     @include clearfix;
+
+    @include breakpoint(medium) {
+      top: 242px;  // Matches the height of the sticky nav
+    }
   }
 
   // Hero styling

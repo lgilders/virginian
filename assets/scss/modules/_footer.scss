@@ -20,14 +20,21 @@
 // Additional styles for The Virginian site
 
 #footer-container {
-  margin: 0;
-  margin-top: 0 !important; // Something from forms adding to page causing issue after initial load
+  position: relative;
+  top: 36px; // Matches the height of the sticky nav
+  margin: 0 !important;
   padding: rem-calc(24) rem-calc(30) rem-calc(36);
   border: none;
   background-color: $secondary-color;
 
+  @include clearfix;
+
   @include breakpoint(small) {
-    padding: rem-calc(40);
+    padding: rem-calc(14) 0;
+  }
+
+  @include breakpoint(medium) {
+    top: 242px; // Matches the height of the sticky nav
   }
 
   footer + ul {
@@ -40,7 +47,7 @@
 
   #footer {
     margin: 0 auto;
-    max-width: rem-calc(1440);
+    max-width: rem-calc(1376);
     width: 100%;
     display: block;
     float: none;
@@ -89,11 +96,6 @@
     @include breakpoint(small) {
       li {
         float: left;
-        margin-right: rem-calc(32);
-      }
-
-      li:last-child {
-        margin-right: 0;
       }
 
       a {
@@ -102,7 +104,41 @@
     }
   }
 
-  #menu-footer-primary {
+  #tertiary-links-footer {
+    display: block;
+    margin: 0 auto;
+    float: none;
+    text-align: justify;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 100%;
+    }
+
+    @include clearfix;
+
+    @include breakpoint(medium) {
+      float: left;
+    }
+
+    ul {
+      text-align: center;
+
+      @include breakpoint(medium) {
+        float: left;
+      }
+    }
+
+    li {
+      position: relative;
+      display: inline-block;
+      float: none;
+      padding: rem-calc(16);
+      min-width: 50px;
+      text-align: center;
+      transition: all 1s ease-in;
+    }
 
     .calendar:before,
     .gallery:before,
@@ -138,13 +174,12 @@
 
   #social-media-footer {
     display: inline-block;
-    width: 100%;
     margin: 0 auto;
     padding-top: rem-calc(16);
 
+    @include clearfix;
+
     @include breakpoint(medium) {
-      float: right;
-      width: 30%;
       padding: 0;
     }
 
@@ -233,14 +268,22 @@
 }
 
 #subfooter {
+  position: relative;
+  top: 36px; // Matches the height of the sticky nav
   min-height: rem-calc(60);
   padding: rem-calc(24) rem-calc(30) rem-calc(36);
   color: $secondary-color-50;
   background-color: $black;
 
+  @include clearfix;
+
+  @include breakpoint(medium) {
+    top: 242px; // Matches the height of the sticky nav
+  }
+
   .content-container {
     margin: 0 auto;
-    max-width: rem-calc(1440);
+    max-width: rem-calc(1344);
     width: 100%;
   }
 
@@ -252,6 +295,6 @@
 
   @include breakpoint(small) {
     text-align: left;
-    padding: rem-calc(24) rem-calc(40) rem-calc(36);
+    padding: rem-calc(24) rem-calc(16) rem-calc(36);
   }
 }

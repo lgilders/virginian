@@ -123,7 +123,6 @@ get_header(); ?>
 
 					echo $title; ?>
 
-                    <small><?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<p id="breadcrumbs">','</p>'); } ?></small>
 				</header><!-- .archive-header -->
 
 			<?php
@@ -141,9 +140,10 @@ get_header(); ?>
 		</div><!-- #content -->
 	</section><!-- #primary -->
 
-<?php
-get_sidebar( 'content' );
-get_sidebar();
-get_footer();
+    <div id="featured-property" class="large-12">
+        <?php dynamic_sidebar( 'featured-property-widgets' ); ?>
+    </div>
+
+<?php get_footer();
 
 }

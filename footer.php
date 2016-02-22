@@ -13,17 +13,18 @@
 
 		</section>
 		<div id="footer-container">
-			<footer id="footer" class="content-container">
+			<footer id="footer" class="content-container row">
 				<?php do_action( 'foundationpress_before_footer' ); ?>
 
-                <?php foundationpress_bottom_bar(); ?>
-
-                <div id="social-media-footer">
-                    <?php get_template_part( '/parts/social-media' ); ?>
+                <div id="tertiary-links-footer" class="x-small-12 medium-8 large-7 columns">
+                    <?php foundationpress_bottom_bar(); ?>
                 </div>
 
-				<?php do_action( 'foundationpress_after_footer' ); ?>
+                <div id="social-media-footer" class="x-small-12 medium-4 large-3 columns">
+                    <?php get_template_part( '/parts/social-media' ); ?>
+                </div>
 			</footer>
+            <?php do_action( 'foundationpress_after_footer' ); ?>
 		</div>
 
         <footer id="subfooter">

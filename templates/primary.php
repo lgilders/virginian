@@ -69,8 +69,7 @@ get_header(); ?>
     </section>
 </div>
 
-<?php $form = strip_tags( get_field( 'form' ) ); ?>
-<?php $form = apply_filters( 'the_content', $form); ?>
+<?php $form = get_field( 'form' ); ?>
 <?php if($form): ?>
 <div id="visit-us">
     <div id="form" class="content-container">
@@ -101,6 +100,8 @@ get_header(); ?>
 
 <?php do_action( 'foundationpress_after_content' ); ?>
 
-<?php dynamic_sidebar( 'featured-property-widgets' ); ?>
+<div id="featured-property" class="large-12">
+    <?php dynamic_sidebar( 'featured-property-widgets' ); ?>
+</div>
 
 <?php get_footer(); ?>

@@ -116,6 +116,7 @@
 // Styles for main nav
 #desktop-menu {
   min-height: rem-calc(45);
+  background-color: $white;
 }
 
 .menu > li:not(.menu-text) > a {
@@ -328,31 +329,6 @@ button.c-hamburger.c-hamburger--htx {
     white-space: nowrap;
     padding: 0;
     border: none;
-  }
-}
-
-// Logo styles
-#logo, #logo-mobile {
-  min-width: rem-calc(100);
-  margin-bottom: rem-calc(16);
-
-  img {
-    display: block;
-    margin: 0 auto;
-  }
-}
-
-#logo-mobile {
-  display: block;
-  margin-top: rem-calc(14);
-  margin-bottom: rem-calc(14);
-
-  img {
-    width: rem-calc(135);
-  }
-
-  @include breakpoint(medium) {
-    display: none;
   }
 }
 

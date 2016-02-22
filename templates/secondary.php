@@ -52,10 +52,8 @@ get_header(); ?>
                 <?php } ?>
             </section>
 
-            <?php $firstDescription = strip_tags( get_field( 'first_section_description' ) ); ?>
-            <?php $firstDescription = apply_filters( 'the_content', $firstDescription ); ?>
             <section id="description">
-                <p><?php echo $firstDescription; ?></p>
+                <p><?php the_field( 'first_section_description' ); ?></p>
             </section>
         <?php endif; ?>
     </div>
@@ -89,10 +87,8 @@ get_header(); ?>
                 <?php } ?>
             </section>
 
-            <?php $secondDescription = strip_tags( get_field( 'second_section_description' ) ); ?>
-            <?php $secondDescription = apply_filters( 'the_content', $secondDescription); ?>
             <section id="description">
-                <p><?php echo $secondDescription; ?></p>
+                <p><?php the_field( 'second_section_description' ); ?></p>
             </section>
         </div>
     <?php endif; ?>
@@ -113,10 +109,8 @@ get_header(); ?>
                 <?php } ?>
             </section>
 
-            <?php $thirdDescription = strip_tags( get_field( 'third_section_description' ) ); ?>
-            <?php $thirdDescription = apply_filters( 'the_content', $thirdDescription); ?>
             <section id="description">
-                <p><?php echo $thirdDescription; ?></p>
+                <p><?php the_field( 'third_section_description' ); ?></p>
             </section>
         </div>
     <?php endif; ?>
@@ -137,10 +131,8 @@ get_header(); ?>
                 <?php } ?>
             </section>
 
-            <?php $fourthDescription = strip_tags( get_field( 'fourth_section_description' ) ); ?>
-            <?php $fourthDescription = apply_filters( 'the_content', $fourthDescription); ?>
             <section id="description">
-                <p><?php echo $fourthDescription; ?></p>
+                <p><?php the_field( 'fourth_section_description' ); ?></p>
             </section>
         </div>
     <?php endif; ?>
@@ -161,10 +153,8 @@ get_header(); ?>
                 <?php } ?>
             </section>
 
-            <?php $fifthDescription = strip_tags( get_field( 'fifth_section_description' ) ); ?>
-            <?php $fifthDescription = apply_filters( 'the_content', $fifthDescription); ?>
             <section id="description">
-                <p><?php echo $fifthDescription; ?></p>
+                <p><?php the_field( 'fifth_section_description' ); ?></p>
             </section>
         </div>
     <?php endif; ?>
@@ -218,7 +208,7 @@ get_header(); ?>
                                 <h5><span><?php if($number < 10) echo $preface ?><?php echo $number; ?>.&nbsp;</span><?php the_sub_field( 'title' ); ?></h5>
                             </div>
 
-                            <p class="description"><?php the_sub_field('description'); ?></p>
+                            <div class="description-wrapper"><p class="description"><?php the_sub_field('description'); ?></p></div>
 
                             <div class="hole-details">
                                 <ul>
@@ -273,6 +263,8 @@ get_header(); ?>
 
 <?php do_action( 'foundationpress_after_content' ); ?>
 
-<?php dynamic_sidebar( 'featured-property-widgets' ); ?>
+<div id="featured-property" class="large-12">
+    <?php dynamic_sidebar( 'featured-property-widgets' ); ?>
+</div>
 
 <?php get_footer(); ?>

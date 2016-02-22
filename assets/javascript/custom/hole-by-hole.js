@@ -45,9 +45,20 @@ $(document).ready(function ($) {
         // For tablet and desktop
         $(sync2).find(".synced").removeClass("synced");
         $(sync2).find(".owl-item").eq(current).addClass("synced");
+
         // For mobile
-        $(sync3).find(".synced").removeClass("synced");
-        $(sync3).find(".owl-item").eq(current).addClass("synced");
+        if(current < 9) {
+            $(sync3).find(".synced").removeClass("synced");
+            $(sync3).find(".owl-item").eq(0).addClass("synced");
+        } else {
+            $(sync3).find(".synced").removeClass("synced");
+            $(sync3).find(".owl-item").eq(1).addClass("synced");
+        }
+    }
+
+    function updateMobileTabs(current) {
+        $(sync3).find(".synched").removeClass("synced");
+        $(sync3).find("owl-item").eq(current).addClass("synced");
     }
 
     // Initializes carousel for images/content
@@ -62,16 +73,22 @@ $(document).ready(function ($) {
         .on('changed.owl.carousel', function (e) {
             if (!flag) {
                 flag = true;
+                var updateNumber = e.item.index;
                 sync2.trigger('to.owl.carousel', [e.item.index, duration, true]);
+                updateClassName(updateNumber);
                 flag = false;
             }
         })
         .on('dragged.owl.carousel', function (e) {
+            var updateNumber = e.item.index;
+
             if (e.relatedTarget.state.direction == 'left') {
                 sync2.trigger('next.owl.carousel');
             } else {
                 sync2.trigger('prev.owl.carousel');
             }
+
+            updateClassName(updateNumber);
         });
 
     // Initializes carousel for hole numbers
@@ -111,7 +128,7 @@ $(document).ready(function ($) {
             } else {
                 sync1.trigger('to.owl.carousel', [(updateNumber + 8), duration, true]);
             }
-            updateClassName(updateNumber);
+            updateMobileTabs(updateNumber);
         })
         .on('changed.owl.carousel', function (e) {
             if (!flag) {

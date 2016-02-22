@@ -400,22 +400,9 @@ if (function_exists('equity')) {
 
 get_header(); ?>
 
-    <?php $heroImage = get_field( 'hero_image' ); ?>
-    <header id="hero" role="banner"
-        <?php if($heroImage): ?>
-            style="background: #706259 url(<?php echo $heroImage['url']; ?>)"
-        <?php endif; ?>>
-        <div class="content-container">
-            <h1><?php the_field( 'hero_title' ); ?></h1>
-            <p><?php the_field( 'hero_introduction' ); ?></p>
-        </div>
-    </header>
-
     <div id="primary" class="content-area container inner">
 
-        <small><?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<p id="breadcrumbs">','</p>'); } ?></small>
-
-		<div id="content" class="site-content" role="main">
+        <div id="content" class="site-content" role="main">
 
 			<?php
 				// Start the Loop.
@@ -473,7 +460,9 @@ get_header(); ?>
         </div>
     </div>
 
-    <?php dynamic_sidebar( 'featured-property-widgets' ); ?>
+    <div id="featured-property" class="large-12">
+        <?php dynamic_sidebar( 'featured-property-widgets' ); ?>
+    </div>
 
 <?php
 get_footer();

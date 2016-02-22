@@ -198,3 +198,12 @@ label {
   margin: 0 auto !important;
   padding: 0 !important;
 }
+
+// Overrides for columns / rows
+.column, .columns {
+  padding: 0;
+}
+
+.row {
+  max-width: rem-calc(900);
+}

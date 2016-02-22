@@ -37,6 +37,8 @@ body.page-template-secondary {
     }
 
     .item {
+      cursor: pointer;
+
       p {
         padding: rem-calc(10);
         font-size: rem-calc(22);
@@ -69,6 +71,7 @@ body.page-template-secondary {
 
     .item {
       border-right: rem-calc(4) solid $white;
+      cursor: pointer;
 
       p {
         padding: 0.25rem;
@@ -168,11 +171,17 @@ body.page-template-secondary {
       color: #d0b42b;
     }
 
-    .description {
+    .description-wrapper {
       margin: 0;
       padding: rem-calc(20) rem-calc(28);
-      color: $white;
       background-color: $secondary-color-50;
+    }
+
+    p.description {
+      margin: 0 auto !important;
+      max-width: rem-calc(658);
+      color: $white;
+      font-size: rem-calc(24);
     }
 
     .hole-details {

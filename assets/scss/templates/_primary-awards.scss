@@ -1,0 +1,23 @@
+body.page-template-primary {
+  .row {
+    padding: 0 rem-calc(24);
+  }
+
+  .awards {
+    color: $black;
+    text-align: left;
+    vertical-align: top;
+  }
+    .awards h2 {
+      margin-top: 0;
+      padding-top: 0!important;
+    }
+
+    .awards ul {
+      margin: 0 0 rem-calc(32);
+    }
+    .awards ul li {
+      color: $black;
+      text-align: left;
+    }
+  }

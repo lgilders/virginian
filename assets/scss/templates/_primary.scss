@@ -109,7 +109,7 @@ body.page-template-primary {
       }
 
       h1 + p {
-        padding-top: rem-calc(8);
+        padding-top: rem-calc(24);
       }
 
       @include breakpoint(small) {

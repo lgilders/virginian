@@ -29,6 +29,10 @@ body.page-template-real-estate {
     }
   }
 
+  .entry-content {
+    padding: 0 rem-calc(24);
+  }
+
   .listings-search {
     @include clearfix;
   }

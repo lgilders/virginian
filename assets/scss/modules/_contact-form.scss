@@ -17,6 +17,10 @@ iframe {
   @include breakpoint(medium) {
     background-color: $white;
   }
+
+  iframe {
+    border-bottom: 1px solid $secondary-color-50;
+  }
 }
 
 .height-transition {

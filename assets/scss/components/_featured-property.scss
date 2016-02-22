@@ -8,10 +8,11 @@ body.page-template-page-full-width {
 
   // Featured property styling
 
-  section.widget_virginian_featured_listing {
-    float: none !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
+  #featured-property {
+    position: relative;
+    width: 100%;
+    max-width: rem-calc(1440);
+    margin: 0 auto;
     color: $black;
     background-color: $secondary-color-50;
 
@@ -47,12 +48,23 @@ body.page-template-page-full-width {
         font-size: rem-calc(40);
       }
     }
+  }
+
+  section.widget_virginian_featured_listing {
+    width: 100% !important;
+    float: none !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+
+    @include clearfix;
 
     .listing {
       margin: 0 auto;
       padding: 0;
       max-width: rem-calc(1440);
       width: 100%;
+
+      @include clearfix;
     }
 
     p.listing-address {
@@ -89,6 +101,8 @@ body.page-template-page-full-width {
   .widget .listing-wrap {
     margin: 0 auto !important;
     max-width: rem-calc(1354px); // Matches max width of above overlay sections together
+
+    @include clearfix;
   }
 
   .widget .listing-widget-thumb {

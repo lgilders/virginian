@@ -9,4 +9,27 @@
 
   }
 
+  // Virginian styles
+  #hero {
+    min-height: rem-calc(64);
+
+    h1 {
+      color: $secondary-color;
+    }
+
+    h4 {
+      color: $secondary-color-50;
+    }
+  }
+
+  color: $black;
+
+  .gallery-item {
+    padding-right: rem-calc(16);
+  }
+
+  .gallery-item:nth-child(4) {
+    padding-right: 0;
+  }
+
 }
