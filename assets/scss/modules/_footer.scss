@@ -30,7 +30,7 @@
   @include clearfix;
 
   @include breakpoint(small) {
-    padding: rem-calc(14) 0;
+    padding: rem-calc(14) rem-calc(44);
   }
 
   @include breakpoint(medium) {
@@ -279,6 +279,7 @@
 
   @include breakpoint(medium) {
     top: 242px; // Matches the height of the sticky nav
+    padding: rem-calc(24) rem-calc(56) rem-calc(36);
   }
 
   .content-container {
@@ -295,6 +296,5 @@
 
   @include breakpoint(small) {
     text-align: left;
-    padding: rem-calc(24) rem-calc(16) rem-calc(36);
   }
 }

@@ -44,58 +44,28 @@
 
 	<header id="masthead" class="site-header content-container" role="banner">
 		<div class="title-bar" data-responsive-toggle="site-navigation">
-			<button class="c-hamburger c-hamburger--htx" type="button" data-toggle="offCanvas">
-                <span>toggle menu</span>
-            </button>
-            <script>
-                (function() {
-
-                    "use strict";
-                    // Adds class to hamburger button when active
-                    var toggles = document.querySelectorAll(".c-hamburger");
-
-                    for (var i = toggles.length - 1; i >= 0; i--) {
-                        var toggle = toggles[i];
-                        toggleHandler(toggle);
-                    };
-
-                    function toggleHandler(toggle) {
-                        toggle.addEventListener( "click", function(e) {
-                            e.preventDefault();
-                            (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
-                        });
-                    }
-
-                    // Adds class to title-bar menu when active
-                    var togglesMenu = document.querySelectorAll('#masthead .title-bar');
-
-                    for (var i = togglesMenu.length - 1; i >=0; i--) {
-                        var toggleMenu = togglesMenu[i];
-                        toggleClass(toggleMenu);
-                    };
-
-                    function toggleClass(toggleMenu) {
-                        toggleMenu.addEventListener('click', function(e) {
-                            e.preventDefault();
-                            (this.classList.contains('is-active') === true) ? this.classList.remove('is-active') : this.classList.add('is-active');
-                        });
-                    }
-
-                })();
-            </script>
-		</div>
+            <button class="menu-icon" type="button" data-toggle="mobile-menu"></button>
+            <div class="title-bar-title">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+            </div>
+        </div>
 
 		<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
             <div id="contact-form" class="height-transition height-transition-hidden">
-                <!-- SharpSpring Form for Contact  -->
-                <script type="text/javascript">
-                    var ss_form = {'account': 'MzQxMze2NAYA', 'formID': 'MzI0S0w1NTbUTTGxMNA1STQ10000SDXVNbc0SE0zs0iysDRKAgA'};
-                    ss_form.width = '100%';
-                    ss_form.height = '200';
-                    ss_form.domain = 'app-N24YKLWU.marketingautomation.services';
-                    ss_form.hidden = {'_usePlaceholders' : true}; // Modify this for sending hidden variables, or overriding values
-                </script>
-                <script type="text/javascript" src="https://koi-N24YKLWU.marketingautomation.services/client/form.js?ver=1.1.1"></script>
+                <div class="close-form">X</div>
+                    <?php get_template_part( '/parts/contact-form' ); ?>
+                    <div class="row">
+                        <div class="small-12 centered columns">
+                            <?php echo do_shortcode('[gravityform id="1" title="false" description="false" ajax="true" tabindex="99"]'); ?>
+                        </div>
+                    </div>
+                    <!-- SharpSpring code -->
+                    <script type="text/javascript">
+                        var ss_noform = ss_noform || [];
+                        ss_noform.push(['baseURI', 'https://app-N24YKLWU.marketingautomation.services/webforms/receivePostback/MzQxMze2NAYA/']); ss_noform.push(['endpoint', 'e46627a6-f7c5-49e5-ba87-b090fecb4411']);
+                    </script>
+                    <script type="text/javascript" src="https://koi-N24YKLWU.marketingautomation.services/client/noform.js?ver=1.24" ></script>
+                </div>
             </div>
 
             <div id="desktop-menu">
@@ -108,35 +78,20 @@
 
                     <?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'topbar' ) : ?>
                         <?php get_template_part( 'parts/mobile-top-bar' ); ?>
-
-                        <div id="contact-form-mobile">
-                            <!-- SharpSpring Form for test:ContactCondensedMobile  -->
-                            <script type="text/javascript">
-                                var ss_form = {'account': 'MzQxMze2NAYA', 'formID': 'MzY2TzI3tkjRTbQwMtE1MU410LUwMjTSNbZMTrRMNE81tjS1AAA'};
-                                ss_form.width = '100%';
-                                ss_form.height = '260';
-                                ss_form.domain = 'app-N24YKLWU.marketingautomation.services';
-                                ss_form.hidden = {'_usePlaceholders' : true}; // Modify this for sending hidden variables, or overriding values
-                            </script>
-                            <script type="text/javascript" src="https://koi-N24YKLWU.marketingautomation.services/client/form.js?ver=1.1.1"></script>
-                        </div>
-
-                        <div id="social-media-mobile">
-                            <?php get_template_part( '/parts/social-media' ); ?>
-                        </div>
                     <?php endif; ?>
                 </div>
             </div>
 
-            <?php get_template_part( '/parts/logo' ); ?>
+            <div class="sticky-nav">
+                <?php get_template_part( '/parts/logo' ); ?>
 
-			<div class="top-bar-left show-for-medium">
-				<?php foundationpress_top_bar_l(); ?>
-			</div>
+                <div class="top-bar-left show-for-medium">
+                    <?php foundationpress_top_bar_l(); ?>
+                </div>
+            </div>
+
 		</nav>
 	</header>
 
 	<section class="container">
 		<?php do_action( 'foundationpress_after_header' ); ?>
-
-        <?php get_template_part( '/parts/logo-mobile' ); ?>

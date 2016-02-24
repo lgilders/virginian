@@ -41,6 +41,20 @@ body.page-template-secondary {
       }
     }
 
+    .sub-headers {
+      @include clearfix;
+
+      li {
+        float: right;
+        width: 19%;
+        border: none;
+      }
+
+      h6 {
+        font-size: rem-calc(24);
+      }
+    }
+
     .membership-row {
       @include clearfix;
 
@@ -85,6 +99,7 @@ body.page-template-secondary {
       width: 46%;
       border-right: 1px solid $black;
       margin-bottom: rem-calc(40);
+      padding-right: rem-calc(32);
     }
 
     #terms-2 {

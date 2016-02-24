@@ -4,7 +4,8 @@ body.page-template-secondary,
 body.single-listing,
 body.page-template-real-estate,
 body.search-results,
-body.page-template-page-full-width {
+body.page-template-page-full-width,
+body.search {
 
   // Featured property styling
 
@@ -24,7 +25,7 @@ body.page-template-page-full-width {
 
     @include breakpoint(medium) {
       min-height: rem-calc(313);
-      padding: rem-calc(24) !important;
+      padding: rem-calc(24) rem-calc(44) !important;
     }
 
     h2 {
@@ -142,10 +143,6 @@ body.page-template-page-full-width {
 
   // Fixes for strange section sizes during resize events
   @media screen and (max-width: 625px) {
-
-    section.widget_virginian_featured_listing h2 {
-      //padding-top: rem-calc(18);
-    }
 
     .widget .listing-widget-thumb, .listing-summary {
       width: 100%;

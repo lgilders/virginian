@@ -254,6 +254,7 @@ button.c-hamburger.c-hamburger--htx {
   width: 100%;
   background-color: $black;
   padding: 0 rem-calc(48);
+  margin-top: rem-calc(32);
 
   @include breakpoint(medium) {
     display: none;

@@ -234,126 +234,20 @@ function single_listing_post_content() {
 			}
 		?>
 
-		<div id="listing-contact" <?php if(!function_exists('aeprofiles_connected_agents_markup')) { echo 'style="width: 100%;"'; }; ?>>
-			
-			<?php
-			$options = get_option('plugin_wp_listings_settings');
-			if (get_post_meta( $post->ID, '_listing_contact_form', true) != '') {
+        <div id="listing-contact" <?php if(!function_exists('aeprofiles_connected_agents_markup')): ?> >
+            <h4>Listing Inquiry</h4>
 
-				echo do_shortcode(get_post_meta( $post->ID, '_listing_contact_form', true) );
+            <?php echo do_shortcode('[gravityform id="4" title="false" description="false" ajax="true" tabindex="99"]'); ?>
+            <?php echo
+            '<script type="text/javascript">
+                var ss_noform = ss_noform || [];
+                ss_noform.push([\'baseURI\', \'https://app-N24YKLWU.marketingautomation.services/webforms/receivePostback/MzQxMze2NAYA/\']); ss_noform.push([\'endpoint\', \'7fe11301-348c-483b-98af-35c333964afc\']);
+                </script>
+                <script type="text/javascript" src="https://koi-N24YKLWU.marketingautomation.services/client/noform.js?ver=1.24" ></script>';
+            ?>
+        </div><!-- .listing-contact -->
+        <?php endif; ?>
 
-			} elseif (isset($options['wp_listings_default_form'])) {
-
-				echo do_shortcode($options['wp_listings_default_form']);
-
-			} else {
-				echo '<h4>Listing Inquiry</h4>';
-				$nameError = '';
-				$emailError = '';
-
-				if(isset($_POST['submitted'])) {
-
-				$url = get_permalink();
-				$listing = get_the_title();
-
-				if(trim($_POST['contactName']) === '') {
-					$nameError = 'Please enter your name.';
-					$hasError = true;
-				} else {
-					$name = trim($_POST['contactName']);
-				}
-
-				if(trim($_POST['email']) === '')  {
-					$emailError = 'Please enter your email address.';
-					$hasError = true;
-				} else if (!preg_match("/^[[:alnum:]][a-z0-9_.-]*@[a-z0-9.-]+\.[a-z]{2,4}$/i", trim($_POST['email']))) {
-					$emailError = 'You entered an invalid email address.';
-					$hasError = true;
-				} else {
-					$email = trim($_POST['email']);
-				}
-
-				$phone = trim($_POST['phone']);
-
-				if(function_exists('stripslashes')) {
-					$comments = stripslashes(trim($_POST['comments']));
-				} else {
-					$comments = trim($_POST['comments']);
-				}
-
-
-				if(isset($_POST['antispam']) && $_POST['antispam'] == '') {
-					if(!isset($hasError)) {
-						$emailTo = get_the_author_meta( 'user_email', $post->post_author );
-						if (!isset($emailTo) || ($emailTo == '') ){
-							$emailTo = get_option('admin_email');
-						}
-						$subject = 'Listing Inquiry from '.$name;
-						$body = "Name: $name \n\nEmail: $email \n\nPhone: $phone \n\nListing: $listing \n\nURL: $url \n\nComments: $comments";
-						$headers = 'From: '.$name.' <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email;
-
-						wp_mail($emailTo, $subject, $body, $headers);
-						$emailSent = true;
-					}
-				} else {
-					$emailSent = true; // make spammer think message went through
-				}
-
-			} ?>
-
-			<?php if(isset($emailSent) && $emailSent == true) {	?>
-				<div class="thanks">
-					<a name="redirectTo"></a>
-					<p>Thanks, your email was sent! We'll be in touch shortly.</p>
-				</div>
-			<?php } else { ?>
-				<?php if(isset($hasError)) { ?>
-					<a name="redirectTo"></a>
-					<label class="error" name="redirectTo">Sorry, an error occured. Please try again.<label>
-				<?php } ?>
-
-				<form action="<?php the_permalink(); ?>#redirectTo" id="inquiry-form" method="post">
-					<ul class="inquiry-form">
-						<li class="contactName">
-							<label for="contactName">Name: <span class="required">*</span></label>
-							<input type="text" name="contactName" id="contactName" value="<?php if(isset($_POST['contactName'])) echo $_POST['contactName'];?>" class="required requiredField" />
-							<?php if($nameError != '') { ?>
-								<label class="error"><?=$nameError;?></label>
-							<?php } ?>
-						</li>
-
-						<li class="contactEmail">
-							<label for="email">Email: <span class="required">*</span></label>
-							<input type="text" name="email" id="email" value="<?php if(isset($_POST['email']))  echo $_POST['email'];?>" class="required requiredField email" />
-							<?php if($emailError != '') { ?>
-								<label class="error"><?=$emailError;?></label>
-							<?php } ?>
-						</li>
-
-						<li class="contactPhone">
-							<label for="phone">Phone:</label>
-							<input type="text" name="phone" id="phone" value="<?php if(isset($_POST['phone']))  echo $_POST['phone'];?>" />
-						</li>
-
-						<li class="contactComments"><label for="commentsText">Message:</label>
-							<textarea name="comments" id="commentsText" rows="6" cols="20"><?php if(isset($_POST['comments'])) { if(function_exists('stripslashes')) { echo stripslashes($_POST['comments']); } else { echo $_POST['comments']; } } ?></textarea>
-						</li>
-
-						<li>
-							<input style="display: none;" type="text" name="antispam" />
-						</li>
-
-						<li>
-							<input id="submit" class="button" type="submit" value="Send Inquiry"></input>
-						</li>
-					</ul>
-					<input type="hidden" name="submitted" id="submitted" value="true" />
-				</form>
-			<?php }
-
-			}
-			?>
-		</div><!-- .listing-contact -->
 
         <?php
         if (function_exists('_p2p_init') && function_exists('agent_profiles_init') ) {

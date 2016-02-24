@@ -12,15 +12,40 @@ iframe {
   padding-top: rem-calc(16);
   z-index: 1000;
   color: $black;
-  background-color: $black;
-
-  @include breakpoint(medium) {
-    background-color: $white;
-  }
+  background-color: $white;
+  transition: all 1s ease-in;
 
   iframe {
     border-bottom: 1px solid $secondary-color-50;
   }
+
+  .close-form {
+    display: none;
+    color: $secondary-color;
+    font: 16px/100% arial, sans-serif;
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 1s ease-in;
+  }
+
+  .close-form.is-active {
+    display: block;
+    transition: all 1s ease-in;
+  }
+
+  .button:focus {
+    background-color: $white !important;
+    color: $accent-color-2 !important;
+  }
+}
+
+.gform_confirmation_message_1 {
+  font-family: $body-font-family;
+  font-size: rem-calc(18);
+  color: $accent-color-2;
 }
 
 .height-transition {
@@ -37,18 +62,66 @@ iframe {
   display: block;
   max-height: 17rem;
   color: $white;
+  background-color: $black;
+  padding: 0 rem-calc(16);
+  margin: rem-calc(32) 0;
+
+  @include clearfix;
 
   @include breakpoint(medium) {
     display: none;
   }
+
+  h4 {
+    margin: 0 rem-calc(32);
+    color: $accent-color-2;
+    text-align: center;
+    text-transform: uppercase;
+    border-top: 1px solid $white;
+    font-size: rem-calc(24);
+    line-height: rem-calc(24);
+    font-family: $body-font-family;
+  }
+
+  label {
+    display: none;
+  }
+
+  .gfield {
+    width: 100% !important;
+  }
+
+  input {
+    background-color: $white !important;
+  }
+
+  input.button {
+    width: 100%;
+    color: $white !important;
+    background-color: $accent-color-2 !important;
+    background-image: none;
+    text-shadow: none;
+    border-radius: inherit;
+
+    &:hover, &:focus, &:active {
+      background-color: $white !important;
+      color: $accent-color-2 !important;
+    }
+  }
+
+  .gform_wrapper .top_label li.gfield.gf_middle_third, .gform_wrapper .top_label li.gfield.gf_right_third {
+    margin-left: 0 !important;
+  }
+
 }
 
 
 
 
 /* -------------- Custom ---------------- */
-fieldset li label {
-  display: none;  }
+label {
+  display: none !important;
+}
 
 ul.form_fields {
   float: left;
@@ -57,8 +130,9 @@ ul.form_fields {
 
 ul.form_fields li {
   display: table-cell;
-  width: 32.5%;
-  padding: 0 1rem 0 0; }
+  width: rem-calc(235);
+  padding: 0 1rem;
+}
 
 li.clear {
   width: 0 !important;
@@ -85,11 +159,11 @@ fieldset {
     margin-top: -42px; }
 
   button#submit_button {
-    width: 13rem;
+    width: rem-calc(205);
     margin: 0;
     height: rem-calc(40);
     font-size: rem-calc(18);
     line-height: 0;
-    max-width: 200px; }
+  }
 
 }

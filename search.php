@@ -2,92 +2,44 @@
 /**
  * The template for displaying search results pages.
  *
- * @package WordPress
- * @subpackage FoundationPress
+ * @package FoundationPress
  * @since FoundationPress 1.0.0
  */
-
 get_header(); ?>
 
-<div class="row">
-	<div class="content-container" role="main">
+    <div class="row">
+        <div class="small-12 large-12 columns" role="main">
 
-		<?php do_action( 'foundationpress_before_content' ); ?>
+            <?php do_action( 'foundationpress_before_content' ); ?>
 
-        <h1>Search Results</h1>
+            <h1>Search Results</h1>
+            <h2><?php _e( 'You searched for', 'foundationpress' ); ?> "<?php echo get_search_query(); ?>"</h2>
 
-        <?php
-        $searchVars = "";
-        $spacer = " ";
-        $propertyType = get_query_var('property-types');
-        $neighborhood = get_query_var('neighborhood');
-        $bedrooms = get_query_var('bedrooms');
-        $squareFootage = get_query_var('square-footage');
-        $price = get_query_var('price');
+            <?php if ( have_posts() ) : ?>
 
-        $searchVars .= $propertyType;
+                <?php while ( have_posts() ) : the_post(); ?>
+                    <?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+                <?php endwhile; ?>
 
-        if ($searchVars != "") {
-            $searchVars .= $spacer;
-        }
+            <?php else : ?>
+                <?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-        $searchVars .= $neighborhood;
+            <?php endif;?>
 
-        if ($searchVars != "") {
-            $searchVars .= $spacer;
-        }
+            <?php do_action( 'foundationpress_before_pagination' ); ?>
 
-        $searchVars .= $bedrooms;
+            <?php if ( function_exists( 'foundationpress_pagination' ) ) { foundationpress_pagination(); } else if ( is_paged() ) { ?>
 
-        if ($bedrooms != "") {
-            $searchVars .= " bedrooms";
-        }
+                <nav id="post-nav">
+                    <div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'foundationpress' ) ); ?></div>
+                    <div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
+                </nav>
+            <?php } ?>
 
-        if ($searchVars != "") {
-            $searchVars .= $spacer;
-        }
+            <?php do_action( 'foundationpress_after_content' ); ?>
 
-        $searchVars .= $squareFootage;
-
-        if ($squareFootage != "") {
-            $searchVars .= " square footage";
-        }
-
-        if ($searchVars != "") {
-            $searchVars .= $spacer;
-        }
-
-        $searchVars .= $price;
-
-        ?>
-
-		<h2><?php _e( 'You searched for', 'foundationpress' ); ?> "<?php echo get_search_query() . $searchVars; ?>"</h2>
-
-
-        <?php if ( have_posts() ) : ?>
-
-		<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part( 'content', get_post_format() ); ?>
-		<?php endwhile; ?>
-
-		<?php else : ?>
-			<?php get_template_part( 'content', 'none' ); ?>
-
-	<?php endif;?>
-
-	<?php do_action( 'foundationpress_before_pagination' ); ?>
-
-	<?php if ( function_exists( 'foundationpress_pagination' ) ) { foundationpress_pagination(); } else if ( is_paged() ) { ?>
-
-		<nav id="post-nav">
-			<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'foundationpress' ) ); ?></div>
-			<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
-		</nav>
-	<?php } ?>
-
-	<?php do_action( 'foundationpress_after_content' ); ?>
-
-	</div>
+        </div>
+    </div>
 
     <div class="real-estate-search" data-responsive-toggle="search-form">
         <h5>Real Estate Search</h5>
@@ -121,6 +73,8 @@ get_header(); ?>
         </div>
     </div>
 
-</div>
-<?php dynamic_sidebar( 'featured-property-widgets' ); ?>
-<?php get_footer(); ?>
+    <div id="featured-property" class="large-12">
+        <?php dynamic_sidebar( 'featured-property-widgets' ); ?>
+    </div>
+
+<?php get_footer();

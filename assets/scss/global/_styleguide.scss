@@ -144,7 +144,6 @@ input {
   line-height: rem-calc(18);
   background-color: $white;
   color: $black;
-  border: 1px solid $black;
 }
 
 label {
@@ -189,8 +188,8 @@ label {
   }
 
   li {
-    display: inline-block !important;
-    margin-right: 1.5rem !important;
+    //display: inline-block !important;
+    //margin-right: 1.5rem !important;
   }
 }
 

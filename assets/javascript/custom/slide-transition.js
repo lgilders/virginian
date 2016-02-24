@@ -45,11 +45,15 @@
             $el.css("max-height", "0");
             $el.addClass("height-transition-hidden");
 
+            var $closeButton = $('.close-form');
+            $closeButton.removeClass('is-active');
         });
     };
 
     $.fn.slideDownTransition = function() {
         return this.each(function() {
+            var $closeButton = $('.close-form');
+
             var $el = $(this);
             $el.removeClass("height-transition-hidden");
 
@@ -65,19 +69,43 @@
                 $el.css({
                     "max-height": height
                 });
+
+                $closeButton.addClass('is-active');
             }, 1);
+
         });
     };
 
     var contactLink = $('#menu-header-secondary li:last-child');
     var contactForm = $('#contact-form');
+    var closeButton = $('.close-form');
+    var submitButton = jQuery('#contact-form .gform_wrapper .button');
+
+    submitButton.on('click', function (e) {
+        setTimeout(function () {
+            contactForm.slideUpTransition();
+        }, 6000);
+    });
 
     contactLink.click(function () {
         event.preventDefault();
-        console.log('Contact link clicked');
-        if (contactForm.hasClass('height-transition-hidden'))
+        //console.log('Contact link clicked');
+        if (contactForm.hasClass('height-transition-hidden')) {
             contactForm.slideDownTransition();
-        else
+        }
+        else {
             contactForm.slideUpTransition();
+        }
+    });
+
+    closeButton.click(function () {
+        event.preventDefault();
+        //console.log('Close Form Button Clicked');
+        if (contactForm.hasClass('height-transition-hidden')) {
+            contactForm.slideDownTransition();
+        }
+         else {
+            contactForm.slideUpTransition();
+        }
     });
 })(jQuery);

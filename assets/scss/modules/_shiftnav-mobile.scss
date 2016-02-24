@@ -1,0 +1,43 @@
+#shiftnav-toggle-main {
+  background-color: $white !important;
+  color: $secondary-color-50 !important;
+
+}
+
+.shiftnav {
+  a {
+    color: $secondary-color-50;
+    font-size: rem-calc(18);
+    border-bottom: 1px solid black;
+  }
+
+  li {
+    color: $secondary-color-50;
+  }
+
+  .shiftnav-target {
+    line-height: 175% !important;
+  }
+
+  .shiftnav-submenu-activation {
+    width: 45px !important;
+    height: 45px !important;
+  }
+
+  .shiftnav-depth-1 {
+    background: $secondary-color-50 !important;
+
+    a {
+      color: $white !important;
+      border: none !important;
+    }
+  }
+
+  .shiftnav-inner {
+    background-color: $black !important;
+  }
+
+  .shiftnav .shiftnav-submenu-activation i.fa {
+    color: $secondary-color-50 !important;
+  }
+}

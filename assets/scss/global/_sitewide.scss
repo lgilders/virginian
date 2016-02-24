@@ -73,16 +73,33 @@ body {
     display: block;
     margin: 0 auto;
     margin-top: rem-calc(14);
-    margin-bottom: rem-calc(14);
     width: 100%;
 
     img {
-      width: rem-calc(135);
+      width: rem-calc(96);
     }
 
     @include breakpoint(medium) {
       display: none;
     }
+  }
+
+  // ShiftNav Pro Overrides
+  .shiftnav-menu-image {
+    background-color: $white !important;
+
+    a {
+      border: none !important;
+    }
+  }
+
+  #shiftnav-toggle-main .shiftnav-main-toggle-content-before {
+    float: none;
+  }
+
+  #shiftnav-toggle-main .shiftnav-main-toggle-content-after>*, #shiftnav-toggle-main .shiftnav-main-toggle-content-before>* {
+    left: rem-calc(20);
+    z-index: inherit;
   }
 
 
@@ -384,6 +401,28 @@ body {
         color: $secondary-color;
       }
     }
+  }
+}
+
+body.search {
+  .pagination .current {
+    background-color: $white;
+    border: 2px solid $accent-color-2;
+    color: $accent-color-2;
+
+    &:hover, &:focus {
+      color: $white;
+      background-color: $accent-color-2;
+    }
+  }
+
+  .pagination a {
+    color: $secondary-color-50;
+  }
+
+  .pagination a:hover, .pagination button:hover {
+    background: transparent;
+    color: $white;
   }
 }
 

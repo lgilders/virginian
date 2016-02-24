@@ -237,6 +237,14 @@ get_header(); ?>
                 <li><h6>Golf</h6></li>
             </ul>
         </div>
+        <div class="sub-headers">
+            <ul>
+                <li><h6>Social Junior</h6></li>
+                <li><h6>Social Full</h6></li>
+                <li><h6>Golf Junior</h6></li>
+                <li><h6>Golf Full</h6></li>
+            </ul>
+        </div>
         <?php while( have_rows('membership') ): the_row(); ?>
         <ul class="membership-row">
             <li><?php echo get_sub_field('field_description'); ?></li>
