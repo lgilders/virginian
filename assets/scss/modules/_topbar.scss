@@ -224,7 +224,7 @@ button.c-hamburger.c-hamburger--htx {
   }
 
   li:not(.menu-text) > a {
-    font-size: rem-calc(16);
+    font-size: rem-calc(12);
     font-weight: 400;
 
     @include breakpoint(medium) {
@@ -232,10 +232,6 @@ button.c-hamburger.c-hamburger--htx {
       &:hover, &:active, .current-menu-item {
         color: $accent-color-2;
       }
-    }
-
-    @include breakpoint(large) {
-      font-size: rem-calc(12);
     }
   }
 

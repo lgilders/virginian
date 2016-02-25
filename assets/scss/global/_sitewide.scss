@@ -39,20 +39,35 @@ body {
   color: white;
 
   // Set up sticky nav
-  header#masthead {
+  #sticky-nav {
     position: fixed;
-    z-index: 10;
+    max-width: rem-calc(1440);
+    width: 100%;
+    margin: 0 auto;
+    background: white;
+    z-index: 9999;
+    padding-top: 1rem;
+    transition: all 1s ease-in;
+    border-bottom: 1px solid whitesmoke;
+  }
 
-    @include breakpoint(medium) {
-      position: relative;
-      z-index: inherit;
+  #sticky-nav.shrink {
+    img {
+      height: rem-calc(96);
+    }
+
+    a {
+      font-size: rem-calc(16);
+      line-height: rem-calc(24);
     }
   }
 
-  nav#site-navigation {
-    position: fixed;
-    height: 242px;
-    z-index: 10;
+  #contact-form.hide {
+    display: none;
+  }
+
+  #desktop-menu.hide {
+    display: none;
   }
 
   // Logo styles
@@ -113,7 +128,7 @@ body {
     @include clearfix;
 
     @include breakpoint(medium) {
-      top: 242px;  // Matches the height of the sticky nav
+      top: 198px;  // Matches the height of the sticky nav
     }
   }
 

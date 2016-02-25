@@ -34,7 +34,7 @@
   }
 
   @include breakpoint(medium) {
-    top: 242px; // Matches the height of the sticky nav
+    top: 198px; // Matches the height of the sticky nav
   }
 
   footer + ul {
@@ -278,7 +278,7 @@
   @include clearfix;
 
   @include breakpoint(medium) {
-    top: 242px; // Matches the height of the sticky nav
+    top: 198px; // Matches the height of the sticky nav
     padding: rem-calc(24) rem-calc(56) rem-calc(36);
   }
 

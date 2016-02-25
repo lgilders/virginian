@@ -1,4 +1,16 @@
 body.page-template-secondary {
+  /* Membership Page Overrides */
+
+  #membership-content .headers {
+    border-top: 1px solid #696969!important;
+    padding-top: 0.5rem!important;
+  }
+
+  #membership-content h5 {
+    background-color: white!important;
+    color: #799a3d!important;
+  }
+
   #membership-content {
     width: 100%;
     max-width: rem-calc(1024);

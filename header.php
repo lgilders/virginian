@@ -82,7 +82,7 @@
                 </div>
             </div>
 
-            <div class="sticky-nav">
+            <div id="sticky-nav">
                 <?php get_template_part( '/parts/logo' ); ?>
 
                 <div class="top-bar-left show-for-medium">
