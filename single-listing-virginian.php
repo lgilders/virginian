@@ -1,10 +1,8 @@
 <?php
 /**
- * The Template for displaying all single listing posts
- *
- * @package WP Listings
- * @since 0.1.0
- */
+Single Listing Template: Virginian
+Description: Single Real Estate Listing
+*/
 
 add_action('wp_enqueue_scripts', 'enqueue_single_listing_scripts');
 function enqueue_single_listing_scripts() {

@@ -38,7 +38,6 @@
  <?php endwhile;?>
 
  <?php do_action( 'foundationpress_after_content' ); ?>
- <?php get_sidebar(); ?>
 
  </div>
 

@@ -68,21 +68,18 @@
                 </div>
             </div>
 
-            <div id="desktop-menu">
-                <div class="small-12 medium-6 large-6 search-form">
-                    <?php get_search_form(); ?>
-                </div>
-
-                <div class="top-bar-right">
-                    <?php foundationpress_top_bar_r(); ?>
-
-                    <?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'topbar' ) : ?>
-                        <?php get_template_part( 'parts/mobile-top-bar' ); ?>
-                    <?php endif; ?>
-                </div>
-            </div>
 
             <div id="sticky-nav">
+                <div id="desktop-menu">
+                    <div class="top-bar-right">
+                        <?php foundationpress_top_bar_r(); ?>
+
+                        <?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'topbar' ) : ?>
+                            <?php get_template_part( 'parts/mobile-top-bar' ); ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+
                 <?php get_template_part( '/parts/logo' ); ?>
 
                 <div class="top-bar-left show-for-medium">

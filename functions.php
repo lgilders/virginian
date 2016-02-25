@@ -51,4 +51,7 @@ require_once( 'library/sticky-posts.php' );
 /** Add custom query vars */
 require_once( 'library/query-vars.php' );
 
+/** Stop auto-scrolling after form submission */
+add_filter( 'gform_confirmation_anchor', '__return_false' );
+
 ?>

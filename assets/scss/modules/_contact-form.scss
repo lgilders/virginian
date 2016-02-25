@@ -25,7 +25,7 @@ iframe {
     font: 16px/100% arial, sans-serif;
     position: absolute;
     right: 30px;
-    top: 15px;
+    top: 50px;
     text-decoration: none;
     cursor: pointer;
     transition: all 1s ease-in;
@@ -40,13 +40,27 @@ iframe {
     background-color: $white !important;
     color: $accent-color-2 !important;
   }
+
+  .gform_body {
+    width: 75%;
+    display: inline-block;
+    float: left;
+  }
+
+  .gform_footer {
+    width: 25%;
+    display: inline-block;
+  }
+
+  .gform_button {
+    height: 40px;
+    top: 8px;
+    position: relative;
+    font-size: rem-calc(18) !important;
+    line-height: rem-calc(8);
+  }
 }
 
-.gform_confirmation_message_1 {
-  font-family: $body-font-family;
-  font-size: rem-calc(18);
-  color: $accent-color-2;
-}
 
 .height-transition {
   transition: max-height 1s ease-in-out;
@@ -65,6 +79,7 @@ iframe {
   background-color: $black;
   padding: 0 rem-calc(16);
   margin: rem-calc(32) 0;
+  transition: all 1s ease-in;
 
   @include clearfix;
 
@@ -115,6 +130,9 @@ iframe {
 
 }
 
+#contact-form-mobile.hide {
+  display: none;
+}
 
 
 

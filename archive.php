@@ -41,8 +41,10 @@ get_header(); ?>
 		<?php } ?>
 
 	</article>
-	<?php get_sidebar(); ?>
+</div>
 
+<div id="featured-property" class="large-12">
+    <?php dynamic_sidebar( 'featured-property-widgets' ); ?>
 </div>
 
 <?php get_footer(); ?>

@@ -1,0 +1,42 @@
+body.archive {
+  .container {
+    top: 130px;
+    max-width: rem-calc(1440);
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  h1 {
+    color: $accent-color-2;
+  }
+
+  #breadcrumbs {
+    padding-bottom: rem-calc(16);
+  }
+
+  .site-content {
+    padding: 0 rem-calc(16);
+  }
+
+  .archive-listing-navigation {
+    border: none;
+    margin:0 auto;
+    padding: rem-calc(16) rem-calc(16) rem-calc(48);
+
+    @include clearfix;
+
+    h1 {
+      display: none;
+    }
+
+    .page-numbers {
+      border: none;
+    }
+
+    .pagination a:hover {
+      border: none;
+      background: $accent-color-2;
+      color: $white;
+    }
+  }
+}

@@ -1,11 +1,7 @@
 <?php
 /**
- * The template for displaying Listing Archive pages
- *
- * @link http://codex.wordpress.org/Template_Hierarchy
- *
- * @package WP Listings
- * @since 0.1.0
+Archive Listing Template: Virginian Archive
+Description: Archive Real Estate Listings
  */
 
 function archive_listing_loop() {
@@ -123,10 +119,7 @@ get_header(); ?>
 
 					echo $title; ?>
 
-
 				</header><!-- .archive-header -->
-
-                <?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<p id="breadcrumbs">','</p>'); } ?>
 
 			<?php
 

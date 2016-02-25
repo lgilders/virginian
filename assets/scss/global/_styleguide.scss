@@ -100,7 +100,7 @@ button, .button, a.button {
   box-shadow: none;
   transition: background-color 0.25s ease-out, color 0.25s ease-out;
 
-  &:hover {
+  &:hover, &:focus, &:active {
     color: $accent-color-2;
     background-color: $white;
     background-image: none;
@@ -196,6 +196,12 @@ label {
 .gform_footer.top_label {
   margin: 0 auto !important;
   padding: 0 !important;
+}
+
+.gforms_confirmation_message {
+  font-family: $body-font-family;
+  font-size: rem-calc(18);
+  color: $accent-color-2;
 }
 
 // Overrides for columns / rows

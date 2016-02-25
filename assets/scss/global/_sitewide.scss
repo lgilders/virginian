@@ -46,27 +46,25 @@ body {
     margin: 0 auto;
     background: white;
     z-index: 9999;
-    padding-top: 1rem;
     transition: all 1s ease-in;
     border-bottom: 1px solid whitesmoke;
   }
 
   #sticky-nav.shrink {
-    img {
-      height: rem-calc(96);
+    #logo {
+      padding-bottom: rem-calc(8);
     }
 
-    a {
+    img {
+      height: rem-calc(80);
+    }
+
+    .top-bar-left a {
       font-size: rem-calc(16);
-      line-height: rem-calc(24);
     }
   }
 
   #contact-form.hide {
-    display: none;
-  }
-
-  #desktop-menu.hide {
     display: none;
   }
 
@@ -117,6 +115,18 @@ body {
     z-index: inherit;
   }
 
+  .shiftnav .shiftnav-depth-1 {
+    .shiftnav-target:hover {
+      color: $black !important;
+    }
+  }
+
+  .shiftnav .sub-menu .current-menu-item.shiftnav-depth-1 {
+    a.shiftnav-target {
+      color: $black !important;
+    }
+  }
+
 
   // Set up body container
   section.container {
@@ -128,7 +138,7 @@ body {
     @include clearfix;
 
     @include breakpoint(medium) {
-      top: 198px;  // Matches the height of the sticky nav
+      top: 227px;  // Matches the height of the sticky nav
     }
   }
 
