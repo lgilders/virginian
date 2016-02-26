@@ -121,6 +121,10 @@ get_header(); ?>
 
 				</header><!-- .archive-header -->
 
+                <?php if( function_exists('yoast_breadcrumb') ): ?>
+                    <?php {yoast_breadcrumb( '<p id="breadcrumbs" ', '</p>' );} ?>
+                <?php endif; ?>
+
 			<?php
 
 			archive_listing_loop();
@@ -135,6 +139,10 @@ get_header(); ?>
 
 		</div><!-- #content -->
 	</section><!-- #primary -->
+
+    <div id="featured-property">
+        <?php dynamic_sidebar( 'featured-property-widgets' ); ?>
+    </div>
 
 <?php get_footer();
 

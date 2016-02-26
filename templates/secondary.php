@@ -265,6 +265,13 @@ get_header(); ?>
     <?php endif; ?>
     <?php /* Ends Membership Repeater */ ?>
 
+    <?php $centerContent = get_field( 'full_width_text' ); ?>
+    <?php if($centerContent): ?>
+    <div class="content-container full-width">
+        <?php echo $centerContent; ?>
+    </div>
+    <?php endif; ?>
+
     <div class="content-container secondary-nav">
         <?php the_field( 'secondary_nav' ); ?>
     </div>

@@ -21,27 +21,9 @@ get_header(); ?>
         <?php endif; ?>
     </div>
 
-    <?php $content = the_content(); ?>
-    <?php if($content): ?>
-        <div class="content-container">
-            <?php echo $content; ?>
-        </div>
-    <?php endif; ?>
-
-    <?php $photo_gallery = get_field( 'photo_gallery' ); ?>
-    <?php if($photo_gallery): ?>
-        <div class="content-container">
-            <?php
-
-            $image_ids = get_field('photo_gallery', false, false);
-
-            $shortcode = '[gallery ids="' . implode(',', $image_ids) . '" columns="4" size="medium"]';
-
-            echo do_shortcode( $shortcode );
-
-            ?>
-        </div>
-    <?php endif; ?>
+    <div class="content-container">
+        <?php the_content(); ?>
+    </div>
 
 </div>
 

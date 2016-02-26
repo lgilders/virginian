@@ -106,7 +106,9 @@ if (function_exists('equity')) {
 
 get_header(); ?>
 
-	<section id="primary" class="content-area container inner">
+    <?php do_action( 'foundationpress_before_content' ); ?>
+
+	<section id="primary" class="content-area content-container inner">
 		<div id="content" class="site-content" role="main">
 
 			<?php if ( have_posts() ) : ?>
@@ -126,7 +128,9 @@ get_header(); ?>
 
 				</header><!-- .archive-header -->
 
-                <?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<p id="breadcrumbs">','</p>'); } ?>
+                <?php if( function_exists('yoast_breadcrumb') ): ?>
+                    <?php {yoast_breadcrumb( '<p id="breadcrumbs" ', '</p>' );} ?>
+                <?php endif; ?>
 
 			<?php
 
@@ -143,6 +147,11 @@ get_header(); ?>
 		</div><!-- #content -->
 	</section><!-- #primary -->
 
-<?php get_footer();
 
-}
+    <?php do_action( 'foundationpress_after_content' ); ?>
+
+<div id="featured-property" class="large-12">
+        <?php dynamic_sidebar( 'featured-property-widgets' ); ?>
+</div>
+
+<?php get_footer(); }

@@ -1,9 +1,11 @@
 body.archive {
   .container {
-    top: 130px;
+    top: 242px;
     max-width: rem-calc(1440);
     width: 100%;
     margin: 0 auto;
+
+    @include clearfix;
   }
 
   h1 {
@@ -15,7 +17,16 @@ body.archive {
   }
 
   .site-content {
-    padding: 0 rem-calc(16);
+    padding: 0 rem-calc(24);
+
+    @include clearfix;
+  }
+
+  #primary {
+    float: none;
+    margin-bottom: rem-calc(48);
+
+    @include clearfix;
   }
 
   .archive-listing-navigation {
@@ -39,4 +50,17 @@ body.archive {
       color: $white;
     }
   }
+
+  .listing-navigation a:hover {
+    color: $accent-color-2;
+  }
+
+  .listing-wrap span.listing-status, .wp-listings-shortcode .listing-wrap span.listing-status {
+    background: $accent-color-2;
+  }
+
+  #footer-container, #subfooter {
+    top: 242px;
+  }
+
 }

@@ -62,8 +62,12 @@ body.single-listing {
   }
 
   #listing-description, #listing-details, #listing-gallery, #listing-video {
-    height: rem-calc(368);
+    height: rem-calc(416);
     overflow-x: scroll;
+  }
+
+  .envira-gallery-wrap, .envira-gallery-public {
+    height: rem-calc(416);
   }
 
   #listing-description {
@@ -85,7 +89,7 @@ body.single-listing {
   }
 
   #listing-gallery img {
-    width: 100%;
+    //width: 100%;
   }
 
   .label {
@@ -182,5 +186,9 @@ body.single-listing {
       max-width: rem-calc(1024);
       width: 100%;
     }
+  }
+
+  .listing-navigation a:hover {
+    color: $accent-color-2;
   }
 }

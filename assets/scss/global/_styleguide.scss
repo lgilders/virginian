@@ -204,6 +204,61 @@ label {
   color: $accent-color-2;
 }
 
+// Overrides gravity forms error validation messages
+#description {
+  .gform_wrapper div.validation_error {
+    display: none !important;
+  }
+
+  .gform_wrapper li.gfield.gfield_error.gfield_contains_required {
+    margin: 0 !important;
+  }
+
+  .gform_wrapper li.gfield.gfield_error, .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+    background: $white !important;
+    margin: 0 !important;
+    border: none !important;
+  }
+
+  .gfield_description.validation_message {
+    max-width: rem-calc(248) !important;
+    font-weight: 400;
+    font-size: rem-calc(14);
+
+    @include breakpoint(small) {
+      position: relative;
+      bottom: rem-calc(32);
+      left: rem-calc(128);
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+
+    @include breakpoint(large) {
+      left: rem-calc(248);
+    }
+  }
+
+  .ginput_container.ginput_container_phone + .gfield_description.validation_message {
+      bottom: rem-calc(62);
+  }
+
+  .ginput_container.ginput_container_checkbox + .gfield_description.validation_message {
+    position: relative;
+    bottom: rem-calc(120);
+  }
+
+  .gform_wrapper .gfield_description.validation_message, .gform_wrapper .top_label .gfield_description.validation_message {
+    padding: 0 !important;
+  }
+
+  .instruction.validation_message {
+    font-weight: 400;
+    font-size: rem-calc(14);
+  }
+}
+
+
+
 // Overrides for columns / rows
 .column, .columns {
   padding: 0;
@@ -211,4 +266,30 @@ label {
 
 .row {
   max-width: rem-calc(900);
+}
+
+
+// Photo Gallery
+body.page-template-page-full-width {
+  .envira-gallery-wrap {
+    padding: 0 rem-calc(24);
+  }
+
+  a.page-numbers {
+    padding: rem-calc(8);
+    color: $accent-color-2;
+    border: 1px solid transparent;
+
+    &:hover {
+      border-color: $accent-color-2;
+      color: $white;
+      background-color: $accent-color-2;
+    }
+  }
+
+  .page-numbers.current {
+    padding: rem-calc(8);
+    color: $accent-color-2;
+    border: 1px solid $accent-color-2;
+  }
 }
