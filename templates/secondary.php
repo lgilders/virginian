@@ -12,7 +12,6 @@ get_header(); ?>
         <div class="content-container">
             <h1><?php the_field( 'hero_title' ); ?></h1>
             <p><?php the_field( 'hero_introduction' ); ?></p>
-            <?php the_field( 'sub_navigation' ); ?>
         </div>
     </header>
 
@@ -24,7 +23,6 @@ get_header(); ?>
         <div class="content-container">
             <h1><?php the_field( 'hero_title' ); ?></h1>
             <p><?php the_field( 'hero_introduction' ); ?></p>
-            <?php the_field( 'sub_navigation' ); ?>
         </div>
     </header>
 

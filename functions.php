@@ -54,4 +54,18 @@ require_once( 'library/query-vars.php' );
 /** Stop auto-scrolling after form submission */
 add_filter( 'gform_confirmation_anchor', '__return_false' );
 
+/**
+ * Reload Enviratope on item click
+ */
+function envira_gallery_reload_enviratope( $data ) {
+    ?>
+
+    $('#listing-tabs li:nth-child(3n)').on('click', function(e) {
+    envira_container_<?php echo $data['id']; ?>.enviratope('reloadItems').enviratope();
+    });
+
+    <?php
+}
+add_action( 'envira_gallery_api_enviratope', 'envira_gallery_reload_enviratope' );
+
 ?>

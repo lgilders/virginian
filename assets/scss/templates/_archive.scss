@@ -42,6 +42,13 @@ body.archive {
 
     .page-numbers {
       border: none;
+      color: $secondary-color;
+    }
+
+    .page-numbers.current {
+      color: $accent-color-2;
+      background: $white;
+      border: 1px solid $accent-color-2;
     }
 
     .pagination a:hover {

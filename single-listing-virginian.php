@@ -235,14 +235,13 @@ function single_listing_post_content() {
         <div id="listing-contact" <?php if(!function_exists('aeprofiles_connected_agents_markup')): ?> >
             <h4>Listing Inquiry</h4>
 
-            <?php echo do_shortcode('[gravityform id="4" title="false" description="false" ajax="true" tabindex="99"]'); ?>
-            <?php echo
-            '<script type="text/javascript">
-                var ss_noform = ss_noform || [];
-                ss_noform.push([\'baseURI\', \'https://app-N24YKLWU.marketingautomation.services/webforms/receivePostback/MzQxMze2NAYA/\']); ss_noform.push([\'endpoint\', \'7fe11301-348c-483b-98af-35c333964afc\']);
-                </script>
-                <script type="text/javascript" src="https://koi-N24YKLWU.marketingautomation.services/client/noform.js?ver=1.24" ></script>';
-            ?>
+            <?php echo do_shortcode('[gravityform id="4" title="false" description="false" ajax="true" tabindex="20" html_id="realestate_form"]'); ?>
+            <script type="text/javascript">
+                var __ss_noform = __ss_noform || [];
+                __ss_noform.push(['baseURI', 'https://app-N24YKLWU.marketingautomation.services/webforms/receivePostback/MzQxMze2NAYA/']);
+                __ss_noform.push(['form', 'gform_4', '7fe11301-348c-483b-98af-35c333964afc']); //real estate
+            </script>
+            <script type="text/javascript" src="https://koi-N24YKLWU.marketingautomation.services/client/noform.js?ver=1.24"></script>
         </div><!-- .listing-contact -->
         <?php endif; ?>
 
