@@ -9,7 +9,7 @@ iframe {
 // DESKTOP styles
 #contact-form {
   min-height: 0 !important;
-  padding-top: rem-calc(16);
+  //padding-top: rem-calc(16);
   z-index: 1000;
   color: $black;
   background-color: $white;
@@ -58,6 +58,10 @@ iframe {
     position: relative;
     font-size: rem-calc(18) !important;
     line-height: rem-calc(8);
+  }
+
+  .gform_wrapper .gfield_description+.gform_wrapper .gfield_description.validation_message, .gform_wrapper .ginput_container+.gfield_description.validation_message {
+    margin-top: 0 !important;
   }
 }
 

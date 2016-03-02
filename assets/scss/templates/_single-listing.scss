@@ -146,13 +146,27 @@ body.single-listing {
       padding-left: 0;
     }
 
+    li {
+      margin-right: rem-calc(8);
+    }
+
+    li:nth-child(2n) {
+      margin-right: 0;
+    }
+
     ul li:last-child {
+      margin-right: 0;
       text-align: right;
     }
 
     input#submit {
       width: 100%;
     }
+  }
+
+  #listing-contact input[type="text"], #listing-contact textarea {
+    border: 1px solid #cacaca;
+    border-radius: inherit;
   }
 
   .listing-navigation {

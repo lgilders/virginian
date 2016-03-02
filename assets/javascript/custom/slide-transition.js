@@ -67,7 +67,7 @@
 
             setTimeout(function() {
                 $el.css({
-                    "max-height": height
+                    "max-height": height + 75
                 });
 
                 $closeButton.addClass('is-active');

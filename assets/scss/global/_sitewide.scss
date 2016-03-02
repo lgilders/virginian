@@ -64,10 +64,6 @@ body {
     }
   }
 
-  #contact-form.hide {
-    display: none;
-  }
-
   // Logo styles
   #logo, #logo-mobile {
     min-width: rem-calc(100);
@@ -258,7 +254,7 @@ body {
       }
     }
 
-    @include breakpoint(small) {
+    @include breakpoint(600) {
 
       .menu > li:not(.menu-text) > a {
         margin: rem-calc(8) rem-calc(16) rem-calc(24) 0;

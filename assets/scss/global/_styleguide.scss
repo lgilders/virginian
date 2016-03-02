@@ -186,11 +186,6 @@ label {
   label {
     display: block !important;
   }
-
-  li {
-    //display: inline-block !important;
-    //margin-right: 1.5rem !important;
-  }
 }
 
 .gform_footer.top_label {
@@ -205,59 +200,59 @@ label {
 }
 
 // Overrides gravity forms error validation messages
-#description {
-  .gform_wrapper div.validation_error {
-    display: none !important;
-  }
+.gform_wrapper div.validation_error,
+.gform_wrapper .gfield_date_day label,
+.gform_wrapper .gfield_date_month label,
+.gform_wrapper .gfield_date_year label,
+.gform_wrapper .gfield_time_ampm label,
+.gform_wrapper .gfield_time_hour label,
+.gform_wrapper .gfield_time_minute label,
+.gform_wrapper .ginput_complex label,
+.gform_wrapper .instruction {
+  display: none !important;
+}
 
-  .gform_wrapper li.gfield.gfield_error.gfield_contains_required {
-    margin: 0 !important;
-  }
+.gform_wrapper li.gfield.gfield_error,
+.gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning{
+  background: $white !important;
+  margin: 0 !important;
+  border: none !important;
+}
 
-  .gform_wrapper li.gfield.gfield_error, .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
-    background: $white !important;
-    margin: 0 !important;
-    border: none !important;
-  }
+.gform_wrapper .validation_message {
+  position: relative !important;
+  bottom: rem-calc(8) !important;
+  font-size: rem-calc(14) !important;
+  font-weight: 400 !important;
+}
 
-  .gfield_description.validation_message {
-    max-width: rem-calc(248) !important;
-    font-weight: 400;
-    font-size: rem-calc(14);
+.gform_wrapper .gfield {
+  max-height: rem-calc(60) !important;
+}
 
-    @include breakpoint(small) {
-      position: relative;
-      bottom: rem-calc(32);
-      left: rem-calc(128);
-      padding: 0 !important;
-      margin: 0 !important;
-    }
+.gform_wrapper .ginput_container.ginput_container_checkbox + .gfield_description.validation_message {
+  bottom: rem-calc(40) !important;
+}
 
-    @include breakpoint(large) {
-      left: rem-calc(248);
-    }
-  }
-
-  .ginput_container.ginput_container_phone + .gfield_description.validation_message {
-      bottom: rem-calc(62);
-  }
-
-  .ginput_container.ginput_container_checkbox + .gfield_description.validation_message {
-    position: relative;
-    bottom: rem-calc(120);
-  }
-
-  .gform_wrapper .gfield_description.validation_message, .gform_wrapper .top_label .gfield_description.validation_message {
-    padding: 0 !important;
-  }
-
-  .instruction.validation_message {
-    font-weight: 400;
-    font-size: rem-calc(14);
+#gform_3 {
+  .gfield.gf_list_2col {
+    max-height: inherit !important;
   }
 }
 
+li#field_4_9, #field_2_7 {
+  max-height: inherit !important;
+}
 
+.gform_wrapper li.gfield_error input[type=email],
+.gform_wrapper li.gfield_error input[type=number],
+.gform_wrapper li.gfield_error input[type=password],
+.gform_wrapper li.gfield_error input[type=tel],
+.gform_wrapper li.gfield_error input[type=text],
+.gform_wrapper li.gfield_error input[type=url],
+.gform_wrapper li.gfield_error textarea {
+  border: 1px solid #790000 !important;
+}
 
 // Overrides for columns / rows
 .column, .columns {

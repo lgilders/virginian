@@ -68,4 +68,5 @@ function envira_gallery_reload_enviratope( $data ) {
 }
 add_action( 'envira_gallery_api_enviratope', 'envira_gallery_reload_enviratope' );
 
+
 ?>

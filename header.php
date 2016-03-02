@@ -51,8 +51,10 @@
         </div>
 
 		<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
-            <div id="contact-form" class="height-transition height-transition-hidden">
-                <div class="close-form">X</div>
+
+            <div id="sticky-nav">
+                <div id="contact-form" class="height-transition height-transition-hidden">
+                    <div class="close-form">X</div>
                     <?php get_template_part( '/parts/contact-form' ); ?>
                     <div class="row">
                         <div class="small-12 centered columns">
@@ -66,10 +68,7 @@
                     </script>
                     <script type="text/javascript" src="https://koi-N24YKLWU.marketingautomation.services/client/noform.js?ver=1.24" ></script>
                 </div>
-            </div>
 
-
-            <div id="sticky-nav">
                 <div id="desktop-menu">
                     <div class="top-bar-right">
                         <?php foundationpress_top_bar_r(); ?>
